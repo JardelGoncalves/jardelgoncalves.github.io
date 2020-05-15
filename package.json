@@ -20,8 +20,7 @@
     "start": "run-p start:**",
     "start:gatsby": "gatsby develop -H 0.0.0.0 -o",
     "start:storybook": "start-storybook -p 9000 -c .storybook",
-    "build": "run-p 'build:!(storybook)'",
-    "build:gatsby": "gatsby build",
+    "build": "gatsby build",
     "build:storybook": "build-storybook -c .storybook -o storybook",
     "serve": "gatsby serve -o -p 8080",
     "clean": "gatsby clean"
