@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Storybook Starter',
+    title: 'Jardel Gonçalves',
   },
   plugins: [
     {
