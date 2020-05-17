@@ -6,6 +6,9 @@ import { CardService, Wrapper } from './styles';
 
 const ListService = ({ className, services = [] }) => (
   <Wrapper className={className}>
+
+    <h1 className="title">Serviços</h1>
+
     <ScrollContainer
       className="container"
       vertical={false}

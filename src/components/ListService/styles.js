@@ -1,25 +1,53 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 110px 0;
+  background-color: #191919;
+
+  .title {
+    font-family: 'Gilroy ExtraBold';
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 48px;
+  }
+
   .container {
     display: flex;
     flex-direction: row;
   };
 
+  .title {
+    margin-left: 100px;
+  }
   .card:first-child {
     margin-left: 80px;
   }
 
+  .title,
   .card {
     transition: all 0.3s ease-in-out;
   }
 
   @media only screen and (max-width: 1100px) {
+    .title {
+      margin-left: 50px;
+    }
+
     .card:first-child {
       margin-left: 40px;
     }
   }
   @media only screen and (max-width: 650px) {
+    padding: 80px 0;
+
+    .title {
+      margin-left: 10px;
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
     .card:first-child {
       margin-left: 0;
     }
