@@ -4,13 +4,7 @@ import { action } from '@storybook/addon-actions';
 import styled from 'styled-components';
 import GlobalStyle from '../src/global/GlobalStyle';
 
-const Wrapper = styled.div`
-  display: flex;
-  flex: 1;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-`;
+const Wrapper = styled.div``;
 
 const Decorator = storyFn => (
   <Wrapper>

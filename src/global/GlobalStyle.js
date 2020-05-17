@@ -34,12 +34,12 @@ export default createGlobalStyle`
     font-family: 'Gilroy ExtraBold';
     font-weight: 500;
     background-color: #191919;
-    width: 100%;
   }
 
   ::placeholder {
     font-size: 17px;
     font-family: 'Gilroy ExtraBold';
     color: #ffffffb3;
+    width: 100%;
   }
 `;
