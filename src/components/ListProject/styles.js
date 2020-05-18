@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   padding: 110px 0;
   padding-bottom: 190px;
   background-color: #222;
+  position: relative;
 
   .title {
     font-family: 'Gilroy ExtraBold';
@@ -121,7 +122,6 @@ export const CardProject = styled.section`
 export const Slide = styled.div`
   position: relative;
   width: 100%;
-  background-color: tomato;
   display: flex;
 `;
 
@@ -143,6 +143,7 @@ export const Show = styled.div`
     display: flex;
     opacity: 0;
     z-index: 1;
+
   }
 
   .project {
