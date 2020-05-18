@@ -44,7 +44,6 @@ export const Wrapper = styled.div`
 
     .title {
       margin-left: 10px;
-      font-size: 40px;
       margin-bottom: 40px;
     }
 
