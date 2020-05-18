@@ -1,41 +1,31 @@
 import React from 'react';
-import styled from 'styled-components';
+import config from 'react-reveal/globals';
 
 import Layout from '../global/Layout';
-import Image from '../components/Image';
+import Header from '../components/Header';
 
-const Page = styled.div`
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+import {
+  Hero,
+  Skills,
+  Services,
+  Projects,
+  Timeline,
+  Contact,
+} from '../section';
 
-const Heading = styled.h1`
-  font-size: 24px;
-  color: #555;
-  margin-top: 60px;
-`;
+config({ ssrFadeout: true });
 
-const Label = styled.p`
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 12px;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-`;
 
 const IndexPage = () => (
-  <Layout>
-    <Page>
-      <Image />
-      <Heading>GatsbyJS + Storybook</Heading>
-      <Label>Starter</Label>
-    </Page>
-  </Layout>
-);
+    <Layout>
+      <Header />
+      <Hero />
+      <Skills id="skills" />
+      <Services id="services" />
+      <Projects id="projects" />
+      <Timeline id="timeline" />
+      <Contact id="contact" />
+    </Layout>
+  );
 
 export default IndexPage;
