@@ -47,6 +47,12 @@ const Select = ({ className, options, placeholder, onChange }) => {
       },
     }),
     singleValue: (styles) => ({ ...styles, color: '#fff' }),
+    placeholder: (defaultStyles) => ({
+          ...defaultStyles,
+          color: '#ffffff66',
+          fontFamily: 'Gilroy ExtraBold',
+          fontSize: 17,
+      }),
   };
 
   return (
