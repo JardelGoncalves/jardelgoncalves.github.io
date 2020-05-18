@@ -14,6 +14,7 @@ const Header = () => (
           <li><Link to="#services">Serviços</Link></li>
           <li><Link to="#projects">Projetos</Link></li>
           <li><Link to="#timeline">Linha do tempo</Link></li>
+          <li><Link to="#contact">Contato</Link></li>
         </ul>
       </header>
     </Wrapper>
