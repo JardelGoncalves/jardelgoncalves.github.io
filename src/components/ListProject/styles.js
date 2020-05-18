@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   padding: 110px 0;
   padding-bottom: 190px;
-  background-color: #191919;
+  background-color: #222;
 
   .title {
     font-family: 'Gilroy ExtraBold';
@@ -69,7 +69,7 @@ export const CardProject = styled.section`
     width: 100%;
     height: 100%;
     background-color: #5C3BFE;
-    border:${({ active }) => (active ? '3px solid #5C3BFE' : 'none')};
+    border:${({ active }) => (active ? '5px solid #5C3BFE' : 'none')};
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     cursor: pointer;
@@ -126,11 +126,12 @@ export const Slide = styled.div`
 `;
 
 export const Show = styled.div`
+  background-color: #222;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
   width: 100%;
 
 
@@ -141,6 +142,7 @@ export const Show = styled.div`
     padding-bottom: 40px;
     display: flex;
     opacity: 0;
+    z-index: 1;
   }
 
   .project {
@@ -241,7 +243,7 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 900px) {
-    padding-bottom: 0px;
+    padding-bottom: 120px;
     .project {
       padding-bottom: 0px;
     }
@@ -263,7 +265,7 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 800px) {
-    padding-bottom: 0px;
+    padding-bottom: 120px;
     .project {
       padding-left: 40px;
       padding-right: 40px;
@@ -287,11 +289,12 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    padding-bottom: 0px;
+    padding-bottom: 120px;
+
     .project {
       padding-left: 20px;
       padding-right: 20px;
-      padding-bottom: 0px;
+      padding-bottom: 40px;
     }
 
     h1 {
@@ -319,6 +322,7 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 500px) {
+    padding-bottom: 110px;
 
     div.project__image {
       opacity: 0.2;
@@ -332,6 +336,7 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 520px) {
+    padding-bottom: 120px;
     div.project__image {
       opacity: 0.2;
       top: 150px;
