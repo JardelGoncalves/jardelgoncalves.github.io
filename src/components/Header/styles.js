@@ -7,6 +7,9 @@ import logoWhite from '../../assets/logos/icon_white.svg';
 export const Wrapper = styled(Headroom)`
   .headroom--pinned {
     background: #5C3BFE;
+    -webkit-box-shadow: 0px 23px 28px -30px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 23px 28px -30px rgba(0,0,0,0.52);
+    box-shadow: 0px 23px 28px -30px rgba(0,0,0,0.52);
 
     a.logo {
       .logo__img {
@@ -39,7 +42,8 @@ export const Wrapper = styled(Headroom)`
         height: 60px;
         background-image: url(${logo});
         background-size: 60px;
-        background-repeat: no-repeat
+        background-repeat: no-repeat;
+        z-index: 1;
       }
     }
 
@@ -68,9 +72,18 @@ export const Wrapper = styled(Headroom)`
     }
   }
 
+  @media only screen and (max-width: 900px) {
+    a.logo {
+      .logo__img {
+        background-image: url(${logoWhite});
+      }
+    }
+  }
+
 
   @media only screen and (max-width: 800px) {
     header {
+      justify-content: center;
       ul {
         display: none;
       }
