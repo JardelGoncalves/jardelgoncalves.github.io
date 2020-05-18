@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import GlobalStyle from './GlobalStyle';
+import GlobalStyle from '../GlobalStyle';
+import { Wrapper } from './styles';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,9 +27,9 @@ const Layout = ({ children }) => (
           />
         </Helmet>
         <GlobalStyle />
-        <div style={{ position: 'relative' }}>
+        <Wrapper>
           {children}
-        </div>
+        </Wrapper>
       </>
     )}
   />
