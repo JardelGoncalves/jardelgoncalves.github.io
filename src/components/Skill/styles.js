@@ -21,7 +21,7 @@ const moveAnimation = keyframes`
 export const Bar = styled.div`
   width: 420px;
   height: 20px;
-  background-color: #222;
+  background-color: #2C2C2C;
   border-radius: 10px;
   position: relative;
 
