@@ -93,8 +93,12 @@ export const Wrapper = styled.div`
     padding-left: 20px;
     padding-right: 20px;
 
-    a {
-        font-size: 15px;
+    ul {
+      li {
+        a {
+          font-size: 17px;
+        }
+      }
     }
   }
 `;
