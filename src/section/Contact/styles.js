@@ -73,7 +73,7 @@ export const Wrapper = styled.div`
 
     a {
         font-size: 19px;
-      }
+    }
   }
 
   @media only screen and (max-width: 900px) {
@@ -92,6 +92,10 @@ export const Wrapper = styled.div`
   @media only screen and (max-width: 600px) {
     padding-left: 20px;
     padding-right: 20px;
+
+    a {
+        font-size: 15px;
+    }
   }
 `;
 
