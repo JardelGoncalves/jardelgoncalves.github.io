@@ -45,6 +45,7 @@ export const Wrapper = styled.div`
     .title {
       margin-left: 10px;
       margin-bottom: 40px;
+      font-size: 40px;
     }
 
     .card:first-child {

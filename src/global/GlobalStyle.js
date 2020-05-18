@@ -30,6 +30,10 @@ export default createGlobalStyle`
     src: url('${GilroyExtraBold}') format('opentype');
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: 'Gilroy ExtraBold';
     font-weight: 500;

@@ -18,6 +18,12 @@ export const Wrapper = styled.div`
     padding-right: 40px;
   }
 
+  @media only screen and (max-width: 650px) {
+    h1.title {
+      font-size: 40px;
+    }
+  }
+
   @media only screen and (max-width: 600px) {
     padding-left: 20px;
     padding-right: 20px;
