@@ -29,9 +29,9 @@ export const Wrapper = styled.header`
 
       a {
         text-decoration: none;
-        font-size: 10px;
+        font-size: 8px;
         color: #fff;
-        padding: 8px 6px;
+        padding: 8px 4px;
         border-bottom: 2px solid transparent;
         display: flex;
         flex-direction: column;
@@ -43,7 +43,7 @@ export const Wrapper = styled.header`
         }
 
         svg {
-          font-size: 24px;
+          font-size: 22px;
         }
 
         span {
