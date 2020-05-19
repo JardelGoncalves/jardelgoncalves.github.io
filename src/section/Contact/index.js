@@ -11,6 +11,19 @@ import { RaisedButton, ExternalLink } from '../../components/Button';
 
 import { Wrapper, Col } from './styles';
 
+const options = [
+  { label: '1 página', value: '1' },
+  { label: '2 páginas', value: '2' },
+  { label: '3 páginas', value: '3' },
+  { label: '4 páginas', value: '4' },
+  { label: '5 páginas', value: '5' },
+  { label: '6 páginas', value: '6' },
+  { label: '7 páginas', value: '7' },
+  { label: '8 páginas', value: '8' },
+  { label: '9 páginas', value: '9' },
+  { label: '+10 páginas', value: '+10' },
+];
+
 const Projects = ({ id }) => (
   <Fade right>
     <Wrapper id={id}>
@@ -22,7 +35,11 @@ const Projects = ({ id }) => (
       <form>
         <Input placeholder="Seu nome" className="input-data" />
         <Input placeholder="Email para contato" className="input-data" />
-        <Select placeholder="Quantidade de páginas" className="input-data" />
+        <Select
+          placeholder="Quantidade de páginas"
+          className="input-data"
+          options={options}
+        />
         <Textarea
           placeholder="Breve descrição do projeto"
           className="input-data"
@@ -44,6 +61,9 @@ const Projects = ({ id }) => (
                     <span>/jardelgoncalves</span>
                   </>
                 )}
+                to="https://linkedin.com/in/jardelgoncalves"
+                target="_blank"
+                rel="noopener noreferrer"
               />
             </li>
             <li>
@@ -54,6 +74,9 @@ const Projects = ({ id }) => (
                     <span>/jardelgoncalves</span>
                   </>
                 )}
+                to="https://github.com/jardelgoncalves"
+                target="_blank"
+                rel="noopener noreferrer"
               />
             </li>
             <li>
@@ -64,6 +87,7 @@ const Projects = ({ id }) => (
                     <span>jardelgoncalves1996@gmail.com</span>
                   </>
                 )}
+                to="mailto:jardelgoncalves1996@gmail.com"
               />
             </li>
           </ul>
