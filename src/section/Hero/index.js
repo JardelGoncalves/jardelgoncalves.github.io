@@ -39,7 +39,12 @@ const Hero = ({ id }) => (
           habilidades e em busca das melhores maneiras para resolver um
           problema.
         </p>
-        <ExternalLink text="Baixar currículo" />
+        <ExternalLink
+          text="Baixar currículo"
+          to="https://github.com/jardelgoncalves/jardelgoncalves.github.io/raw/master/CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
       </Col>
       <Col>
         <Avatar />

@@ -87,10 +87,12 @@ const ListProject = () => {
           <div className={`project ${index === 0 ? 'project--active' : ''}`}>
             <h1>Fashionista</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Aliquam ultrices aliquam pharetra pellentesque duis.
-              Pharetra ultrices mauris quis morbi nibh sodales ut scelerisque
-              aliquet. Elem
+              Projeto Final do programa AceleraDev React da Codenation que
+              consistia em desenvolver uma aplicação Mobile First das principais
+              Funcionalidades de um e-commerce no segmento de moda feminina.
+              As funcionalidades são: Listar produto, visualizar produto,
+              adicionar produto ao carrinho, visualizar produtos no carrinho
+              e pesquisar produto. Além disso o site persiste as informações
             </p>
             <div className="project__tech">
               <h2>Tecnologias</h2>

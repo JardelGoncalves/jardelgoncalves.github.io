@@ -56,7 +56,7 @@ export const Wrapper = styled.div`
 
 export const CardService = styled.section`
   display: flex;
-  height: 440px;
+  height: 400px;
   min-width: 740px;
   background-color: transparent;
   display: flex;
@@ -86,7 +86,7 @@ export const CardService = styled.section`
     }
     p {
       font-family: 'Gilroy Light';
-      font-size: 22px;
+      font-size: 20px;
       line-height: 1.7;
       color: #ffffffea;
       margin-top: 20px;

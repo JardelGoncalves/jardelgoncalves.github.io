@@ -12,19 +12,18 @@ const Services = ({ id }) => {
     {
       key: 'web',
       title: 'Desenvolvimento de aplicações Web',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-        aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,
-        porttitor rhoncus dolor purus non enim praesent elementum facilisis leo,
-        vel`,
+      description: `Construo aplicações institucionais, landing-pages,
+      e-commerce e etc... aplicando conceitos de Thumb Zone (zona de polegares)
+      entre outras abordagens para melhorar a experiência em dispositivos
+      mobile e com as tecnologias corretas para sua empresa.`,
       icon: <GoBrowser />,
     },
     {
       key: 'mobile',
       title: 'Desenvolvimento de aplicações Mobile',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-        aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,
-        porttitor rhoncus dolor purus non enim praesent elementum facilisis leo,
-        vel`,
+      description: `Na era digital ser diferente pode ser um atrativo para obter
+      novos clientes. Então que tal ter um aplicativo mobile personalizado para
+      sua empresa/negocio? Entre em contato e vamos bater um papo.`,
       icon: <FiSmartphone />,
     },
   ];
