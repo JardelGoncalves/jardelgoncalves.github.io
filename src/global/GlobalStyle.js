@@ -3,8 +3,6 @@ import reset from 'styled-reset-advanced';
 
 
 import GilroyLight from '../assets/fonts/Gilroy-Light.otf';
-import GilroyRegular from '../assets/fonts/Gilroy-Regular.ttf';
-import GilroyMedium from '../assets/fonts/Gilroy-Medium.ttf';
 import GilroyExtraBold from '../assets/fonts/Gilroy-ExtraBold.otf';
 
 export default createGlobalStyle`
@@ -13,16 +11,6 @@ export default createGlobalStyle`
   @font-face {
     font-family: "Gilroy Light";
     src: url('${GilroyLight}') format('opentype');
-  }
-
-  @font-face {
-    font-family: "Gilroy Regular";
-    src: url('${GilroyRegular}') format('truetype');
-  }
-
-  @font-face {
-    font-family: "Gilroy Medium";
-    src: url('${GilroyMedium}') format('truetype');
   }
 
   @font-face {
