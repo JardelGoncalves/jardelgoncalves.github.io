@@ -10,6 +10,7 @@ const Skills = ({ id }) => {
     left: [
       { label: 'HTML/CSS', percentage: 70 },
       { label: 'Javascript', percentage: 75 },
+      { label: 'Typescript', percentage: 65 },
       { label: 'React', percentage: 80 },
       { label: 'React Native', percentage: 75 },
       { label: 'Gatsby', percentage: 65 },
@@ -19,6 +20,7 @@ const Skills = ({ id }) => {
     rigth: [
       { label: 'Express.js', percentage: 80 },
       { label: 'Nest.js', percentage: 30 },
+      { label: 'Git', percentage: 70 },
       { label: 'GraphQL', percentage: 55 },
       { label: 'MongoDB', percentage: 70 },
       { label: 'PostgreSQL', percentage: 75 },
