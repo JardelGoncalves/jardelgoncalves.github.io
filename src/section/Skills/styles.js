@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
   .column:last-child {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   .skill__item {
@@ -60,5 +60,5 @@ export const Wrapper = styled.div`
 export const Col = styled.div`
   display: flex;
   flex-direction: column;
-
+  align-items: flex-start;
 `;
