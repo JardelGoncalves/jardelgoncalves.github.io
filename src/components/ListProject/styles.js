@@ -123,27 +123,10 @@ export const Slide = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-`;
-
-export const Show = styled.div`
-  background-color: #222;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  padding-bottom: 120px;
-  width: 100%;
-
 
   .project {
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 80px;
-    padding-bottom: 40px;
-    display: flex;
     opacity: 0;
-    z-index: 1;
-
+    display: none;
   }
 
   .project {
@@ -152,8 +135,19 @@ export const Show = styled.div`
 
   .project.project--active {
     opacity: 1;
-    transition: all 0.3s ease-in-out;
+    display: flex;
   }
+`;
+
+export const Show = styled.div`
+  background-color: #222;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  padding: 100px 80px;
+  width: 100%;
+  z-index: 1;
 
   h1 {
     font-family: 'Gilroy ExtraBold';
@@ -169,42 +163,6 @@ export const Show = styled.div`
     margin-top: 20px;
   }
 
-  div.project__tech {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    z-index: 10;
-
-    h2 {
-      font-size: 19px;
-      margin-bottom: 8px;
-      color: #fff;
-      font-family: 'Gilroy ExtraBold';
-    }
-
-    div.project__links,
-    div.tech {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 6px;
-    }
-
-    div.project__links {
-      margin-top: 60px;
-
-      a {
-        margin: 2px;
-      }
-    }
-  }
-
-  .project__tech,
-  p {
-    width: 600px;
-
-  }
-
-
   div.project__image {
     position: absolute;
     top: 80px;
@@ -212,6 +170,7 @@ export const Show = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: 1;
 
     img {
       position: absolute;
@@ -219,18 +178,47 @@ export const Show = styled.div`
       top: -80px;
       width: 65%;
       height: auto;
+      z-index: 1;
+
     }
   }
 
-  div.project__image {
-    transition: all 0.3s ease-in-out;
+  div.project__content {
+    width: 600px;
+    z-index: 2;
+
+    .project__tech {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      z-index: 10;
+
+      h2 {
+        font-size: 19px;
+        margin-bottom: 8px;
+        color: #fff;
+        font-family: 'Gilroy ExtraBold';
+      }
+
+      .tech {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 6px;
+      }
+    }
+
+    .project__links {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+
+      a {
+        margin: 4px;
+      }
+    }
   }
 
   @media only screen and (max-width: 1000px) {
-    padding-bottom: 0px;
-    .project {
-      padding-bottom: 20px;
-    }
 
     div.project__image {
       opacity: 0.7;
@@ -244,16 +232,11 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 900px) {
-    padding-bottom: 120px;
-    .project {
-      padding-bottom: 0px;
-    }
 
-    .project__tech,
-    p {
+    .project__content {
       width: 400px;
-
     }
+
     div.project__image {
       opacity: 0.7;
       top: 180px;
@@ -266,49 +249,38 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 800px) {
-    padding-bottom: 120px;
-    .project {
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-bottom: 20px;
-    }
+    padding-left: 40px;
+    padding-right: 40px;
 
-    .project__tech,
-    p {
+    .project__content {
       width: 400px;
-
     }
+
     div.project__image {
       opacity: 0.7;
-      top: 120px;
+      top: 180px;
 
       img {
         right: -380px;
-        width: 85%;
+        width: 110%;
       }
     }
   }
 
-  @media only screen and (max-width: 600px) {
-    padding-bottom: 120px;
-
-    .project {
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 40px;
-    }
+  @media only screen and (max-width: 650px) {
+    padding-left: 20px;
+    padding-right: 20px;
 
     h1 {
       font-size: 28px;
     }
+
     p {
       font-size: 16px;
     }
 
-    .project__tech,
-    p {
-      width: 100%;
-
+    .project__content {
+      max-width: 100%;
     }
 
     div.project__image {
@@ -323,7 +295,6 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 500px) {
-    padding-bottom: 110px;
 
     div.project__image {
       opacity: 0.2;
@@ -337,7 +308,6 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 520px) {
-    padding-bottom: 120px;
     div.project__image {
       opacity: 0.2;
       top: 150px;

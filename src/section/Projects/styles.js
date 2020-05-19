@@ -5,21 +5,18 @@ export const Wrapper = styled.div`
   flex-direction: column;
   background-color: #222;
   position: relative;
-  height: 1030px;
+  height: 1100px;
 
   @media only screen and (max-width: 1000px) {
     height: 1010px;
   }
 
   @media only screen and (max-width: 900px) {
-    height: 1110px;
+    height: 1100px;
   }
 
-  @media only screen and (max-width: 600px) {
-    height: 990px;
-  }
 
   @media only screen and (max-width: 600px) {
-    height: 1110px;
+    height: 1200px;
   }
 `;

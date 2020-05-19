@@ -10,7 +10,6 @@ import hubfinance from '../../assets/images/projects/card/hubfinance.png';
 import quisocial from '../../assets/images/projects/card/quisocial.png';
 import tindev from '../../assets/images/projects/card/tindev.png';
 import todo from '../../assets/images/projects/card/todo.png';
-import favorite from '../../assets/images/projects/card/favorite.png';
 
 
 import fashionistaMock from
@@ -19,7 +18,6 @@ import hubfinanceMock from '../../assets/images/projects/mockup/hubfinance.png';
 import quisocialMock from '../../assets/images/projects/mockup/quisocial.png';
 import tindevMock from '../../assets/images/projects/mockup/tindev.png';
 import todoMock from '../../assets/images/projects/mockup/todo.png';
-import favoriteMock from '../../assets/images/projects/mockup/favorite.png';
 
 const ListProject = () => {
   const [index, setIndex] = useState(0);
@@ -72,19 +70,14 @@ const ListProject = () => {
             </div>
           </button>
         </CardProject>
-        <CardProject className="card__project" active={index === 5}>
-          <button type="button" onClick={() => setIndex(5)}>
-            <img src={favorite} alt="Miniatura Favorite Music" />
-            <div className="card__project__caption">
-              Favorite Music
-            </div>
-          </button>
-        </CardProject>
       </ScrollContainer>
       <Slide>
         {/* Fashionista */}
-        <Show>
-          <div className={`project ${index === 0 ? 'project--active' : ''}`}>
+        <Show className={`project ${index === 0 ? 'project--active' : ''}`}>
+          <div className="project__image">
+            <img src={fashionistaMock} alt="Projeto Fashionista" />
+          </div>
+          <div className="project__content">
             <h1>Fashionista</h1>
             <p>
               Projeto Final do programa AceleraDev React da Codenation que
@@ -99,6 +92,51 @@ const ListProject = () => {
               <div className="tech">
                 <Tag text="React" />
                 <Tag text="Redux" />
+                <Tag text="Redux Saga" />
+                <Tag text="Next.js" />
+                <Tag text="immer" />
+                <Tag text="Eslint" />
+                <Tag text="Pritter" />
+                <Tag text="Vercel" />
+              </div>
+            </div>
+            <div className="project__links">
+              <ExternalLink
+                text="Código fonte"
+                to="https://github.com/jardelgoncalves/fashionista-ecommerce"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+              <ExternalLink
+                text="Demo"
+                to="https://fashionista.now.sh"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            </div>
+          </div>
+        </Show>
+        {/* Hub Finance */}
+        <Show className={`project ${index === 1 ? 'project--active' : ''}`}>
+          <div className="project__image">
+            <img src={hubfinanceMock} alt="Projeto  Hub Finance" />
+          </div>
+          <div className="project__content">
+            <h1>Hub Finance</h1>
+            <p>
+              Projeto de estudo que tem como objetivo cadastrar todas as
+              despesas e receitas de uma pessoa. Todas as despesas podem ser
+              cadastrada com uma categoria, são apresentado gráficos
+              comparativos de despesas por categoria e valores de despesas e
+              receitas por mês. Para ter aceso é necessário efetar cadastro
+              e login.
+            </p>
+            <div className="project__tech">
+              <h2>Tecnologias</h2>
+              <div className="tech">
+                <Tag text="React" />
+                <Tag text="Redux" />
+                <Tag text="Thunk" />
                 <Tag text="PostgreSQL" />
                 <Tag text="SQLite" />
                 <Tag text="Objection.js" />
@@ -108,119 +146,125 @@ const ListProject = () => {
                 <Tag text="Docker" />
                 <Tag text="AWS EC2" />
               </div>
-              <div className="project__links">
-                <ExternalLink text="Código fonte" />
-                <ExternalLink text="Demo" />
-              </div>
             </div>
-
-            <div className="project__image">
-              <img src={fashionistaMock} alt="Hub Finance" />
-            </div>
-          </div>
-        </Show>
-        <Show>
-          <div className={`project ${index === 1 ? 'project--active' : ''}`}>
-            <h1>Hub Finance</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <div className="project__tech">
-              <h2>Tecnologias</h2>
-              <div className="tech">
-                <Tag text="React" />
-              </div>
-              <div className="project__links">
-                <ExternalLink text="Código fonte" />
-                <ExternalLink text="Demo" />
-              </div>
-            </div>
-            <div className="project__image">
-              <img src={hubfinanceMock} alt="Hub Finance" />
+            <div className="project__links">
+            <ExternalLink
+              text="Código fonte"
+              to="https://github.com/jardelgoncalves/hub-finance"
+              target="_blank"
+              rel="noopener noreferrer"
+            />
             </div>
           </div>
         </Show>
-        <Show>
-          <div className={`project ${index === 2 ? 'project--active' : ''}`}>
+        {/* QuiSocial */}
+        <Show className={`project ${index === 2 ? 'project--active' : ''}`}>
+          <div className="project__image">
+            <img src={quisocialMock} alt="Projeto QuiSocial" />
+          </div>
+          <div className="project__content">
             <h1>QuiSocial</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Projeto de estudo que tem como objetivo criar uma simples rede
+              social. O usuário precisa se cadastrar e efetuar login, após essa
+              etapa ele pode visualizar todos os posts ou postar algo. Além
+              disso ele pode dar palmas (claps) para os posts toda essa
+              interação é feita em tempo real.
             </p>
             <div className="project__tech">
               <h2>Tecnologias</h2>
               <div className="tech">
+                <Tag text="Express.js" />
                 <Tag text="React" />
-              </div>
-              <div className="project__links">
-                <ExternalLink text="Código fonte" />
-                <ExternalLink text="Demo" />
+                <Tag text="SQLite" />
+                <Tag text="Sequelize" />
+                <Tag text="Socket.io" />
+                <Tag text="Mocha" />
+                <Tag text="Chai" />
               </div>
             </div>
-            <div className="project__image">
-              <img src={quisocialMock} alt="QuiSocial" />
+            <div className="project__links">
+              <ExternalLink
+                text="Código fonte"
+                to="https://github.com/jardelgoncalves/QuiSocial"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
             </div>
           </div>
         </Show>
-        <Show>
-          <div className={`project ${index === 3 ? 'project--active' : ''}`}>
+        {/* Tindev */}
+        <Show className={`project ${index === 3 ? 'project--active' : ''}`}>
+          <div className="project__image">
+            <img src={tindevMock} alt="Projeto Tindev" />
+          </div>
+          <div className="project__content">
             <h1>Tindev</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Projeto de estudo desenvolvido na 8ª Omnistack da Rocketseat que
+              teve como objetivo construir uma aplicação Web e Mobile para
+              conectar desenvolvedores. Para acessar a aplicação o usuário
+              precisa logar com o seu github e após logado ele poderia dar like
+              ou dislike nos Devs. Toda essa interação (Match entre os devs) é
+              executada em tempo real.
             </p>
             <div className="project__tech">
               <h2>Tecnologias</h2>
               <div className="tech">
                 <Tag text="React" />
-              </div>
-              <div className="project__links">
-                <ExternalLink text="Código fonte" />
-                <ExternalLink text="Demo" />
+                <Tag text="React Native" />
+                <Tag text="MongoDB" />
+                <Tag text="Mongoose" />
+                <Tag text="Express.js" />
+                <Tag text="Socket.io" />
               </div>
             </div>
-            <div className="project__image">
-              <img src={tindevMock} alt="Tindev" />
+            <div className="project__links">
+              <ExternalLink
+                text="Código fonte"
+                to="https://github.com/jardelgoncalves/tindev"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
             </div>
           </div>
         </Show>
-        <Show>
-          <div className={`project ${index === 4 ? 'project--active' : ''}`}>
+        {/* Todo List */}
+        <Show className={`project ${index === 4 ? 'project--active' : ''}`}>
+          <div className="project__image">
+            <img src={todoMock} alt="Projeto Todo List" />
+          </div>
+          <div className="project__content">
             <h1>Todo List</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Projeto de estudo que teve como objetivo criar uma aplicação para
+              para gerenciar tarefas. O Usuario precisa se cadastrar para
+              iniciar o gerenciamento das tarefas. Após logado o mesmo pode
+              criar tarefas, excluir, marcar como feita ou filtrar uma tarefa
+              específica.
             </p>
             <div className="project__tech">
               <h2>Tecnologias</h2>
               <div className="tech">
                 <Tag text="React" />
-              </div>
-              <div className="project__links">
-                <ExternalLink text="Código fonte" />
-                <ExternalLink text="Demo" />
-              </div>
-            </div>
-            <div className="project__image">
-              <img src={todoMock} alt="Todo List" />
-            </div>
-          </div>
-        </Show>
-        <Show>
-          <div className={`project ${index === 5 ? 'project--active' : ''}`}>
-            <h1>Favorite Music</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <div className="project__tech">
-              <h2>Tecnologias</h2>
-              <div className="tech">
-                <Tag text="React" />
-              </div>
-              <div className="project__links">
-                <ExternalLink text="Código fonte" />
-                <ExternalLink text="Demo" />
+                <Tag text="PostgreSQL" />
+                <Tag text="SQLite" />
+                <Tag text="Sequelize" />
+                <Tag text="Express.js" />
+                <Tag text="Mocha" />
+                <Tag text="Chai" />
+                <Tag text="Docker" />
+                <Tag text="Passport" />
+                <Tag text="Passport-jwt" />
               </div>
             </div>
-            <div className="project__image">
-              <img src={favoriteMock} alt="Favorite Music" />
+            <div className="project__links">
+            <ExternalLink
+              text="Código fonte"
+              to="https://github.com/jardelgoncalves/app-todo-list"
+              target="_blank"
+              rel="noopener noreferrer"
+            />
             </div>
           </div>
         </Show>
