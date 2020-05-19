@@ -63,6 +63,7 @@ const Select = ({ className, options, placeholder, onChange }) => {
         options={options}
         onChange={onChange}
         className={className}
+        noOptionsMessage={() => 'Nenhuma opção encontrada'}
       />
     </Wrapper>
   );
