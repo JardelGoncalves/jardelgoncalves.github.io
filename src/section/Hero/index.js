@@ -32,11 +32,12 @@ const Hero = ({ id }) => (
           Inovação
         </span>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-        aliquam, purus sit amet luctus venenatis, lectus magna fringilla
-        urna, porttitor rhoncus dolor purus non enim praesent elementum
-        facilisis leo, vel fringilla est ullamcorper eget nulla facilisi
-        etiam dignissim diam quis
+          No último semestre da minha graduação foi onde de fato decidi se
+          tornar desenvolvedor, hoje tabalho em uma empresa criando produtos
+          digitais com pessoas talentosas. Estou silenciosamente confiante,
+          naturalmente curioso e perpetuamente trabalhando para melhorar minhas
+          habilidades e em busca das melhores maneiras para resolver um
+          problema.
         </p>
         <ExternalLink text="Baixar currículo" />
       </Col>
