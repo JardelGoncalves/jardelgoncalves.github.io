@@ -5,19 +5,20 @@ import { CardProject, Wrapper, Show, Slide } from './styles';
 import Tag from '../Tag';
 import { ExternalLink } from '../Button';
 
-import fashionista from '../../assets/images/projects/card/fashionista.png';
-import hubfinance from '../../assets/images/projects/card/hubfinance.png';
-import quisocial from '../../assets/images/projects/card/quisocial.png';
-import tindev from '../../assets/images/projects/card/tindev.png';
-import todo from '../../assets/images/projects/card/todo.png';
+import fashionista from '../../assets/images/projects/card/fashionista.webp';
+import hubfinance from '../../assets/images/projects/card/hubfinance.webp';
+import quisocial from '../../assets/images/projects/card/quisocial.webp';
+import tindev from '../../assets/images/projects/card/tindev.webp';
+import todo from '../../assets/images/projects/card/todo.webp';
 
 
 import fashionistaMock from
-  '../../assets/images/projects/mockup/fashionista.png';
-import hubfinanceMock from '../../assets/images/projects/mockup/hubfinance.png';
-import quisocialMock from '../../assets/images/projects/mockup/quisocial.png';
-import tindevMock from '../../assets/images/projects/mockup/tindev.png';
-import todoMock from '../../assets/images/projects/mockup/todo.png';
+  '../../assets/images/projects/mockup/fashionista.webp';
+import hubfinanceMock from
+  '../../assets/images/projects/mockup/hubfinance.webp';
+import quisocialMock from '../../assets/images/projects/mockup/quisocial.webp';
+import tindevMock from '../../assets/images/projects/mockup/tindev.webp';
+import todoMock from '../../assets/images/projects/mockup/todo.webp';
 
 const ListProject = () => {
   const [index, setIndex] = useState(0);
