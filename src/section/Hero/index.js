@@ -32,8 +32,8 @@ const Hero = ({ id }) => (
           Inovação
         </span>
         <p>
-          No último semestre da minha graduação foi onde de fato decidi se
-          tornar desenvolvedor, hoje tabalho em uma empresa criando produtos
+          No último semestre da minha graduação foi onde de fato decidi me
+          tornar desenvolvedor, hoje trabalho em uma empresa criando produtos
           digitais com pessoas talentosas. Estou silenciosamente confiante,
           naturalmente curioso e perpetuamente trabalhando para melhorar minhas
           habilidades e em busca das melhores maneiras para resolver um
