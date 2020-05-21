@@ -15,8 +15,9 @@ const Timeline = () => (
           Desenvolvedor FullStack - Hubtec Tecnologia &amp; Inovação
         </h3>
         <p>
-          Creative Direction, User Experience, Visual Design, Project
-          Management, Team Leading
+          Empresa que atualmente trabalho com desenvolvimento diferenciado
+          aplicações Web e Mobile, participei e participo de projetos de
+          Fintech, Health Tech e entre outros.
         </p>
       </TimelineElement>
       <TimelineElement
@@ -28,8 +29,11 @@ const Timeline = () => (
           do Ceará - Campus Quixadá
         </h3>
         <p>
-          Creative Direction, User Experience, Visual Design, Project
-          Management, Team Leading
+          O curso de Redes de Computadores da UFC de Quixadá é diferenciado
+          devido a não só focar em disciplinas voltado para infraestrutura mas
+          também ter disciplinas de programção desde o básico até disciplinas
+          voltado para desenvolvimento de sistemas distribuidos e
+          desenvolvimento Web.
         </p>
       </TimelineElement>
     </TimelineWrapper>
