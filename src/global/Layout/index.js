@@ -25,6 +25,10 @@ const Layout = ({ children }) => (
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
+          <meta
+            name="google-site-verification"
+            content="jBVmqPj11HBOz3mFElOh_pjysg3Anv-ON8UwyXTGPys"
+          />
         </Helmet>
         <GlobalStyle />
         <Wrapper>
