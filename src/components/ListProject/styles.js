@@ -95,6 +95,8 @@ export const CardProject = styled.section`
       position: absolute;
       top: 0;
       left: 0;
+      right: 0;
+      text-align: center;
       border-bottom-left-radius: 16px;
       border-bottom-right-radius: 16px;
     }
