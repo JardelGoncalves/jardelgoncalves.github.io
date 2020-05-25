@@ -10,7 +10,7 @@ const ExternalLink = ({ text, to, color, bg, ...rest }) => (
 );
 
 ExternalLink.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   to: PropTypes.string,
   color: PropTypes.string,
   bg: PropTypes.string,
