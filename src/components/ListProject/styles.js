@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   padding: 110px 0;
   padding-bottom: 190px;
-  background-color: #222;
+  background-color: #191919;
   position: relative;
 
   .title {
@@ -142,7 +142,7 @@ export const Slide = styled.div`
 `;
 
 export const Show = styled.div`
-  background-color: #222;
+  background-color: #191919;
   display: none;
   flex-direction: column;
   justify-content: center;
