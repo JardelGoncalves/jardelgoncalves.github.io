@@ -6,8 +6,8 @@ import {
   AiOutlineProject,
   AiOutlineTrophy,
   AiOutlineContacts,
+  AiOutlineBook,
 } from 'react-icons/ai';
-import { FaRegHandshake } from 'react-icons/fa';
 
 
 import { Wrapper } from './styles';
@@ -22,9 +22,9 @@ const TabBottom = () => (
           </Link>
         </li>
         <li>
-          <Link to="#services">
-            <FaRegHandshake />
-            <span>Serviços</span>
+          <Link to="#libraries">
+            <AiOutlineBook />
+            <span>Bibliotecas</span>
           </Link>
         </li>
         <li>
