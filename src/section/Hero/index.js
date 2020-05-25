@@ -1,5 +1,4 @@
 import React from 'react';
-import { Fade } from 'react-reveal';
 
 import { Wrapper, Col } from './styles';
 
@@ -23,34 +22,31 @@ const Hero = ({ id }) => (
         fill="#5C3BFE"
       />
     </svg>
-    <Fade left>
-      <Col className="hero__text">
-        <h2>Olá, meu nome é</h2>
-        <h1>Jardel Gonçalves</h1>
-        <span>
-          Desenvolvedor Full-Stack na Hubtec Tecnologia &amp;
-          Inovação
-        </span>
-        <p>
-          No último semestre da minha graduação foi onde de fato decidi me
-          tornar desenvolvedor, hoje trabalho em uma empresa criando produtos
-          digitais com pessoas talentosas. Estou silenciosamente confiante,
-          naturalmente curioso e perpetuamente trabalhando para melhorar minhas
-          habilidades e em busca das melhores maneiras para resolver um
-          problema.
-        </p>
-        <ExternalLink
-          text="Baixar currículo"
-          to="https://github.com/jardelgoncalves/jardelgoncalves.github.io/raw/master/CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-      </Col>
-      <Col>
-        <Avatar />
-      </Col>
-    </Fade>
-
+    <Col className="hero__text">
+      <h2>Olá, meu nome é</h2>
+      <h1>Jardel Gonçalves</h1>
+      <span>
+        Desenvolvedor Full-Stack na Hubtec Tecnologia &amp;
+        Inovação
+      </span>
+      <p>
+        No último semestre da minha graduação foi onde de fato decidi me
+        tornar desenvolvedor, hoje trabalho em uma empresa criando produtos
+        digitais com pessoas talentosas. Estou silenciosamente confiante,
+        naturalmente curioso e perpetuamente trabalhando para melhorar minhas
+        habilidades e em busca das melhores maneiras para resolver um
+        problema.
+      </p>
+      <ExternalLink
+        text="Baixar currículo"
+        to="https://github.com/jardelgoncalves/jardelgoncalves.github.io/raw/master/CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    </Col>
+    <Col>
+      <Avatar />
+    </Col>
   </Wrapper>
 );
 
