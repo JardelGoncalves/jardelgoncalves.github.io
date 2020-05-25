@@ -1,6 +1,6 @@
 import Hero from './Hero';
 import Skills from './Skills';
-import Services from './Services';
+import Libraries from './Libraries';
 import Projects from './Projects';
 import Timeline from './Timeline';
 import Contact from './Contact';
@@ -8,7 +8,7 @@ import Contact from './Contact';
 export {
   Hero,
   Skills,
-  Services,
+  Libraries,
   Projects,
   Timeline,
   Contact,

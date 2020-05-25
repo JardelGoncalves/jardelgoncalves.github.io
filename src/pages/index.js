@@ -8,7 +8,7 @@ import TabBottom from '../components/TabBottom';
 import {
   Hero,
   Skills,
-  Services,
+  Libraries,
   Projects,
   Timeline,
   Contact,
@@ -22,8 +22,8 @@ const IndexPage = () => (
       <Header />
       <Hero />
       <Skills id="skills" />
-      <Services id="services" />
       <Projects id="projects" />
+      <Libraries id="libraries" />
       <Timeline id="timeline" />
       <Contact id="contact" />
       <TabBottom />
