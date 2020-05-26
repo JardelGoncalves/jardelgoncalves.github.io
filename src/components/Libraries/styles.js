@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 110px 0;
+  padding: 120px 0;
   position: relative;
   background-color: #222;
 
@@ -38,7 +38,7 @@ export const Wrapper = styled.div`
     }
   }
   @media only screen and (max-width: 650px) {
-    padding: 90px 0;
+    padding: 100px 0;
     .card__library:first-child {
       margin-left: 20px;
       font-size: 40px;
