@@ -33,10 +33,11 @@ const Layout = ({ children }) => (
         </Helmet>
         <SEO
           lang="pt-BR"
-          description="Desenvolvedor Full-Stack e Mobile"
+          description="Sou desenvolvedor Full-Stack e Mobile"
           keywords="React, React Native, Node, Node.js, Javascript,
           Desenvolvedor Frontend, Frontend, Desenvolvedor Backend,
-          Backend, MongoDB, PostgreSQL, TypeScript, Gatsby, Next.js"
+          Backend, MongoDB, PostgreSQL, TypeScript, Gatsby, Next.js,
+          Jardel, Jardel Gonçalves"
         />
         <GlobalStyle />
         <Wrapper>

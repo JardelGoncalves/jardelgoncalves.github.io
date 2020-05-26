@@ -11,12 +11,11 @@ const detailsQuery = graphql`
       siteMetadata {
         title
         author,
+        siteUrl,
       }
     }
   }
 `;
-
-const siteURL = 'https://jardelgoncalves.dev';
 
 const SEO = ({
   description,
@@ -42,8 +41,11 @@ const SEO = ({
           { property: 'og:title', content: title },
           { property: 'og:description', content: description },
           { property: 'og:type', content: 'website' },
-          { property: 'og:url', content: siteURL },
-          { property: 'og:image', content: `${siteURL}${ogImage}` },
+          { property: 'og:url', content: data.site.siteMetadata.siteUrl },
+          {
+            property: 'og:image',
+            content: `${data.site.siteMetadata.siteUrl}${ogImage}`,
+          },
           { property: 'og:image:alt', content: description },
           { property: 'og:image:type', content: 'image/png' },
           { property: 'og:image:width', content: '1062' },

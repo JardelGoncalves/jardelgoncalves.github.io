@@ -9,7 +9,7 @@ import broleto from '../../assets/images/library/broleto.webp';
 
 const Libraries = () => (
     <Wrapper>
-      <h1 className="title">Bibliotecas Open Source</h1>
+      <h1 className="title">Bibliotecas</h1>
       <ScrollContainer
         className="container"
         vertical={false}
