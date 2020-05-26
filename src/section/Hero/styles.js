@@ -41,11 +41,11 @@ export const Wrapper = styled.div`
   p {
     width: 700px;
     line-height: 1.7;
-    font-size: 22px;
+    font-size: 18px;
   }
 
   span {
-    font-size: 18px;
+    font-size: 15px;
     color: #5C3BFE;
     margin: 30px 0;
   }

@@ -3,6 +3,7 @@ import React from 'react';
 import { Wrapper, Col } from './styles';
 
 import Avatar from '../../components/Avatar';
+import MouseIcon from '../../components/MouseIcon';
 import { ExternalLink } from '../../components/Button';
 
 const Hero = ({ id }) => (
@@ -47,6 +48,7 @@ const Hero = ({ id }) => (
     <Col>
       <Avatar />
     </Col>
+    <MouseIcon to="#skills" />
   </Wrapper>
 );
 
