@@ -19,7 +19,7 @@ const Skills = ({ id }) => {
     ],
     rigth: [
       { label: 'Express.js', percentage: 80 },
-      { label: 'Nest.js', percentage: 30 },
+      { label: 'Nest.js', percentage: 50 },
       { label: 'Git', percentage: 70 },
       { label: 'GraphQL', percentage: 55 },
       { label: 'MongoDB', percentage: 70 },
