@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Jardel Gonçalves',
+    author: 'Jardel Gonçalves',
+    siteUrl: 'https://jardelgoncalves.dev',
   },
   plugins: [
     {
@@ -27,5 +29,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-sitemap',
   ],
 };
