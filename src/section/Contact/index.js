@@ -11,20 +11,22 @@ import { RaisedButton, ExternalLink } from '../../components/Button';
 
 import { Wrapper, Col } from './styles';
 
+import withLogic from './withLogic';
+
 const options = [
-  { label: '1 página', value: '1' },
-  { label: '2 páginas', value: '2' },
-  { label: '3 páginas', value: '3' },
-  { label: '4 páginas', value: '4' },
-  { label: '5 páginas', value: '5' },
-  { label: '6 páginas', value: '6' },
-  { label: '7 páginas', value: '7' },
-  { label: '8 páginas', value: '8' },
-  { label: '9 páginas', value: '9' },
-  { label: '+10 páginas', value: '+10' },
+  { label: '1 página', value: '1 página' },
+  { label: '2 páginas', value: '2 páginas' },
+  { label: '3 páginas', value: '3 páginas' },
+  { label: '4 páginas', value: '4 páginas' },
+  { label: '5 páginas', value: '5 páginas' },
+  { label: '6 páginas', value: '6 páginas' },
+  { label: '7 páginas', value: '7 páginas' },
+  { label: '8 páginas', value: '8 páginas' },
+  { label: '9 páginas', value: '9 páginas' },
+  { label: '+10 páginas', value: '+10 páginas' },
 ];
 
-const Projects = ({ id }) => (
+const Projects = ({ id, state, errors, loading, onSubmit, onInputChange }) => (
   <Fade right>
     <Wrapper id={id}>
       <Col>
@@ -32,20 +34,37 @@ const Projects = ({ id }) => (
       TEM UMA IDEIA E DESEJA TIRAR DO PAPEL? ENTRE EM CONTATO
       </h1>
 
-      <form>
-        <Input placeholder="Seu nome" className="input-data" />
-        <Input placeholder="Email para contato" className="input-data" />
+      <form onSubmit={onSubmit}>
+        <Input
+          placeholder="Seu nome"
+          className="input-data"
+          value={state.name}
+          onChange={(e) => onInputChange('name', e.target.value)}
+          messageError={errors.name}
+        />
+        <Input
+          placeholder="Email para contato"
+          className="input-data"
+          value={state.email}
+          onChange={(e) => onInputChange('email', e.target.value)}
+          messageError={errors.email}
+        />
         <Select
           placeholder="Quantidade de páginas"
           className="input-data"
           options={options}
+          onChange={(v) => onInputChange('pages', v)}
+          messageError={errors.pages}
         />
         <Textarea
           placeholder="Breve descrição do projeto"
           className="input-data"
+          value={state.description}
+          onChange={(e) => onInputChange('description', e.target.value)}
+          messageError={errors.description}
         />
         <div className="container__button">
-          <RaisedButton text="Enviar" type="submit" />
+          <RaisedButton loading={loading} text="Enviar" type="submit" />
         </div>
       </form>
       </Col>
@@ -97,4 +116,4 @@ const Projects = ({ id }) => (
   </Fade>
 );
 
-export default Projects;
+export default withLogic(Projects);

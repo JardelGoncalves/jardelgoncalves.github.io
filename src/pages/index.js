@@ -1,6 +1,7 @@
 import React from 'react';
 import config from 'react-reveal/globals';
 
+import Notifications from 'react-notify-toast';
 import Layout from '../global/Layout';
 import SEO from '../global/SEO';
 import Header from '../components/Header';
@@ -28,6 +29,7 @@ const IndexPage = () => (
         Backend, MongoDB, PostgreSQL, TypeScript, Gatsby, Next.js,
         Jardel, Jardel Gonçalves"
       />
+      <Notifications />
       <Header />
       <Hero />
       <Skills id="skills" />
