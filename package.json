@@ -26,6 +26,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "gatsby": "^2.15.6",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-manifest": "^2.2.14",
@@ -38,17 +39,20 @@
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-sharp": "^2.2.13",
     "prop-types": "^15.7.2",
+    "qs": "^6.9.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.10.0",
     "react-indiana-drag-scroll": "^1.6.1",
+    "react-notify-toast": "^0.5.1",
     "react-reveal": "^1.2.2",
     "react-select": "^3.1.0",
     "react-vertical-timeline-component": "^2.6.2",
     "styled-components": "^4.3.2",
-    "styled-reset-advanced": "^1.0.1"
+    "styled-reset-advanced": "^1.0.1",
+    "validator": "^13.0.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.11",
