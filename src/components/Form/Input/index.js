@@ -2,8 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Wrapper } from './styles';
+import MessageError from '../MessageError';
 
-const Input = ({ className, type, placeholder, value, onChange }) => (
+const Input = ({
+  className,
+  type,
+  messageError,
+  placeholder,
+  value,
+  onChange,
+}) => (
   <Wrapper className={className}>
     <input
       type={type}
@@ -11,6 +19,7 @@ const Input = ({ className, type, placeholder, value, onChange }) => (
       placeholder={placeholder}
       onChange={onChange}
     />
+    {messageError && <MessageError text={messageError} />}
   </Wrapper>
 );
 

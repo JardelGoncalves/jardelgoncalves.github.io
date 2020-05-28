@@ -1,11 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FaCircleNotch } from 'react-icons/fa';
 
 import { Wrapper } from './styles';
 
-const RaisedButton = ({ text, type, onClick, color, bg }) => (
-  <Wrapper type={type} color={color} bg={bg} onClick={onClick}>
+const RaisedButton = ({ text, type, loading, onClick, color, bg }) => (
+  <Wrapper
+    type={type}
+    color={color}
+    bg={bg}
+    onClick={onClick}
+    disabled={loading}
+  >
     {text}
+    {loading && (<FaCircleNotch />)}
   </Wrapper>
 );
 

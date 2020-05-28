@@ -2,8 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Wrapper } from './styles';
+import MessageError from '../MessageError';
 
-const Textarea = ({ className, value, placeholder, rows, onChange }) => (
+const Textarea = ({
+  className,
+  value,
+  placeholder,
+  rows,
+  messageError,
+  onChange,
+}) => (
   <Wrapper>
     <textarea
       className={className}
@@ -12,6 +20,7 @@ const Textarea = ({ className, value, placeholder, rows, onChange }) => (
       value={value}
       onChange={onChange}
     />
+    {messageError && <MessageError text={messageError} />}
   </Wrapper>
 );
 

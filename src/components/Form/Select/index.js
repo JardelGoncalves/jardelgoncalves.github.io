@@ -3,8 +3,15 @@ import ReactSelect from 'react-select';
 import PropTypes from 'prop-types';
 
 import { Wrapper } from './styles';
+import MessageError from '../MessageError';
 
-const Select = ({ className, options, placeholder, onChange }) => {
+const Select = ({
+  className,
+  options,
+  placeholder,
+  messageError,
+  onChange,
+}) => {
   const selectStyle = {
     control: (styles) => ({
       ...styles,
@@ -65,6 +72,7 @@ const Select = ({ className, options, placeholder, onChange }) => {
         className={className}
         noOptionsMessage={() => 'Nenhuma opção encontrada'}
       />
+      {messageError && <MessageError text={messageError} />}
     </Wrapper>
   );
 };
