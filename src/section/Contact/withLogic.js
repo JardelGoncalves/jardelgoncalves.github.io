@@ -42,6 +42,10 @@ const withLogic = (Component) => ({ id }) => {
 
     if (validations.hasError()) {
       setErrors((old) => ({
+        name: '',
+        email: '',
+        pages: '',
+        description: '',
         ...old,
         ...validations.error,
       }));
@@ -57,6 +61,20 @@ const withLogic = (Component) => ({ id }) => {
         description,
       }), { mode: 'no-cors' });
 
+      setState({
+        name: '',
+        email: '',
+        pages: null,
+        description: '',
+      });
+
+      setErrors({
+        name: '',
+        email: '',
+        pages: '',
+        description: '',
+      });
+
       notify.show(
         'Sua mensagem foi enviada. Em breve entrarei em contato! 😎',
         'success'
@@ -70,6 +88,10 @@ const withLogic = (Component) => ({ id }) => {
         && response.data.message
       ) {
         setErrors((old) => ({
+          name: '',
+          email: '',
+          pages: '',
+          description: '',
           ...old,
           ...response.data.message,
         }));
