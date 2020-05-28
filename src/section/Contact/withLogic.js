@@ -75,6 +75,7 @@ const withLogic = (Component) => ({ id }) => {
         description: '',
       });
 
+      notify.hide();
       notify.show(
         'Sua mensagem foi enviada. Em breve entrarei em contato! 😎',
         'success'
@@ -98,7 +99,8 @@ const withLogic = (Component) => ({ id }) => {
       } else {
         notify.show(
           'Todo mundo falha e dessa vez foi o servidor. Tente novamente! 😓',
-          'error'
+          'error',
+          3000,
         );
       }
     } finally {
