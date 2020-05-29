@@ -68,7 +68,7 @@ export const Wrapper = styled.div`
   }
   @media only screen and (max-width: 1050px) {
     h1.title {
-      font-size: 40px;
+      font-size: 32px;
     }
 
     a {
@@ -97,6 +97,19 @@ export const Wrapper = styled.div`
       li {
         a {
           font-size: 17px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    ul {
+      li {
+        a {
+          font-size: 14px;
         }
       }
     }

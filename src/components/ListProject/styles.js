@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
 
     .title {
       margin-left: 10px;
-      font-size: 40px;
+      font-size: 36px;
       margin-bottom: 40px;
     }
 
@@ -221,7 +221,11 @@ export const Show = styled.div`
   }
 
   @media only screen and (max-width: 1000px) {
-
+    .project__content {
+        h1 {
+          font-size: 30px;
+        }
+    }
     div.project__image {
       opacity: 0.7;
       top: 120px;
@@ -273,16 +277,16 @@ export const Show = styled.div`
     padding-left: 20px;
     padding-right: 20px;
 
-    h1 {
-      font-size: 28px;
-    }
-
-    p {
-      font-size: 16px;
-    }
-
     .project__content {
       max-width: 100%;
+
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
     }
 
     div.project__image {

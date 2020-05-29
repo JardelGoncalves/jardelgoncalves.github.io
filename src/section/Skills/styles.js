@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
 
   @media only screen and (max-width: 650px) {
     h1.title {
-      font-size: 40px;
+      font-size: 36px;
     }
   }
 

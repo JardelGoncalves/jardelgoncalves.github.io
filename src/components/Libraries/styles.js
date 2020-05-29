@@ -35,6 +35,7 @@ export const Wrapper = styled.div`
     }
    .title {
       margin-left: 40px;
+      font-size: 36px;
     }
   }
   @media only screen and (max-width: 650px) {
