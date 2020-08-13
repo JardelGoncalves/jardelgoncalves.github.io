@@ -22,13 +22,7 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
     'react/jsx-props-no-spreading': 'off',
-    overrides: [
-      {
-        files: ['./**/*.stories.tsx'],
-        rules: {
-          'import/no-extraneous-dependencies': 'off',
-        },
-      },
-    ],
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
   },
 };
