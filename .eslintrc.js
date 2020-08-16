@@ -33,5 +33,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/extensions': 'off',
     'react/require-default-props': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'react/prop-types': 'off',
   },
 };
