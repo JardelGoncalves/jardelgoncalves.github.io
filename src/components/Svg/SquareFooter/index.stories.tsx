@@ -1,5 +1,6 @@
 import React from 'react';
-import { SquareFooter } from '.'
+import { SquareFooter } from '.';
+
 export default {
   title: 'Svg/SquareFooter',
   component: SquareFooter,

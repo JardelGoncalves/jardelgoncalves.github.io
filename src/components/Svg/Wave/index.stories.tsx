@@ -1,5 +1,6 @@
 import React from 'react';
-import { Wave } from '.'
+import { Wave } from '.';
+
 export default {
   title: 'Svg/Wave',
   component: Wave,
