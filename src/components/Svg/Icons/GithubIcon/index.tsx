@@ -9,6 +9,7 @@ export const GithubIcon = () => (
     viewBox="0 0 22 21"
   >
     <path
+      stroke="#5BCA5D"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"

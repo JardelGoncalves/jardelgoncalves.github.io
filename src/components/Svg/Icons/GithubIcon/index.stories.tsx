@@ -2,7 +2,7 @@ import React from 'react';
 import { GithubIcon } from '.';
 
 export default {
-  title: 'Svg/GithubIcon',
+  title: 'Svg/Icons/GithubIcon',
   component: GithubIcon,
 };
 
