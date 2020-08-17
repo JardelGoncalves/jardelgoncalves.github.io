@@ -30,6 +30,7 @@ export const Wrap = styled.a<IIconButtonProps>`
   font-size: 18px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 
   svg, .icon {
     transition: all 0.2s ease-in-out;
