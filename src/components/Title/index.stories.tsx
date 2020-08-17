@@ -1,6 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, number } from '@storybook/addon-knobs';
+import {
+  withKnobs, text, number, boolean,
+} from '@storybook/addon-knobs';
 
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme';
@@ -17,5 +19,6 @@ storiesOf('Title', module)
       text={text('text', 'Project')}
       size={number('size', 60)}
       color={text('color', '#5BCA5D')}
+      disableSvg={boolean('disableSvg', true)}
     />
   ));

@@ -21,5 +21,6 @@ export const Wrap = styled.h1<IProps>`
   svg {
     margin-left: 10px;
     color: ${({ theme, color }: IProps) => color || theme.colors.primary};
+    fill: ${({ theme, color }: IProps) => color || theme.colors.primary};
   }
 `;
