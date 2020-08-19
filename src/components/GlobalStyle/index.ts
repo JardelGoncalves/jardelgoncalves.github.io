@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   h6,
   span,
   p,
+  label,
   body,
   input,
   button {
