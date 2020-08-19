@@ -9,6 +9,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "ityped": "^1.0.3",
     "next": "latest",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
