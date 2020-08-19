@@ -10,11 +10,13 @@ interface ILinkProps {
   border?: 'ALL' | 'BOTTOM' | 'TOP';
   size?: number;
   text?: string;
-  path: string,
-  isExternal: boolean;
+  path?: string,
+  isExternal?: boolean | false;
+  outline?: boolean | false;
+  color?: string;
 }
 export const LinkButton = ({
-  hoverColor, borderColor, maxWidth, border, size, text, path, isExternal,
+  hoverColor, borderColor, maxWidth, border, size, text, path, isExternal, outline, color,
 }: ILinkProps) => (
   isExternal
     ? (
@@ -27,18 +29,22 @@ export const LinkButton = ({
         maxWidth={maxWidth}
         border={border}
         size={size}
+        outline={outline}
+        color={color}
       >
         {text}
       </Wrap>
     )
     : (
-      <Link href={path}>
+      <Link href={path || '#'}>
         <Wrap
           hoverColor={hoverColor}
           borderColor={borderColor}
           maxWidth={maxWidth}
           border={border}
           size={size}
+          outline={outline}
+          color={color}
         >
           {text}
         </Wrap>

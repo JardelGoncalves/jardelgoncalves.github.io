@@ -9,10 +9,13 @@ interface ILinkProps {
   border?: 'ALL' | 'BOTTOM' | 'TOP';
   size?: number;
   theme?: any;
+  outline?: boolean | false;
+  color?: string;
+
 }
 
 export const Wrap = styled.a<ILinkProps>`
-  background-color: transparent;
+  background-color: ${({ outline, theme, borderColor }) => (!outline ? 'transparent' : borderColor || theme.colors.primary)};
   height: 48px;
   max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : '250px')};
   width: 100%;
@@ -20,7 +23,8 @@ export const Wrap = styled.a<ILinkProps>`
   align-items: center;
   justify-content: center;
   font-size: ${({ theme, size }) => (size ? `${size}px` : theme.fonts.desktop.p)};
-  color: ${({ theme, borderColor }) => borderColor || theme.colors.primary};
+  font-weight: bold;
+  color: ${({ theme, borderColor, color }) => (color || borderColor || theme.colors.primary)};
   border: none;
   text-decoration: none;
   ${({
