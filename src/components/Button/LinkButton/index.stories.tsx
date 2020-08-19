@@ -10,7 +10,7 @@ import { GlobalStyle } from '../../GlobalStyle';
 
 import { LinkButton } from '.';
 
-storiesOf('Link Button', module)
+storiesOf('Button/Link Button', module)
   .addDecorator(withKnobs)
   .addDecorator((storyFn) => (
     <>

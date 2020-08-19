@@ -3,15 +3,15 @@ import { storiesOf } from '@storybook/react';
 import {
   withKnobs, text, boolean,
 } from '@storybook/addon-knobs';
+import { FiGithub } from 'react-icons/fi';
 
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../../theme';
 import { GlobalStyle } from '../../GlobalStyle';
 
 import { IconButton } from '.';
-import { GithubIcon } from '../../Svg';
 
-storiesOf('Icon Button', module)
+storiesOf('Button/Icon Button', module)
   .addDecorator(withKnobs)
   .addDecorator((storyFn) => (
     <>
@@ -21,7 +21,7 @@ storiesOf('Icon Button', module)
   ))
   .add('default', () => (
     <IconButton
-      icon={<GithubIcon />}
+      icon={<FiGithub />}
       path={text('path', 'https://google.com')}
       color={text('color', '#ffffff')}
       strokeHoverColor={text('strokeHoverColor', '#ffffff')}

@@ -8,7 +8,7 @@ import { GlobalStyle } from '../../GlobalStyle';
 
 import { RaisedButton } from '.';
 
-storiesOf('Raised Button', module)
+storiesOf('Button/Raised Button', module)
   .addDecorator(withKnobs)
   .addDecorator((storyFn) => (
     <>
