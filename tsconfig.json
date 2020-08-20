@@ -31,10 +31,19 @@
     "isolatedModules": true
   },
   "paths": {
-    "@src/*": ["./src/*"],
-    "*": ["*"]
+    "@src/*": [
+      "./src/*"
+    ],
+    "*": [
+      "*"
+    ]
   },
   "exclude": [
     "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }
