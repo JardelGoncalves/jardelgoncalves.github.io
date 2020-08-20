@@ -10,7 +10,7 @@ interface IIconButtonProps {
   strokeHoverColor?: string;
   path: string,
 }
-export const IconButton = ({
+const IconButton = ({
   color, bg, outline, icon, path, strokeHoverColor,
 }: IIconButtonProps) => (
   <Wrap
@@ -25,3 +25,5 @@ export const IconButton = ({
     {icon}
   </Wrap>
 );
+
+export { IconButton };

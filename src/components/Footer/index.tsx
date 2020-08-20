@@ -28,7 +28,7 @@ const config = {
   ],
 };
 
-export const Footer: React.FC = () => (
+const Footer: React.FC = () => (
   <Wrap>
     <Row>
       <div className="column">
@@ -70,3 +70,5 @@ export const Footer: React.FC = () => (
     <Wave />
   </Wrap>
 );
+
+export { Footer };

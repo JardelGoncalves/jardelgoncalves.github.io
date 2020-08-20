@@ -15,7 +15,7 @@ interface ILinkProps {
   outline?: boolean | false;
   color?: string;
 }
-export const LinkButton = ({
+const LinkButton = ({
   hoverColor, borderColor, maxWidth, border, size, text, path, isExternal, outline, color,
 }: ILinkProps) => (
   isExternal
@@ -51,3 +51,5 @@ export const LinkButton = ({
       </Link>
     )
 );
+
+export { LinkButton };

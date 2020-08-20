@@ -4,7 +4,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import { Wrapper, TimelineWrapper, TimelineElement } from './styles';
 
-export const Timeline = () => (
+const Timeline = () => (
   <Wrapper>
     <TimelineWrapper className="vertical-timeline-custom-line active">
       <TimelineElement
@@ -68,3 +68,5 @@ export const Timeline = () => (
     </TimelineWrapper>
   </Wrapper>
 );
+
+export { Timeline };

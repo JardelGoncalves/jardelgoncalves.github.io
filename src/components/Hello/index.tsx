@@ -4,7 +4,7 @@ import { init } from 'ityped';
 import { Wrap } from './styles';
 import { Rain } from '../Svg';
 
-export const Hello = () => {
+const Hello = () => {
   useEffect(() => {
     const myElement = document.querySelector('#my-name');
     init(myElement, {
@@ -16,7 +16,7 @@ export const Hello = () => {
   }, []);
 
   return (
-    <Wrap>
+    <Wrap className="hello">
       <Rain />
       <h1>
         Hello
@@ -31,3 +31,5 @@ export const Hello = () => {
     </Wrap>
   );
 };
+
+export { Hello };

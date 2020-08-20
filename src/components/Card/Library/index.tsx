@@ -15,7 +15,7 @@ interface ILibrariesCard {
   data: ILibraryItem[];
 }
 
-export const LibrariesCard = ({ data }: ILibrariesCard) => (
+const LibrariesCard = ({ data }: ILibrariesCard) => (
   <Wrap>
     <ScrollContainer
       className="container"
@@ -43,3 +43,5 @@ export const LibrariesCard = ({ data }: ILibrariesCard) => (
     </ScrollContainer>
   </Wrap>
 );
+
+export { LibrariesCard };

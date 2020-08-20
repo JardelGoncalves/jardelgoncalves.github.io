@@ -9,7 +9,7 @@ interface IProgressBar {
   bg?: string ;
 }
 
-export const ProgressBar = ({
+const ProgressBar = ({
   percentage, label, color, bg,
 }: IProgressBar) => (
   <Wrapper color={color} bg={bg}>
@@ -23,3 +23,5 @@ export const ProgressBar = ({
     </Bar>
   </Wrapper>
 );
+
+export { ProgressBar };

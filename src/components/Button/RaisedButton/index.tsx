@@ -9,7 +9,7 @@ interface IRaisedProp {
   outline?: boolean | false;
 }
 
-export const RaisedButton = ({
+const RaisedButton = ({
   text,
   bg,
   color,
@@ -19,3 +19,5 @@ export const RaisedButton = ({
     {text}
   </Wrap>
 );
+
+export { RaisedButton };

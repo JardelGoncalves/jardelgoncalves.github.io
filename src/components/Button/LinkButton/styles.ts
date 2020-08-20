@@ -15,7 +15,7 @@ interface ILinkProps {
 }
 
 export const Wrap = styled.a<ILinkProps>`
-  background-color: ${({ outline, theme, borderColor }) => (!outline ? 'transparent' : borderColor || theme.colors.primary)};
+  background-color: ${({ outline, theme, borderColor }) => (outline ? 'transparent' : borderColor || theme.colors.primary)};
   height: 48px;
   max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : '250px')};
   width: 100%;

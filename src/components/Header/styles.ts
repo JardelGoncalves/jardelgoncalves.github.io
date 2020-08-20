@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Headroom from 'react-headroom';
 
 export const Wrapper = styled(Headroom)`
+  z-index: 10000;
   .headroom--pinned {
     background: ${({ theme }) => theme.colors.primary};
     -webkit-box-shadow: 0px 23px 28px -30px rgba(0,0,0,0.52);

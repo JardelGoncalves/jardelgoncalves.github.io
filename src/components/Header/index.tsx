@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Wrapper } from './styles';
 import { Logo } from '../Svg';
 
-export const Header = () => (
+const Header = () => (
   <Wrapper>
     <header>
       <Link href="#about-me">
@@ -45,3 +45,5 @@ export const Header = () => (
     </header>
   </Wrapper>
 );
+
+export { Header };

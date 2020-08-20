@@ -6,6 +6,8 @@ type IProp = {
   url: string;
 }
 
-export const Avatar = ({ url }: IProp) => (
+const Avatar = ({ url }: IProp) => (
   <Wrap alt="Avatar" src={url} />
 );
+
+export { Avatar };

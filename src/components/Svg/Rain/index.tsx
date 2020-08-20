@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Rain = () => (
+const Rain = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1110"
@@ -306,3 +306,5 @@ export const Rain = () => (
     </defs>
   </svg>
 );
+
+export { Rain };

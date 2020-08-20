@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SquareFooter: React.FC = () => (
+const SquareFooter: React.FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1060"
@@ -38,3 +38,5 @@ export const SquareFooter: React.FC = () => (
     </defs>
   </svg>
 );
+
+export { SquareFooter };
