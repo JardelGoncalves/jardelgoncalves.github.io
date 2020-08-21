@@ -11,6 +11,7 @@
   "dependencies": {
     "ityped": "^1.0.3",
     "next": "latest",
+    "next-pwa": "^3.1.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-headroom": "^3.0.0",
