@@ -11,12 +11,14 @@
   "dependencies": {
     "ityped": "^1.0.3",
     "next": "latest",
+    "next-i18next": "^6.0.2",
     "next-pwa": "^3.1.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-headroom": "^3.0.0",
     "react-icons": "^3.10.0",
     "react-indiana-drag-scroll": "^1.6.1",
+    "react-select": "^3.1.0",
     "react-vertical-timeline-component": "^3.0.2",
     "styled-components": "^5.0.0"
   },
