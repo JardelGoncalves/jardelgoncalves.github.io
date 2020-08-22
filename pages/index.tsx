@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Footer } from '../src/components';
-import { Hero, About } from '../src/containers';
+import { Hero, About, Libraries } from '../src/containers';
 import i18n from '../i18n';
 
 function Home({ t }) {
@@ -9,6 +9,7 @@ function Home({ t }) {
       <Layout>
         <Hero t={t} />
         <About t={t} />
+        <Libraries t={t} />
       </Layout>
       <Footer t={t} />
     </>
