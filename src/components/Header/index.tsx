@@ -28,16 +28,16 @@ const Header = ({ t }:IProps) => (
           </Link>
         </li>
         <li>
-          <Link href="#skills">
+          <Link href="#projects">
             <a>
-              {t('skills')}
+              {t('projects')}
             </a>
           </Link>
         </li>
         <li>
-          <Link href="#projects">
+          <Link href="#skills">
             <a>
-              {t('projects')}
+              {t('skills')}
             </a>
           </Link>
         </li>
