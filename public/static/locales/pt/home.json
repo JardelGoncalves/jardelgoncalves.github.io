@@ -1,6 +1,7 @@
 {
   "about-me": "Sobre mim",
   "projects": "Projetos",
+  "libraries": "Bibliotecas",
   "skills": "Habilidades",
   "timeline": "Linha do tempo",
   "blog": "Blog",
@@ -11,5 +12,7 @@
   "about-me-description-ph": "Não escrevo só código, eu soluciono problema.",
   "btn-download-cv": "Baixar currículo",
   "footer-contacts": "Contatos",
-  "footer-follow-me": "Siga-me"
+  "footer-follow-me": "Siga-me",
+  "libraries-text-button": "Ver Documentação",
+  "libraries-broleto-desc": "Uma biblioteca que suporta validação e obtenção dos dados de boletos bancários ou arrecadação seja pela linha digitável ou código de barras com ou sem formatação."
 }

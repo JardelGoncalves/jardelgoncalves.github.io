@@ -3,6 +3,7 @@
   "projects": "Projects",
   "skills": "Skills",
   "timeline": "Timeline",
+  "libraries": "Libraries",
   "blog": "Blog",
   "hello": "Hello",
   "apresentation": "My name is",
@@ -11,5 +12,7 @@
   "about-me-description-ph": "I don't just write code, I solve a problem.",
   "btn-download-cv": "Download CV",
   "footer-contacts": "Contacts",
-  "footer-follow-me": "Follow me"
+  "footer-follow-me": "Follow me",
+  "libraries-text-button": "View Documentation",
+  "libraries-broleto-desc": "In Brazil, there is a payment method for online purchases called Boleto Bancário or bank slip, this library can be used to validate and obtain data from this method through numbering."
 }
