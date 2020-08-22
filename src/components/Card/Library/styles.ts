@@ -24,7 +24,7 @@ export const Box = styled.div`
   padding: 16px;
   padding-top: 50px;
   position: relative;
-  margin-left: 50px;
+  margin-left: 70px;
   border-radius: 8px;
 
   h5 {

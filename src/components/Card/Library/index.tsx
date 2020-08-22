@@ -13,9 +13,10 @@ interface ILibraryItem {
 
 interface ILibrariesCard {
   data: ILibraryItem[];
+  textButton?: string;
 }
 
-const LibrariesCard = ({ data }: ILibrariesCard) => (
+const LibrariesCard = ({ data, textButton }: ILibrariesCard) => (
   <Wrap>
     <ScrollContainer
       className="container"
@@ -23,7 +24,7 @@ const LibrariesCard = ({ data }: ILibrariesCard) => (
       horizontal
     >
       {data.map((item:ILibraryItem) => (
-        <Box>
+        <Box key={item.name}>
           <LogoWrapper>
             <img src={item.logo} alt={item.name} />
           </LogoWrapper>
@@ -32,11 +33,13 @@ const LibrariesCard = ({ data }: ILibrariesCard) => (
             {item.description}
           </p>
           <LinkButton
-            text="View doc"
+            text={textButton}
             path={item.path}
             border="ALL"
-            color="#fff"
+            hoverColor="#fff"
             outline
+            isExternal
+            size={17}
           />
         </Box>
       ))}
