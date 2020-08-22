@@ -20,7 +20,7 @@ storiesOf('Header', module)
   ))
   .add('default', () => (
     <div style={{ height: 1000, background: '#2c2c2c' }}>
-      <Header />
+      <Header t={(p) => p} />
 
     </div>
   ));

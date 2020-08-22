@@ -10,5 +10,5 @@ storiesOf('Footer', module)
     <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
   ))
   .add('default', () => (
-    <Footer />
+    <Footer t={(p) => p} />
   ));

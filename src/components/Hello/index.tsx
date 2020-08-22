@@ -4,7 +4,10 @@ import { init } from 'ityped';
 import { Wrap } from './styles';
 import { Rain } from '../Svg';
 
-const Hello = ({ t }) => {
+interface IProps {
+  t: (text:string) => string;
+}
+const Hello = ({ t }:IProps) => {
   useEffect(() => {
     const myElement = document.querySelector('#my-name');
     init(myElement, {

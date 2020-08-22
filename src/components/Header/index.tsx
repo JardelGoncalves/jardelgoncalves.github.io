@@ -7,7 +7,11 @@ import { Select } from '../Select';
 
 import i18n from '../../../i18n';
 
-const Header = ({ t }) => (
+interface IProps {
+  t: (text:string) => string
+}
+
+const Header = ({ t }:IProps) => (
   <Wrapper>
     <header>
       <Link href="/">

@@ -28,7 +28,11 @@ const config = {
   ],
 };
 
-const Footer = ({ t }) => (
+interface IProps {
+  t: (text:string) => string
+}
+
+const Footer = ({ t }:IProps) => (
   <Wrap>
     <Row>
       <div className="column">

@@ -20,6 +20,6 @@ storiesOf('Hello', module)
   ))
   .add('default', () => (
     <div style={{ background: '#2c2c2c' }}>
-      <Hello />
+      <Hello t={(p) => p} />
     </div>
   ));
