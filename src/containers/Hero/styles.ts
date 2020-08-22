@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 80px;
   display: flex;
   flex-direction: column;
   align-items: center;

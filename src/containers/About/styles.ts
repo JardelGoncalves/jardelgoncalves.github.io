@@ -4,11 +4,12 @@ const common = css`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
 `;
 
 export const Wrap = styled.div`
   ${common};
+  padding: 0 80px;
   padding-top: 50px;
   padding-bottom: 80px;
 
