@@ -37,8 +37,10 @@ export const Wrapper = styled(Headroom)`
       list-style: none;
       margin: 0;
       padding: 0;
+      align-items: center;
       li {
         margin: 0 20px;
+        padding: 0;
         a {
           text-decoration: none;
           font-size: 16px;
@@ -53,5 +55,19 @@ export const Wrapper = styled(Headroom)`
         }
       }
     }
+  }
+`;
+
+export const Lang = styled.span`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    padding: 0;
+    margin: 0;
+    width: 25px;
+    height: auto;
   }
 `;

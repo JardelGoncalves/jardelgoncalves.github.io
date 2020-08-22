@@ -14,7 +14,7 @@ export const Wrap = styled.h1<IProps>`
   flex-direction: row;
   align-items: center;
   font-size: ${({ theme, size }) => (size ? `${size}px` : theme.fonts.desktop.h1)};
-  color: ${({ theme, color }) => color || theme.colors.primary};
+  color: ${({ theme, color }) => color || theme.colors.text};
   font-weight: 900;
   font-family: 'Inter', sans-serif;
 

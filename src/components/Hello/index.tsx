@@ -4,7 +4,7 @@ import { init } from 'ityped';
 import { Wrap } from './styles';
 import { Rain } from '../Svg';
 
-const Hello = () => {
+const Hello = ({ t }) => {
   useEffect(() => {
     const myElement = document.querySelector('#my-name');
     init(myElement, {
@@ -19,15 +19,15 @@ const Hello = () => {
     <Wrap className="hello">
       <Rain />
       <h1>
-        Hello
+        {t('hello')}
         <span className="text-primary">,</span>
       </h1>
       <h2>
-        My name is
+        {t('apresentation')}
         {' '}
         <span className="text-primary" id="my-name" />
       </h2>
-      <span className="office">I&apos;m a Full Stack Developer</span>
+      <span className="office">{t('office')}</span>
     </Wrap>
   );
 };

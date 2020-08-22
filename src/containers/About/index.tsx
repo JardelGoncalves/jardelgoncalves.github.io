@@ -10,21 +10,18 @@ import {
   LinkButton,
 } from '../../components';
 
-const About = () => (
-  <Wrap>
+const About = ({ t }) => (
+  <Wrap id="about-me">
     <div className="about__content">
-      <Title text="Sobre mim" size={60} disableSvg={false} />
+      <Title text={t('about-me')} size={60} disableSvg={false} />
       <p>
-        Sempre gostei de desafios e entrar na área de T.I foi a decisão certa.
-        Desde o inicio da minha carreira como desenvolvedor sempre busquei aperfeiçoar
-        minhas qualidades e melhorar defeitos e em meio a essas experiências encontrei
-        pessoas talentosas que me ajudaram não só a buscar a melhor solução, mas uma
-        solução peformártica para o problema e desde então sou apaixonado pelo que faço.
-        <strong className="about__content--bold"> Não escrevo só código, eu soluciono problema.</strong>
+        {t('about-me-description')}
+        {' '}
+        <strong className="about__content--bold">{t('about-me-description-ph')}</strong>
       </p>
       <div className="about__content__footer">
         <LinkButton
-          text="Baixar currículo"
+          text={t('btn-download-cv')}
           path="#"
           isExternal
           border="ALL"

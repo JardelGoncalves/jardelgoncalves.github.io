@@ -28,11 +28,11 @@ const config = {
   ],
 };
 
-const Footer: React.FC = () => (
+const Footer = ({ t }) => (
   <Wrap>
     <Row>
       <div className="column">
-        <Title disableSvg={false} size={60} color="#ffffff" text="Contatos" />
+        <Title disableSvg={false} size={55} color="#ffffff" text={t('footer-contacts')} />
         <ListItems>
           {config.contacts.map((c:any) => (
             <li key={c.link}>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => (
         </ListItems>
       </div>
       <div className="column">
-        <Title disableSvg={false} size={60} color="#ffffff" text="Siga-me" />
+        <Title disableSvg={false} size={55} color="#ffffff" text={t('footer-follow-me')} />
         <ListItems row>
           {config.follow.map((f:any) => (
             <li key={f.link}>

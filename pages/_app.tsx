@@ -1,10 +1,12 @@
 import React from 'react';
 import App from 'next/app';
 import { ThemeProvider } from 'styled-components';
+
 import { theme } from '../src/theme';
 import { GlobalStyle, Head } from '../src/components';
+import i18n from '../i18n';
 
-export default class MyApp extends App {
+class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
@@ -16,3 +18,5 @@ export default class MyApp extends App {
     );
   }
 }
+
+export default i18n.appWithTranslation(MyApp);
