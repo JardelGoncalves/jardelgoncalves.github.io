@@ -18,5 +18,5 @@ storiesOf('Timeline', module)
     </>
   ))
   .add('default', () => (
-    <Timeline />
+    <Timeline t={(s) => s} />
   ));
