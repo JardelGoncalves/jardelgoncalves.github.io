@@ -12,7 +12,7 @@ interface IProgressBar {
 const ProgressBar = ({
   percentage, label, color, bg,
 }: IProgressBar) => (
-  <Wrapper color={color} bg={bg}>
+  <Wrapper color={color} bg={bg} className="progress-bar">
     <span className="label">{label}</span>
     <Bar percentage={percentage} color={color}>
       <div>
