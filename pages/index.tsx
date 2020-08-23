@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Footer } from '../src/components';
 import {
-  Hero, About, Libraries, Skills,
+  Hero, About, Libraries, Skills, Timeline,
 } from '../src/containers';
 import i18n from '../i18n';
 
@@ -13,6 +13,7 @@ function Home({ t }) {
         <About t={t} />
         <Libraries t={t} />
         <Skills t={t} />
+        <Timeline t={t} />
       </Layout>
       <Footer t={t} />
     </>

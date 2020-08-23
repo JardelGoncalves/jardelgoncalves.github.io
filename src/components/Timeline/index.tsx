@@ -1,6 +1,5 @@
 import React from 'react';
 import { MdWork, MdSchool } from 'react-icons/md';
-import 'react-vertical-timeline-component/style.min.css';
 
 import { Wrapper, TimelineWrapper, TimelineElement } from './styles';
 

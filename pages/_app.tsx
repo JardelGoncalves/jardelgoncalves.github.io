@@ -1,6 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import { ThemeProvider } from 'styled-components';
+import 'react-vertical-timeline-component/style.min.css';
 
 import { theme } from '../src/theme';
 import { GlobalStyle, Head } from '../src/components';

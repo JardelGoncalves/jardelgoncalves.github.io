@@ -11,3 +11,4 @@ export * from './Select';
 export * from './Footer';
 export * from './Card';
 export * from './ProgressBar';
+export * from './Timeline';

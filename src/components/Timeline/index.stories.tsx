@@ -5,6 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme';
 import { GlobalStyle } from '../GlobalStyle';
+import 'react-vertical-timeline-component/style.min.css';
 
 import { Timeline } from '.';
 
