@@ -14,6 +14,13 @@ export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
 
+  .row,
+  .row .column, 
+  .row .column .progress-bar .progress-bar__bar,
+  h1 {
+    transition: all 0.2s ease-in-out;
+  }
+
   .row {
     ${common};
     align-items: flex-start;
@@ -25,6 +32,41 @@ export const Wrap = styled.div`
       .progress-bar {
         padding: 12px 0;
       }
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    padding: 0 60px;
+
+    .row {
+      display: flex;
+      flex-direction: column;
+
+      .column {
+        width: 100%;
+        .progress-bar {
+          width: 100%;
+          .progress-bar__bar {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 0 40px;
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    padding: 0 20px;
+
+    h1 {
+      font-size: 40px;
     }
   }
 `;

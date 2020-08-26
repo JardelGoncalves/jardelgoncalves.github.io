@@ -14,7 +14,7 @@ const ProgressBar = ({
 }: IProgressBar) => (
   <Wrapper color={color} bg={bg} className="progress-bar">
     <span className="label">{label}</span>
-    <Bar percentage={percentage} color={color}>
+    <Bar className="progress-bar__bar" percentage={percentage} color={color}>
       <div>
         <span>
           {percentage ? `${percentage}%` : ''}
