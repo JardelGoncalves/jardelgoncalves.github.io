@@ -10,9 +10,6 @@ export const Wrap = styled.div`
 
   svg.wave {
     width: 100%;
-    position: absolute;
-    top: -40px;
-    left: 0;
     z-index: -1;
   }
 
@@ -36,6 +33,31 @@ export const Row = styled.div`
     z-index: 1;
     display: flex;
     flex-direction: column;
+  }
+
+  h1,
+  .column {
+    transition: all 0.2s ease-in-out;
+  }
+
+  @media only screen and (max-width: 750px) {
+    flex-direction: column;
+
+    .column {
+      padding: 40px 0;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    h1 {
+      font-size: 40px;
+    }
   }
 `;
 

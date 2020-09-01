@@ -1,8 +1,6 @@
 import React from 'react';
 
 import {
-  Wave,
-  SquareFooter,
   GithubIcon,
   LinkedinIcon,
   MediumIcon,
@@ -70,8 +68,6 @@ const Footer = ({ t }:IProps) => (
         </ListItems>
       </div>
     </Row>
-    <SquareFooter />
-    <Wave />
   </Wrap>
 );
 
