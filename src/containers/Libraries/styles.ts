@@ -14,4 +14,27 @@ export const Wrap = styled.div`
   h1 {
     margin-left: 80px;
   }
+
+  h1 {
+    transition: all 0.2s ease-in-out;
+  }
+
+  @media only screen and (max-width: 950px) {
+    h1 {
+      margin-left: 60px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    h1 {
+      margin-left: 40px;
+      font-size: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    h1 {
+      margin-left: 20px;
+      font-size: 40px;
+    }
+  }
 `;

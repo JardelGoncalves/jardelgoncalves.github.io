@@ -50,6 +50,21 @@ export const Box = styled.div`
     right: 0;
     margin: auto;
   }
+
+  transition: all 0.2s ease-in-out;
+
+  @media only screen and (max-width: 950px) {
+    margin-left: 60px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-left: 40px;
+  }
+
+  @media only screen and (max-width: 420px) {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
 `;
 
 export const LogoWrapper = styled.div`
