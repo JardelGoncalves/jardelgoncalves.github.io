@@ -56,6 +56,15 @@ export const Wrapper = styled(Headroom)`
       }
     }
   }
+
+  @media only screen and (max-width: 900px) {
+    header {
+      padding: 20px;
+      ul {
+        display: none;
+      }
+    }
+  }
 `;
 
 export const Lang = styled.span`
@@ -70,4 +79,5 @@ export const Lang = styled.span`
     width: 25px;
     height: auto;
   }
+  
 `;

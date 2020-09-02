@@ -87,6 +87,37 @@ const Header = ({ t }:IProps) => (
           />
         </li>
       </ul>
+      <div className="container__lang">
+        <Select
+          onChange={(op) => i18n.i18n.changeLanguage(op.value)}
+          options={[
+            {
+              label: (
+                <Lang>
+                  <PTBRFlag />
+                </Lang>
+              ),
+              value: 'pt',
+            },
+            {
+              label: (
+                <Lang>
+                  <USAFlag />
+                </Lang>
+              ),
+              value: 'en',
+            },
+          ]}
+          defaultValue={{
+            label: (
+              <Lang>
+                <PTBRFlag />
+              </Lang>
+            ),
+            value: 'pt',
+          }}
+        />
+      </div>
     </header>
   </Wrapper>
 );
