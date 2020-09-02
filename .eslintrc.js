@@ -35,5 +35,12 @@ module.exports = {
     'react/require-default-props': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/prop-types': 'off',
+    'jsx-a11y/label-has-associated-control': [2, {
+      required: {
+        some: ['nesting', 'id'],
+      },
+    }],
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
   },
 };
