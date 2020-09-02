@@ -44,4 +44,21 @@ export const Wrap = styled.div`
   span.text-primary {
     color: ${({ theme }) => theme.colors.primary};
   }
+
+  @media only screen and (max-width: 600px) {
+    h2 {
+      padding: 0;
+      margin-top: 0px;
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    h2 {
+      padding: 0;
+      margin: 0;
+      margin-top: -20px;
+      font-size: 35px;
+    }
+  }
 `;
