@@ -27,6 +27,10 @@ export const Wrapper = styled(Headroom)`
     justify-content: space-between;
     padding: 0 80px;
 
+    .navigation {
+      display: none;
+    }
+
     .logo svg {
       width: 70px;
       height: auto;
@@ -58,6 +62,11 @@ export const Wrapper = styled(Headroom)`
   }
 
   @media only screen and (max-width: 900px) {
+    .headroom--pinned {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    };
     header {
       padding: 20px;
       ul {

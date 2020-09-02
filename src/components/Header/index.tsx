@@ -4,16 +4,20 @@ import Link from 'next/link';
 import { Wrapper, Lang } from './styles';
 import { Logo, USAFlag, PTBRFlag } from '../Svg';
 import { Select } from '../Select';
+import { HamburgerMenu } from '../HamburgerMenu';
 
 import i18n from '../../../i18n';
 
 interface IProps {
   t: (text:string) => string
+  menuActive: boolean
+  onClick: () => void;
 }
 
-const Header = ({ t }:IProps) => (
+const Header = ({ t, onClick, menuActive }:IProps) => (
   <Wrapper>
     <header>
+      <HamburgerMenu onClick={onClick} menuActive={menuActive} />
       <Link href="/">
         <a className="logo">
           <Logo />
@@ -54,37 +58,6 @@ const Header = ({ t }:IProps) => (
               {t('blog')}
             </a>
           </Link>
-        </li>
-        <li>
-          <Select
-            onChange={(op) => i18n.i18n.changeLanguage(op.value)}
-            options={[
-              {
-                label: (
-                  <Lang>
-                    <PTBRFlag />
-                  </Lang>
-                ),
-                value: 'pt',
-              },
-              {
-                label: (
-                  <Lang>
-                    <USAFlag />
-                  </Lang>
-                ),
-                value: 'en',
-              },
-            ]}
-            defaultValue={{
-              label: (
-                <Lang>
-                  <PTBRFlag />
-                </Lang>
-              ),
-              value: 'pt',
-            }}
-          />
         </li>
       </ul>
       <div className="container__lang">
