@@ -12,6 +12,7 @@ const Head = () => (
     <meta name="title" content="Jardel Gonçalves" />
     <meta name="description" content="Welcome to my personal portfolio, my name is Jardel and I am a FullStack Developer" />
     <meta name="author" content="Jardel Gonçalves" />
+    <meta name="theme-color" content="#5BCA5D" />
     <meta
       name="keywords"
       content="jardel, jardel gonçalves, desenvolvedor jardel, desenvoldedor, full stack, fullstack, fullstack developer, full stack developer, javascript developer, node.js developer"

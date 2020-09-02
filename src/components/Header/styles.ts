@@ -41,6 +41,7 @@ export const Wrapper = styled(Headroom)`
       list-style: none;
       margin: 0;
       padding: 0;
+      margin-left: 200px;
       align-items: center;
       li {
         margin: 0 20px;
