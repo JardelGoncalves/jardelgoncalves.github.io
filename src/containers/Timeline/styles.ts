@@ -27,4 +27,25 @@ export const Wrap = styled.div`
       }
     }
   }
+
+  @media only screen and (max-width: 950px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    h1 {
+      font-size: 35px;
+    }
+  }
 `;
