@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const Container = styled.nav`
   height: 70px;
   width: 100vw;
-  background-color: #ffffff;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--navbar-border-color);
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 0 90px;
+  transition: border .4s;
 
 
   .logo,
@@ -28,7 +28,7 @@ export const Container = styled.nav`
     h4 {
       font-size: 20px;
       font-weight: 900;
-      background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+      background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -36,7 +36,7 @@ export const Container = styled.nav`
 
     span {
       font-size: 14px;
-      color: #7C7C7C;
+      color: var(--subtitle-color);
     }
   }
 
@@ -48,7 +48,7 @@ export const Container = styled.nav`
     }
 
     li a {
-      color: #616269;
+      color: var(--text-color);
       text-decoration: none;
       font-size: 16px;
       font-weight: 300;
@@ -57,17 +57,20 @@ export const Container = styled.nav`
       line-height: 23px;
 
       &:hover {
-        color: #38EF7D;
+        color: var(--primary-color);
       }
     }
   }
 
   .socials {
     a {
+      svg {
+        fill: var(--text-color);
+      }
       &:hover {
         svg {
           transition: .2s;
-          fill: #38EF7D;
+          fill: var(--primary-color);
         }
       }
     }

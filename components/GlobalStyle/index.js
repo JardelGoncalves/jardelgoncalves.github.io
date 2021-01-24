@@ -25,4 +25,9 @@ export const GlobalStyle = createGlobalStyle`
   select {
     font-family: 'Raleway', sans-serif;
   }
+
+  body {
+    background-color: var(--bg-color);
+    transition: background 0.4s;
+  }
 `;
