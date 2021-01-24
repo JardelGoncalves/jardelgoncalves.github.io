@@ -24,7 +24,7 @@ export const Container = styled.div`
     width: 28px;
     left: -2px;
     bottom: -4px;
-    background-color: #616469;
+    background-color: var(--slider-bg-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -37,21 +37,11 @@ export const Container = styled.div`
   }
 
   input:checked + .slider {
-    background-color: #38EF7D;
+    background-color: var(--primary-color);
     left: 16px;
 
     svg {
-      fill: #fff;
+      fill: var(--white);
     }
   }
-
-  /* input:focus + .slider {
-    box-shadow: 0 0 1px black;
-  }
-
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  } */
 `;
