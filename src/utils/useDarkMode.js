@@ -3,7 +3,7 @@ import { THEME } from './constants';
 import {setTheme} from './set-theme'
 
 export const useDarkMode = () => {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState(window.localStorage.getItem(THEME) || 'light');
   const toggleTheme = () => {
     if (mode === 'light') {
       window.localStorage.setItem(THEME, 'dark')
