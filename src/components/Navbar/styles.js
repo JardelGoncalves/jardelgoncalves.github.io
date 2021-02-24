@@ -4,8 +4,10 @@ export const Container = styled.nav`
   height: 70px;
   width: 100vw;
   border-bottom: 1px solid var(--navbar-border-color);
-  position: relative;
+  position: fixed;
   display: flex;
+  top: 0;
+  left: 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

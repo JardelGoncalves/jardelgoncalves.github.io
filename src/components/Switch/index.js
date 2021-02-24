@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useDarkMode } from '../../src/utils/useDarkMode'
+import { useDarkMode } from '../../utils/useDarkMode'
 import { Icon } from '../Icon'
 
 import { Container } from './styles';
