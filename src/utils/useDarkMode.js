@@ -3,24 +3,27 @@ import { THEME } from './constants';
 import {setTheme} from './set-theme'
 
 export const useDarkMode = () => {
-  const [mode, setMode] = useState(window.localStorage.getItem(THEME) || 'light');
+  const [modeSelected, setModeSelected] = useState('light')
   const toggleTheme = () => {
+    const mode = window.localStorage.getItem(THEME)
+    
     if (mode === 'light') {
       window.localStorage.setItem(THEME, 'dark')
       setTheme('dark')
-      setMode('dark')
+      setModeSelected('dark')
     } else {
       window.localStorage.setItem(THEME, 'light')
       setTheme('light')
-      setMode('light')
+      setModeSelected('light')
     }
   };
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem(THEME);
     setTheme(localTheme || 'light');
-    setMode(localTheme || 'light')
+    setModeSelected(localTheme || 'light')
+
   }, []);
 
-  return [mode === 'dark', toggleTheme]
+  return [modeSelected === 'dark', toggleTheme]
 };
