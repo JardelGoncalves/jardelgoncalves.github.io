@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import { Providers } from '../utils/providers'
 
 type Props = {
   Component: React.FC
@@ -6,7 +7,11 @@ type Props = {
 }
 
 function MyApp({ Component, pageProps }: Props) {
-  return <Component {...pageProps} />
+  return (
+    <Providers>
+      <Component {...pageProps} />
+    </Providers>
+  )
 }
 
 export default MyApp
