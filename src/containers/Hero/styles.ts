@@ -31,14 +31,14 @@ const GradientAnimation = keyframes`
 export const Title = styled.h1`
   background: linear-gradient(
     to right,
-    var(--gradient-from) 0%,
-    var(--gradient-to) 35%
+    var(--gradient-from) 5%,
+    var(--gradient-to) 45%
   );
-  background-size: 150% auto;
+  background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: ${GradientAnimation} 10s ease-in-out infinite;
+  animation: ${GradientAnimation} 7s ease-in-out infinite;
   font-size: 5.5vw;
   font-weight: 900;
 
