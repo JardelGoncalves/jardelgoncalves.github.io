@@ -3,7 +3,7 @@ export interface Colors {
 }
 
 export const base = (colors?: Colors): Colors => ({
-  'bg-color': '#FAFAFA',
-  'text-color': '#050505',
+  '--bg-color': '#FAFAFA',
+  '--text-color': '#050505',
   ...(colors || {})
 })
