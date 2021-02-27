@@ -1,5 +1,6 @@
 import { Colors } from '../theme/base'
 import * as themes from '../theme'
+import { THEME_SETTING_KEY } from './constants'
 
 export enum THEME {
   LIGHT = 'light',
@@ -8,10 +9,15 @@ export enum THEME {
 
 export function setTheme(keyTheme: THEME): void {
   const colors: Colors = themes[keyTheme] || themes.light
+
   for (const key in colors) {
     if (Object.prototype.hasOwnProperty.call(colors, key)) {
       console.log(key)
       document.body.style.setProperty(key, colors[key])
     }
   }
+  localStorage.setItem(
+    THEME_SETTING_KEY,
+    themes[keyTheme] ? keyTheme : THEME.LIGHT
+  )
 }
