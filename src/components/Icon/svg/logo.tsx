@@ -37,8 +37,8 @@ function Logo() {
           y2="546.665"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#EB0774"></stop>
-          <stop offset="0.995" stopColor="#F59C16"></stop>
+          <stop stopColor="#5c3bfe"></stop>
+          <stop offset="0.995" stopColor="#5c3bfe"></stop>
         </linearGradient>
         <linearGradient
           id="paint1_linear"
@@ -48,8 +48,8 @@ function Logo() {
           y2="440"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#EB0774"></stop>
-          <stop offset="0.995" stopColor="#F59C16"></stop>
+          <stop stopColor="#5c3bfe"></stop>
+          <stop offset="0.995" stopColor="#5c3bfe"></stop>
         </linearGradient>
         <linearGradient
           id="paint2_linear"
@@ -59,8 +59,8 @@ function Logo() {
           y2="195"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#EB0774"></stop>
-          <stop offset="0.995" stopColor="#F59C16"></stop>
+          <stop stopColor="#5c3bfe"></stop>
+          <stop offset="0.995" stopColor="#5c3bfe"></stop>
         </linearGradient>
       </defs>
     </svg>
