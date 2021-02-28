@@ -41,11 +41,7 @@ export const Container = styled.div<IProps>`
   }
 
   input:checked + .slider {
-    background: linear-gradient(
-      to right,
-      var(--gradient-from) 5%,
-      var(--gradient-to) 45%
-    );
+    background: var(--primary-color);
     left: 16px;
 
     svg {
