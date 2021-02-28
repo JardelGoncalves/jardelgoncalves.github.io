@@ -11,34 +11,33 @@ export const Wrapper = styled.header`
 `
 
 const GradientAnimation = keyframes`
-  0% {
-    background-position: 0% 0%;
+  0%{
+    background-position-x: 0%;
   }
-  30% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 50% 0%;
-  }
-  70% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 0%;
+  100%{
+    background-position-x: 400vw;
   }
 `
 
 export const Title = styled.h1`
-  background: linear-gradient(
-    to right,
-    var(--gradient-from) 5%,
-    var(--gradient-to) 45%
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--gradient-to) 0%,
+    #43d185 7.14%,
+    #43d185 14.28%,
+    var(--primary-color) 21.42%,
+    var(--primary-color) 28.56%,
+    var(--gradient-from) 35.7%,
+    var(--gradient-from) 42.84%,
+    var(--gradient-to) 50%
   );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: ${GradientAnimation} 7s ease-in-out infinite;
+  background-size: 400vw 400vw;
+  animation: ${GradientAnimation} 50s infinite linear forwards;
+  -webkit-animation: ${GradientAnimation} 50s infinite linear forwards;
   font-size: 5.5vw;
   font-weight: 900;
 
@@ -55,4 +54,14 @@ export const Description = styled.p`
   max-width: 750px;
   width: 100%;
   padding: 12px 0;
+`
+
+export const SocialList = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+
+  a + a {
+    margin-left: 12px;
+  }
 `
