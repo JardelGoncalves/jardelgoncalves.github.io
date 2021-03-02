@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 
 export const Wrapper = styled.header`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@ export const Title = styled.h1`
   font-size: 5.5vw;
   font-weight: 900;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 720px) {
     font-size: 9vw;
   }
 `
