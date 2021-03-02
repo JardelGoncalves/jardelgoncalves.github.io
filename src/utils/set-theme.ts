@@ -12,7 +12,6 @@ export function setTheme(keyTheme: THEME): void {
 
   for (const key in colors) {
     if (Object.prototype.hasOwnProperty.call(colors, key)) {
-      console.log(key)
       document.body.style.setProperty(key, colors[key])
     }
   }
