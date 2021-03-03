@@ -17,7 +17,7 @@ export const Wrapper = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 180px;
+  padding: 0 90px;
   position: relative;
   border-bottom: 1px solid var(--border-color);
   transition: border 0.4s;
