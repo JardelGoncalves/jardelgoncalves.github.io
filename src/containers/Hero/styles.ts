@@ -51,6 +51,7 @@ export const Description = styled.p`
   font-size: 18px;
   font-weight: 300;
   text-align: center;
+  line-height: 1.6em;
   color: var(--text-color);
   max-width: 750px;
   width: 100%;
