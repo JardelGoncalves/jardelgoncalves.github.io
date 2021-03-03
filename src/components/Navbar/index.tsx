@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { Icon } from '../Icon'
 import { SwitchDarkMode } from '../SwitchDarkMode'
 import { Wrapper } from './styles'
@@ -23,6 +24,20 @@ export const Navbar = () => {
   return (
     <Wrapper ref={ref}>
       <Icon name="logo" />
+      <ul className="menu">
+        <li className="menu__item">
+          <Link href="#">Home</Link>
+        </li>
+        <li className="menu__item">
+          <Link href="#">Posts</Link>
+        </li>
+        <li className="menu__item">
+          <Link href="#">About</Link>
+        </li>
+        <li className="menu__item">
+          <Link href="#">AMA</Link>
+        </li>
+      </ul>
       <SwitchDarkMode />
     </Wrapper>
   )
