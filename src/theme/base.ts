@@ -11,5 +11,6 @@ export const base = (colors?: Colors): Colors => ({
   '--gradient-to': '#EB0774',
   '--border-color': '#EAEAEA',
   '--slider-bg-color': '#616469',
+  '--menu-color': '#616469',
   ...(colors || {})
 })
