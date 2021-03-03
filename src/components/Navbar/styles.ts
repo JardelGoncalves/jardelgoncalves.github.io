@@ -30,6 +30,42 @@ export const Wrapper = styled.nav`
     backdrop-filter: saturate(180%) blur(20px);
   }
 
+  .menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+
+    &__item {
+      color: var(--menu-color);
+      font-weight: 700;
+      padding: 8px 24px;
+      position: relative;
+
+      a {
+        &::after {
+          content: '';
+          background-color: var(--primary-color);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 0%;
+          transition: 0.2s;
+        }
+        &:hover,
+        &::after {
+          color: var(--primary-color);
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   @media only screen and (max-width: 720px) {
     padding: 0 32px;
   }
