@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import { BREAKPOINT_SM } from '../../theme/breakpoints'
 
 export const Wrapper = styled.header`
   width: 100%;
@@ -41,7 +42,7 @@ export const Title = styled.h1`
   font-size: 5.5vw;
   font-weight: 900;
 
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: ${BREAKPOINT_SM}) {
     font-size: 9vw;
   }
 `

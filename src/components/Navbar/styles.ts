@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import { BREAKPOINT_SM } from '../../theme/breakpoints'
 
 const fixedNavbar = keyframes`
   from {
@@ -16,10 +17,11 @@ export const Wrapper = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 90px;
+  padding: 0 180px;
   position: relative;
   border-bottom: 1px solid var(--border-color);
   transition: border 0.4s;
+  transition: padding 0.2s;
   z-index: 4;
 
   &.navbar--fixed {
@@ -66,7 +68,8 @@ export const Wrapper = styled.nav`
     }
   }
 
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: ${BREAKPOINT_SM}) {
+    transition: padding 0.2s;
     padding: 0 32px;
   }
 `
