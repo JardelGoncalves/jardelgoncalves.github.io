@@ -7,7 +7,7 @@ import { Wrapper } from './styles'
 
 export const Navbar = () => {
   const [lastYPos, setLastYPos] = useState(0)
-  const [shouldShowNavbar, setShouldShowNavbar] = useState(false)
+  const [shouldShowNavbar, setShouldShowNavbar] = useState(true)
 
   useEffect(() => {
     const handlerScroll = () => {
