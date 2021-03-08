@@ -1,9 +1,9 @@
 import styled, { keyframes } from 'styled-components'
 import { BREAKPOINT_SM } from '../../theme/breakpoints'
 
-export const Wrapper = styled.header`
+export const Wrapper = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,6 +41,7 @@ export const Title = styled.h1`
   -webkit-animation: ${GradientAnimation} 50s infinite linear forwards;
   font-size: 5.5vw;
   font-weight: 900;
+  margin-top: 100px;
 
   @media only screen and (max-width: ${BREAKPOINT_SM}) {
     font-size: 9vw;
