@@ -1,28 +1,34 @@
-import { useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
+import {} from 'framer-motion'
 import Link from 'next/link'
 import { Icon } from '../Icon'
 import { SwitchDarkMode } from '../SwitchDarkMode'
 import { Wrapper } from './styles'
 
 export const Navbar = () => {
-  const ref = useRef<HTMLElement>(null)
+  const [lastYPos, setLastYPos] = useState(0)
+  const [shouldShowNavbar, setShouldShowNavbar] = useState(false)
 
   useEffect(() => {
-    window.onscroll = () => {
-      if (ref && ref.current) {
-        if (
-          document.body.scrollTop > 50 ||
-          document.documentElement.scrollTop > 50
-        ) {
-          ref.current.classList.add('navbar--fixed')
-        } else {
-          ref.current.classList.remove('navbar--fixed')
-        }
-      }
+    const handlerScroll = () => {
+      const yPos = window.scrollY
+      const isScrollingUp = yPos < lastYPos
+      setShouldShowNavbar(isScrollingUp)
+      setLastYPos(yPos)
     }
-  }, [])
+
+    window.addEventListener('scroll', handlerScroll, false)
+    return () => {
+      window.removeEventListener('scroll', handlerScroll, false)
+    }
+  }, [lastYPos])
+
   return (
-    <Wrapper ref={ref}>
+    <Wrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: shouldShowNavbar ? 1 : 0 }}
+      transition={{ opacity: { duration: 0.2 } }}
+    >
       <Icon name="logo" />
       <ul className="menu">
         <li className="menu__item">
