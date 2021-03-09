@@ -32,13 +32,13 @@ export const Navbar = () => {
       <Icon name="logo" />
       <ul className="menu">
         <li className="menu__item">
-          <Link href="#">Home</Link>
+          <Link href="/">Home</Link>
         </li>
         <li className="menu__item">
           <Link href="#">Posts</Link>
         </li>
         <li className="menu__item">
-          <Link href="#">About</Link>
+          <Link href="/about">About</Link>
         </li>
         <li className="menu__item">
           <Link href="#">AMA</Link>
