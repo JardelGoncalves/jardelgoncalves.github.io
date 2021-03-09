@@ -12,5 +12,7 @@ export const base = (colors?: Colors): Colors => ({
   '--border-color': '#EAEAEA',
   '--slider-bg-color': '#616469',
   '--menu-color': '#616469',
+  '--switch-mode-border': 'rgba(97, 100, 105, 0.2)',
+  '--switch-mode-bg': 'transparent',
   ...(colors || {})
 })

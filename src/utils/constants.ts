@@ -1,1 +1,1 @@
-export const THEME_SETTING_KEY = '@jardelgoncalve.dev/theme'
+export const THEME_SETTING_KEY = '@jardelgoncalves.dev/theme'
