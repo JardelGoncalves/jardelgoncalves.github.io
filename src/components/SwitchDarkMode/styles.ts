@@ -1,15 +1,11 @@
 import styled from 'styled-components'
-interface IProps {
-  checked?: boolean
-}
 
-export const Container = styled.div<IProps>`
+export const Container = styled.div`
   position: relative;
   display: flex;
   width: 44px;
-  border: 2px solid
-    ${({ checked }) =>
-      checked ? 'rgba(56, 238, 125, 0.2)' : 'rgba(97, 100, 105, 0.2)'};
+  border: 2px solid var(--switch-mode-border);
+  background-color: var(--switch-mode-bg);
   height: 24px;
   border-radius: 34px;
 
