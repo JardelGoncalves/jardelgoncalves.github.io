@@ -4,9 +4,10 @@ export interface Colors {
 
 export const base = (colors?: Colors): Colors => ({
   '--white': '#FFFFFF',
-  '--primary-color': '#5c3bfe',
+  '--primary-color': '#495FEF',
+  '--secondary-color': '#56B381',
   '--bg-color': '#FAFAFA',
-  '--text-color': '#050505',
+  '--text-color': '#161C2D',
   '--gradient-from': '#F59C16',
   '--gradient-to': '#EB0774',
   '--border-color': '#EAEAEA',
