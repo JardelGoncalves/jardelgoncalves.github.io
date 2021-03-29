@@ -12,7 +12,7 @@ export const Wrapper = styled(motion.nav)`
   padding: 0 90px;
   position: fixed;
   border-bottom: 1px solid var(--border-color);
-  backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: blur(20px);
   transition: border 0.4s;
   transition: padding 0.2s;
   z-index: 4;
