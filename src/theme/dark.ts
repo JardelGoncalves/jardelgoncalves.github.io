@@ -1,6 +1,6 @@
 import { Colors, base } from './base'
 export const dark: Colors = base({
-  '--bg-color': '#161C2D',
+  '--bg-color': '#2a2a2a',
   '--text-color': '#FAFAFA',
   '--border-color': '#e4e4e71a',
   '--menu-color': '#FAFAFA',
