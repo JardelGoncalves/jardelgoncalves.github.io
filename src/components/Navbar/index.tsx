@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import {} from 'framer-motion'
 import Link from 'next/link'
-import { Icon } from '../Icon'
 import { SwitchDarkMode } from '../SwitchDarkMode'
 import { Wrapper } from './styles'
 
@@ -29,7 +28,7 @@ export const Navbar = () => {
       animate={{ opacity: shouldShowNavbar ? 1 : 0 }}
       transition={{ opacity: { duration: 0.2 } }}
     >
-      <Icon name="logo" />
+      <img src="/images/logo.svg" alt="Logo" />
       <ul className="menu">
         <li className="menu__item">
           <Link href="/">Home</Link>
