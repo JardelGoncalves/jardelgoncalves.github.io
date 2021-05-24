@@ -12,10 +12,10 @@ export const Wrapper = styled.div`
 `
 
 const GradientAnimation = keyframes`
-  0%{
+  from {
     background-position-x: 0%;
-  }
-  100%{
+  };
+  to {
     background-position-x: 400vw;
   }
 `
@@ -57,6 +57,29 @@ export const Description = styled.p`
   max-width: 750px;
   width: 100%;
   padding: 12px 0;
+
+  strong {
+    position: relative;
+    font-weight: 900;
+
+    &:last-child {
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(
+          90deg,
+          rgba(204, 43, 94, 0.6) 0%,
+          rgba(117, 58, 136, 0.6) 100%
+        );
+        border-radius: 20px;
+        z-index: -1;
+      }
+    }
+  }
 `
 
 export const SocialList = styled.div`
