@@ -8,7 +8,8 @@ export const Hero = () => {
       <Description>
         I&apos;m a software developer and writer, living in Quixadá/Brazil.
         I&apos;m currently building web and mobile applications on personal
-        projects and I work as a Front-End at Ioasys.
+        projects and I work as a <strong>Front-End</strong> at{' '}
+        <strong>Ioasys</strong>.
       </Description>
       <SocialList>
         <SocialButton
