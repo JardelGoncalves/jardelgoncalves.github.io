@@ -3,9 +3,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <title>Jardel Gonçalves</title>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
