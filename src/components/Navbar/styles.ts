@@ -37,7 +37,10 @@ export const Wrapper = styled(motion.nav)`
           position: absolute;
           bottom: 0;
           left: 0;
-          height: 2px;
+          right: 0;
+          margin: 0 auto;
+          height: 4px;
+          border-radius: 2px;
           width: 0%;
           transition: 0.2s;
         }
@@ -47,7 +50,7 @@ export const Wrapper = styled(motion.nav)`
         }
 
         &:hover::after {
-          width: 100%;
+          width: 35%;
         }
       }
     }
