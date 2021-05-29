@@ -39,7 +39,7 @@ export const Title = styled.h1`
   background-size: 400vw 400vw;
   animation: ${GradientAnimation} 50s infinite linear forwards;
   -webkit-animation: ${GradientAnimation} 50s infinite linear forwards;
-  font-size: 5.5vw;
+  font-size: 5.1vw;
   font-weight: 900;
   margin-top: 100px;
 
@@ -59,17 +59,19 @@ export const Description = styled.p`
   padding: 12px 0;
 
   strong {
-    position: relative;
     font-weight: 900;
 
     &:last-child {
+      position: relative;
+      padding: 0 12px;
+      margin-left: 4px;
       &::before {
         content: '';
         position: absolute;
-        bottom: -3px;
+        top: -3px;
         left: 0;
         width: 100%;
-        height: 10px;
+        height: 30px;
         background: linear-gradient(
           90deg,
           rgba(204, 43, 94, 0.6) 0%,
