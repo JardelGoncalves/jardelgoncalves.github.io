@@ -31,17 +31,20 @@ export const Navbar = () => {
       <img src="/images/logo.svg" alt="Logo" />
       <ul className="menu">
         <li className="menu__item">
-          <Link href="/">Home</Link>
+          <Link href="/">Página Inicial</Link>
         </li>
         <li className="menu__item">
-          <Link href="#">Posts</Link>
+          <Link href="#">Artigos</Link>
         </li>
         <li className="menu__item">
-          <Link href="/about">About</Link>
+          <Link href="/about">Sobre mim</Link>
         </li>
         <li className="menu__item">
+          <Link href="#">RSS Feed</Link>
+        </li>
+        {/* <li className="menu__item">
           <Link href="#">AMA</Link>
-        </li>
+        </li> */}
       </ul>
       <SwitchDarkMode />
     </Wrapper>
