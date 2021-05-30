@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Wrapper } from './styles'
+import * as S from './styles'
+import { Layout } from '../Layout'
 
 interface NavbarProps {
   children: React.ReactNode
@@ -25,30 +26,34 @@ export const Navbar = ({ children }: NavbarProps) => {
   }, [lastYPos])
 
   return (
-    <Wrapper
+    <S.Container
       initial={{ opacity: 0 }}
       animate={{ opacity: shouldShowNavbar ? 1 : 0 }}
       transition={{ opacity: { duration: 0.2 } }}
     >
-      <img src="/images/logo.svg" alt="Logo" />
-      <ul className="menu">
-        <li className="menu__item">
-          <Link href="/">Página Inicial</Link>
-        </li>
-        <li className="menu__item">
-          <Link href="#">Artigos</Link>
-        </li>
-        <li className="menu__item">
-          <Link href="/about">Sobre mim</Link>
-        </li>
-        <li className="menu__item">
-          <Link href="#">RSS Feed</Link>
-        </li>
-        {/* <li className="menu__item">
-          <Link href="#">AMA</Link>
-        </li> */}
-      </ul>
-      {children}
-    </Wrapper>
+      <Layout>
+        <S.NavWrapper>
+          <img src="/images/logo.svg" alt="Logo" />
+          <S.NavMenu className="navbar__menu">
+            <S.NavMenuItem className="navbar__menu__item">
+              <Link href="/">Página Inicial</Link>
+            </S.NavMenuItem>
+            <S.NavMenuItem className="navbar__menu__item">
+              <Link href="#">Artigos</Link>
+            </S.NavMenuItem>
+            <S.NavMenuItem className="navbar__menu__item">
+              <Link href="/about">Sobre mim</Link>
+            </S.NavMenuItem>
+            <S.NavMenuItem className="navbar__menu__item">
+              <Link href="#">RSS Feed</Link>
+            </S.NavMenuItem>
+            {/* <S.NavMenuItem className="navbar__menu__item">
+              <Link href="#">AMA</Link>
+            </S.NavMenuItem> */}
+          </S.NavMenu>
+          {children}
+        </S.NavWrapper>
+      </Layout>
+    </S.Container>
   )
 }
