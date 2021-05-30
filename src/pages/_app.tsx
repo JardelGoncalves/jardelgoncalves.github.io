@@ -1,16 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
-import Head from 'next/head'
 
 import { Navbar } from '../components/core/Navbar'
 import { SwitchDarkMode } from '../components/core/SwitchDarkMode'
-import { THEME_SETTING_KEY } from '../utils/constants/local-storage'
-import { THEMES } from '../utils/constants/enums'
+import { HeadSEO } from '../components/core/HeadSEO'
+import { Layout } from '../components/core/Layout'
 
-import theme from '../styles/theme'
-import '../styles/globals.css'
 import { Cache } from '../utils/cache'
+import { THEMES } from '../utils/constants/enums'
+import { THEME_SETTING_KEY } from '../utils/constants/local-storage'
+import theme from '../styles/theme'
+import * as S from '../styles/global.style'
 
 type Props = {
   Component: React.FC
@@ -18,14 +19,12 @@ type Props = {
 }
 
 function MyApp({ Component, pageProps }: Props) {
-  console.log(Cache.get(THEME_SETTING_KEY))
   const [isDark, setIsDark] = useState(
     Cache.get(THEME_SETTING_KEY) === THEMES.DARK
   )
 
   const toggle = () => {
     const mode = Cache.get(THEME_SETTING_KEY)
-    console.log(mode)
     if (mode === THEMES.DARK) {
       Cache.set(THEME_SETTING_KEY, THEMES.LIGHT)
       setIsDark(false)
@@ -42,13 +41,19 @@ function MyApp({ Component, pageProps }: Props) {
         colors: isDark ? theme.colors.dark : theme.colors.light
       }}
     >
-      <Head>
-        <title>Jardel Gonçalves</title>
-      </Head>
+      <HeadSEO
+        metaDescription={pageProps.metaDescription}
+        metaType={pageProps.metaType}
+        pageTitle={pageProps.pageTitle || 'Jardel Gonçalves'}
+        url={pageProps.url}
+      />
+      <S.GlobalStyle />
       <Navbar>
         <SwitchDarkMode isDark={isDark} toggle={toggle} />
       </Navbar>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   )
 }
