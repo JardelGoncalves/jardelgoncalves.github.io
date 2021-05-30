@@ -1,9 +1,17 @@
-import { breakpoints, colors, shapes, sizes, spacing } from './tokens'
+import {
+  breakpoints,
+  colors,
+  shapes,
+  sizes,
+  spacing,
+  typography
+} from './tokens'
 
 export default {
   breakpoints,
   colors,
   shapes,
   sizes,
-  spacing
+  spacing,
+  typography
 } as const
