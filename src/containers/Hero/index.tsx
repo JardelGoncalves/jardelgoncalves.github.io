@@ -1,5 +1,5 @@
 import { Wrapper, Title, Description, SocialList } from './styles'
-import { SocialButton } from '../../components/Buttons'
+import { SocialButton } from '../../components/core/Button'
 
 export const Hero = () => {
   return (
@@ -9,7 +9,7 @@ export const Hero = () => {
       <Description>
         Eu sou desenvolvedor de software, moro em Quixadá/Brasil. Eu atualmente
         desenvolvo aplicações Web e Mobile em projetos pessoais e trabalho como
-        desenvolvedor <strong>Front-End</strong> at <strong>Ioasys</strong>
+        desenvolvedor <strong>Front-End</strong> na <strong>Ioasys</strong>
       </Description>
       <SocialList>
         <SocialButton
