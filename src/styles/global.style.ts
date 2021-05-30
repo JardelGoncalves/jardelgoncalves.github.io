@@ -13,6 +13,13 @@ interface GlobalStyleProps {
 }
 
 export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+  }
+
   html {
     font-size: 16px;
   }
@@ -29,24 +36,53 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     }
   }
 
-  html,
   body {
-    padding: 0;
-    margin: 0;
-    font-family: ${({ theme }) => theme.typography.family.primary};
-    background-color: ${({ theme }) => theme.colors.bgColor};
-    transition: all 0.5s;
+    transition: background 0.4s;
+    transition: background-color 0.4s;
+    background-color:${({ theme }) => theme.colors.bgColor};
   }
 
   a {
-    color: inherit;
     text-decoration: none;
+    color: inherit
   }
 
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    outline: 0;
+  body,
+  input,
+  textarea,
+  button {
+    font: 500 1rem ${({ theme }) => theme.typography.family.primary};
+    color: ${({ theme }) => theme.colors.textColor};
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: ${({ theme }) => theme.typography.weight.semiBold};
+    font-family: ${({ theme }) => theme.typography.family.primary};
+    color: ${({ theme }) => theme.colors.textColor};
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.primary900};
+  }
+  ::-webkit-scrollbar {
+    width: 0.25rem;
+    border-radius: ${({ theme }) => theme.shapes.borderRadius.md};
   }
 `
