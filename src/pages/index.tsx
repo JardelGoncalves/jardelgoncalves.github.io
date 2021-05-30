@@ -1,8 +1,9 @@
-import { Hero } from '../containers/Hero'
+// import { Hero } from '../containers/Hero'
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
+      <h1>Hello</h1>
     </>
   )
 }
