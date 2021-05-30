@@ -1,21 +1,26 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { BREAKPOINT_SM } from '../../theme/breakpoints'
 
 export const Wrapper = styled(motion.nav)`
-  height: 70px;
+  height: ${({ theme }) => theme.sizes.desktop.navbar};
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 90px;
+  padding: 0.25rem 5.5rem;
   position: fixed;
-  border-bottom: 1px solid var(--border-color);
-  backdrop-filter: blur(20px);
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
+  backdrop-filter: blur(10px);
   transition: border 0.4s;
   transition: padding 0.2s;
-  z-index: 4;
+  z-index: 9999;
+  background-color: ${({ theme }) => theme.colors.bgColor};
+
+  img {
+    width: auto;
+    height: 3.2rem;
+  }
 
   .menu {
     display: flex;
@@ -25,7 +30,7 @@ export const Wrapper = styled(motion.nav)`
     align-items: center;
 
     &__item {
-      color: var(--menu-color);
+      color: ${({ theme }) => theme.colors.menuTextColor};
       font-weight: 700;
       padding: 8px 24px;
       position: relative;
@@ -55,9 +60,8 @@ export const Wrapper = styled(motion.nav)`
       }
     }
   }
-
-  @media only screen and (max-width: ${BREAKPOINT_SM}) {
+`
+/* @media only screen and (max-width: ${BREAKPOINT_SM}) {
     transition: padding 0.2s;
     padding: 0 32px;
-  }
-`
+  } */

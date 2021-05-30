@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
-import {} from 'framer-motion'
 import Link from 'next/link'
-import { SwitchDarkMode } from '../SwitchDarkMode'
 import { Wrapper } from './styles'
 
-export const Navbar = () => {
+interface NavbarProps {
+  children: React.ReactNode
+}
+
+export const Navbar = ({ children }: NavbarProps) => {
   const [lastYPos, setLastYPos] = useState(0)
   const [shouldShowNavbar, setShouldShowNavbar] = useState(true)
 
@@ -46,7 +48,7 @@ export const Navbar = () => {
           <Link href="#">AMA</Link>
         </li> */}
       </ul>
-      <SwitchDarkMode />
+      {children}
     </Wrapper>
   )
 }

@@ -4,8 +4,8 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   width: 44px;
-  border: 2px solid var(--switch-mode-border);
-  background-color: var(--switch-mode-bg);
+  border: 2px solid ${({ theme }) => theme.colors.switchModeBorder};
+  background-color: ${({ theme }) => theme.colors.switchModeBg};
   height: 24px;
   border-radius: 34px;
 
@@ -24,7 +24,7 @@ export const Container = styled.div`
     width: 28px;
     left: -2px;
     bottom: -4px;
-    background-color: var(--slider-bg-color);
+    background-color: ${({ theme }) => theme.colors.sliderBgColor};
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -37,11 +37,11 @@ export const Container = styled.div`
   }
 
   input:checked + .slider {
-    background: var(--primary-color);
-    left: 16px;
+    background: ${({ theme }) => theme.colors.primary900};
+    left: 1rem;
 
     svg {
-      fill: var(--white);
+      fill: ${({ theme }) => theme.colors.white};
     }
   }
 `
