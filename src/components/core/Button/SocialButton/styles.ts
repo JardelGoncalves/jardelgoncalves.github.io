@@ -1,26 +1,30 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.a`
-  border: 2px solid var(--border-color);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  padding: 2px;
-  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
+  border-radius: ${({ theme }) => theme.shapes.borderRadius.xlg};
   transition: all 0.3s;
   cursor: pointer;
+  font-size: 0;
   z-index: 1;
-  position: relative;
+  svg {
+    fill: ${({ theme }) => theme.colors.textColor};
+    width: 1.5rem;
+    height: auto;
+  }
 
   &:hover {
     transition: all 0.3s;
-    border-color: var(--primary-color);
-    background-color: var(--primary-color);
+    border-color: ${({ theme }) => theme.colors.primary900};
 
     svg {
-      fill: var(--white);
+      fill: ${({ theme }) => theme.colors.primary900};
     }
   }
 `
