@@ -1,11 +1,9 @@
-import { Container } from '../../components/Container'
-
 import { Content, Paragraph } from './styles'
 
 export const AboutMe = () => {
   return (
     <>
-      <Container>
+      <>
         <Content>
           <Paragraph>
             I am a software developer currently living in Quixadá/Brazil.
@@ -31,7 +29,7 @@ export const AboutMe = () => {
             AWS EC2, DynamoDB, SASS and Css-in -JS.
           </Paragraph>
         </Content>
-      </Container>
+      </>
     </>
   )
 }
