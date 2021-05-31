@@ -34,20 +34,20 @@ export const Navbar = ({ children }: NavbarProps) => {
       <Layout>
         <S.NavWrapper>
           <img src="/images/logo.svg" alt="Logo" />
-          <S.NavMenu className="navbar__menu">
-            <S.NavMenuItem className="navbar__menu__item">
+          <S.NavMenu>
+            <S.NavMenuItem>
               <Link href="/">Página Inicial</Link>
             </S.NavMenuItem>
-            <S.NavMenuItem className="navbar__menu__item">
+            <S.NavMenuItem>
               <Link href="#">Artigos</Link>
             </S.NavMenuItem>
-            <S.NavMenuItem className="navbar__menu__item">
+            <S.NavMenuItem>
               <Link href="/about">Sobre mim</Link>
             </S.NavMenuItem>
-            <S.NavMenuItem className="navbar__menu__item">
+            <S.NavMenuItem>
               <Link href="#">RSS Feed</Link>
             </S.NavMenuItem>
-            {/* <S.NavMenuItem className="navbar__menu__item">
+            {/* <S.NavMenuItem>
               <Link href="#">AMA</Link>
             </S.NavMenuItem> */}
           </S.NavMenu>
