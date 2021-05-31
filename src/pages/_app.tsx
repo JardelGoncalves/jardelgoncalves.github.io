@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import { Navbar } from '../components/core/Navbar'
@@ -12,6 +12,9 @@ import { THEMES } from '../utils/constants/enums'
 import { THEME_SETTING_KEY } from '../utils/constants/local-storage'
 import theme from '../styles/theme'
 import * as S from '../styles/global.style'
+import { LoadingLogo } from '../components/core/Loading'
+
+import '../styles/global.css'
 
 type Props = {
   Component: React.FC
@@ -19,9 +22,14 @@ type Props = {
 }
 
 function MyApp({ Component, pageProps }: Props) {
-  const [isDark, setIsDark] = useState(
-    Cache.get(THEME_SETTING_KEY) === THEMES.DARK
-  )
+  const [mounted, setMounted] = useState(false)
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    const theme = Cache.get(THEME_SETTING_KEY)
+    setIsDark(theme === THEMES.DARK)
+    setMounted(true)
+  }, [])
 
   const toggle = () => {
     const mode = Cache.get(THEME_SETTING_KEY)
@@ -48,12 +56,18 @@ function MyApp({ Component, pageProps }: Props) {
         url={pageProps.url}
       />
       <S.GlobalStyle />
-      <Navbar>
-        <SwitchDarkMode isDark={isDark} toggle={toggle} />
-      </Navbar>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      {mounted ? (
+        <>
+          <Navbar>
+            <SwitchDarkMode isDark={isDark} toggle={toggle} />
+          </Navbar>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </>
+      ) : (
+        <LoadingLogo />
+      )}
     </ThemeProvider>
   )
 }
