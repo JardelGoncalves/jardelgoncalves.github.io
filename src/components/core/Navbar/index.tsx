@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+
+import { Layout } from 'components/core/Layout'
+
 import * as S from './styles'
-import { Layout } from '../Layout'
 
 interface NavbarProps {
   children: React.ReactNode
