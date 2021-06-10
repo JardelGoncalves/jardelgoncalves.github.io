@@ -1,6 +1,6 @@
 import { Icon } from '../Icon'
 
-import { Container } from './styles'
+import * as S from './styles'
 
 interface SwitchDarkModeProps {
   isDark: boolean
@@ -9,11 +9,11 @@ interface SwitchDarkModeProps {
 
 export const SwitchDarkMode = ({ isDark, toggle }: SwitchDarkModeProps) => {
   return (
-    <Container>
+    <S.Container>
       <input type="checkbox" checked={!!isDark} onChange={toggle} />
       <div className="slider">
         <Icon name="moon" size={28} />
       </div>
-    </Container>
+    </S.Container>
   )
 }
