@@ -1,6 +1,6 @@
-import { Icon } from '../../Icon'
+import { Icon } from 'components/core/Icon'
 
-import { Wrapper } from './styles'
+import * as S from './styles'
 
 interface ISocialButton {
   icon: string
@@ -16,8 +16,8 @@ export const SocialButton = ({
   target
 }: ISocialButton) => {
   return (
-    <Wrapper href={url} {...{ target }}>
+    <S.Wrapper href={url} target={target || ''}>
       <Icon name={icon} size={iconSize} />
-    </Wrapper>
+    </S.Wrapper>
   )
 }
