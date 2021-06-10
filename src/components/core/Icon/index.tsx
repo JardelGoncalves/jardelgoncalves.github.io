@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Wrapper } from './styles'
+import * as S from './styles'
 
 import Linkedin from './svg/linkedin'
 import Email from './svg/email'
@@ -22,9 +22,9 @@ const icons: IConsElements = {
 
 export interface ICon {
   name: string
-  size?: number
+  size?: number | undefined
 }
 
 export const Icon = ({ name, size }: ICon) => {
-  return <Wrapper size={size}>{icons[name]}</Wrapper>
+  return <S.Wrapper size={size}>{icons[name]}</S.Wrapper>
 }
