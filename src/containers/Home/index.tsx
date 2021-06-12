@@ -1,10 +1,10 @@
-import Presentation from 'components/presentation/home/Presentation'
+import Hello from 'components/presentation/home/Hello'
 import * as S from './styles'
 
 export default function Index() {
   return (
     <S.Container>
-      <Presentation />
+      <Hello />
     </S.Container>
   )
 }

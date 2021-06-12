@@ -9,7 +9,7 @@ const GradientAnimation = keyframes`
   }
 `
 
-export const PresentationContainer = styled.div`
+export const HelloContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;

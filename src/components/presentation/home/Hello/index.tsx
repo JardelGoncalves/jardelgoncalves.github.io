@@ -2,9 +2,9 @@ import { SocialButton } from 'components/core/Button'
 
 import * as S from './styles'
 
-export default function Presentation() {
+export default function Hello() {
   return (
-    <S.PresentationContainer>
+    <S.HelloContainer>
       <S.TitleColorize>Hey, eu sou o Jardel</S.TitleColorize>
       <S.Description>
         Eu sou desenvolvedor de software, moro em Quixadá/Brasil. Eu atualmente
@@ -26,6 +26,6 @@ export default function Presentation() {
 
         <SocialButton icon="email" url="mailto:jardelgoncalves1996@gmail.com" />
       </S.SocialList>
-    </S.PresentationContainer>
+    </S.HelloContainer>
   )
 }
