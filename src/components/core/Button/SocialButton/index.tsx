@@ -12,7 +12,7 @@ interface ISocialButton {
 export const SocialButton = ({
   icon,
   url,
-  iconSize = 24,
+  iconSize,
   target
 }: ISocialButton) => {
   return (
