@@ -3,8 +3,8 @@ const fallbackFont =
 
 export const typography = {
   family: {
-    primary: `Poppins, ${fallbackFont}`,
-    secondary: `Poppins, ${fallbackFont}`
+    primary: `Raleway, ${fallbackFont}`,
+    secondary: `Raleway, ${fallbackFont}`
   },
   sizes: {
     '2xs': '0.625rem',
