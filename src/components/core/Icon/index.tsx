@@ -1,12 +1,10 @@
-import React from 'react'
-
 import * as S from './styles'
 
-import Linkedin from './svg/linkedin'
-import Email from './svg/email'
-import Github from './svg/github'
-import Moon from './svg/moon'
-import Logo from './svg/logo'
+import Linkedin from 'static/icons/linkedin.svg'
+import Email from 'static/icons/email.svg'
+import Github from 'static/icons/github.svg'
+import Moon from 'static/icons/moon.svg'
+import Logo from 'static/logo.svg'
 
 export interface IConsElements {
   [key: string]: React.ReactNode
@@ -20,11 +18,11 @@ const icons: IConsElements = {
   moon: <Moon />
 }
 
-export interface ICon {
+export interface IConProps {
   name: string
-  size?: number | undefined
+  scale?: number | undefined
 }
 
-export const Icon = ({ name, size }: ICon) => {
-  return <S.Wrapper size={size}>{icons[name]}</S.Wrapper>
+export const Icon = ({ name, scale }: IConProps) => {
+  return <S.Wrapper scale={scale}>{icons[name]}</S.Wrapper>
 }
