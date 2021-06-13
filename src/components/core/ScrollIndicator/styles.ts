@@ -14,7 +14,7 @@ export const ProgressContainer = styled.div<ProgressContainerProps>`
   position: ${({ position }) => position || 'absolute'};
   left: 0;
   top: ${({ topDistance }) =>
-    Number(topDistance) <= 0 ? 0 : `${topDistance}px`};
+    Number(topDistance) <= 0 ? 0 : `${Number(topDistance) / 16}rem`};
   transition: all 0.2s;
   z-index: 99999;
 `
