@@ -17,7 +17,7 @@ export const SocialButton = ({
 }: ISocialButton) => {
   return (
     <S.Wrapper href={url} target={target || ''}>
-      <Icon name={icon} size={iconSize} />
+      <Icon name={icon} scale={iconSize} />
     </S.Wrapper>
   )
 }
