@@ -17,7 +17,7 @@ export const PresentationContainer = styled.div`
   align-items: center;
 `
 export const TitleColorize = styled.h1`
-  margin-top: 10rem;
+  margin-top: 12rem;
   background: ${({ theme }) =>
     `repeating-linear-gradient(${theme.colors.gradientFontColorize})`};
   background-size: 200% auto;
