@@ -1,11 +1,19 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
 
-export const Container = styled(motion.nav)`
+type ContainerProp = {
+  withBackdrop: boolean
+}
+
+export const Container = styled(motion.nav)<ContainerProp>`
   position: fixed;
   height: ${({ theme }) => theme.sizes.desktop.navbar};
   width: 100%;
-  backdrop-filter: blur(15px);
+  ${({ withBackdrop }) =>
+    withBackdrop &&
+    css`
+      backdrop-filter: blur(15px);
+    `};
   border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   transition: border 0.4s;
   transition: padding 0.2s;
