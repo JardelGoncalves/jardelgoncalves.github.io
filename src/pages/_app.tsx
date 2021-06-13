@@ -2,19 +2,19 @@
 import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
-import { Navbar } from '../components/core/Navbar'
-import { SwitchDarkMode } from '../components/core/SwitchDarkMode'
-import { HeadSEO } from '../components/core/HeadSEO'
-import { Layout } from '../components/core/Layout'
+import { Navbar } from 'components/core/Navbar'
+import { SwitchDarkMode } from 'components/core/SwitchDarkMode'
+import { HeadSEO } from 'components/core/HeadSEO'
+import { Layout } from 'components/core/Layout'
 
-import { Cache } from '../utils/cache'
-import { THEMES } from '../utils/constants/enums'
-import { THEME_SETTING_KEY } from '../utils/constants/local-storage'
-import theme from '../styles/theme'
-import * as S from '../styles/global.style'
-import { LoadingLogo } from '../components/core/Loading'
+import { Cache } from 'utils/cache'
+import { THEMES } from 'utils/constants/enums'
+import { THEME_SETTING_KEY } from 'utils/constants/local-storage'
+import theme from 'styles/theme'
+import * as S from 'styles/global.style'
+import { LoadingLogo } from 'components/core/Loading'
 
-import '../styles/global.css'
+import 'styles/global.css'
 
 type Props = {
   Component: React.FC
