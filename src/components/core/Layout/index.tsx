@@ -5,5 +5,7 @@ interface LayoutProps {
 }
 
 export const Layout = ({ children }: LayoutProps) => (
-  <S.Wrapper>{children}</S.Wrapper>
+  <S.Wrapper>
+    <S.Content>{children}</S.Content>
+  </S.Wrapper>
 )
