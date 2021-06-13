@@ -53,7 +53,7 @@ export const Description = styled.p`
       &::after {
         content: '';
         position: absolute;
-        top: -1px;
+        top: -2px;
         left: 0;
         width: 100%;
         height: 1.625rem;
