@@ -30,6 +30,7 @@ export const Navbar = ({ children }: NavbarProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: shouldShowNavbar ? 1 : 0 }}
       transition={{ opacity: { duration: 0.2 } }}
+      withBackdrop={lastYPos > 30}
     >
       <Layout>
         <S.NavWrapper>
