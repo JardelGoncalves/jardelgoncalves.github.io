@@ -12,7 +12,7 @@ export const SwitchDarkMode = ({ isDark, toggle }: SwitchDarkModeProps) => {
     <S.Container>
       <input type="checkbox" checked={!!isDark} onChange={toggle} />
       <div className="slider">
-        <Icon name="moon" size={28} />
+        <Icon name="moon" scale={0.9} />
       </div>
     </S.Container>
   )

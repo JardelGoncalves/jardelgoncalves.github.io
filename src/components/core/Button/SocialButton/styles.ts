@@ -15,8 +15,6 @@ export const Wrapper = styled.a`
   z-index: 1;
   svg {
     fill: ${({ theme }) => theme.colors.textColor};
-    width: 1.5rem;
-    height: auto;
   }
 
   &:hover {
