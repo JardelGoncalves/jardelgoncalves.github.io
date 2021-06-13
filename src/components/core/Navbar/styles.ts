@@ -7,7 +7,7 @@ type ContainerProp = {
 
 export const Container = styled(motion.nav)<ContainerProp>`
   position: fixed;
-  height: ${({ theme }) => theme.sizes.desktop.navbar};
+  height: ${({ theme }) => theme.sizes.navbar};
   width: 100%;
   ${({ withBackdrop }) =>
     withBackdrop &&

@@ -10,6 +10,6 @@ export const Content = styled.section`
   padding: 0 6.25rem;
   display: flex;
   justify-content: center;
-  max-width: ${({ theme }) => theme.sizes.desktop.portView};
+  max-width: ${({ theme }) => theme.sizes.portView};
   width: 100%;
 `
