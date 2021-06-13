@@ -43,5 +43,6 @@ export const base = (colors?: Colors): Colors => ({
   gradientFontColorize:
     '45deg, #007EFF 0%, #007EFF 7.14%, #2AC769 14.28%, #2AC769 21.42%, #2AC769 28.56%, #FB4E4E 35.7%, #FB4E4E 42.84%, #007EFF 50%',
   gradientEnterprise: '90deg, #9796f0 0%, #fbc7d4 100%',
+  gradientPrimary: '90deg, #007eff 0%, #2ac769 65.63%, #fb4e4e 100%',
   ...(colors || {})
 })
