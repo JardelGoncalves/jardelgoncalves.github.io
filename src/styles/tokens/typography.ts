@@ -22,7 +22,8 @@ export const typography = {
   lineHeight: {
     sm: '1rem',
     base: '1.675rem',
-    md: '2rem'
+    md: '2rem',
+    lg: '2.5rem'
   },
   weight: {
     thin: 100,
