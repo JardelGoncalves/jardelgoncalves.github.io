@@ -33,6 +33,7 @@ export const base = (colors?: Colors): Colors => ({
 
   bgColor: '#FAFAFA',
   textColor: '#25282B',
+  descriptionColor: '#52575C',
   textGradientFrom: '#FB4E4E',
   textGradientTo: '#2AC769',
   borderColor: '#E8E8E8',

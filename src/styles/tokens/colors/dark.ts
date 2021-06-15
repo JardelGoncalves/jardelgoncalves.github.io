@@ -5,5 +5,6 @@ export const dark: Colors = base({
   borderColor: '#e4e4e71a',
   menuTextColor: '#FAFAFA',
   switchModeBorder: 'rgba(0, 126, 255, 0.3)',
-  switchModeBg: 'rgba(0, 126, 255, 0.2)'
+  switchModeBg: 'rgba(0, 126, 255, 0.2)',
+  descriptionColor: '#DBDDE0'
 })
