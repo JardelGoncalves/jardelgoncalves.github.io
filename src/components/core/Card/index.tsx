@@ -4,11 +4,21 @@ interface CardProps {
   children: React.ReactNode
   isColumn?: boolean
   background?: string
+  noPadding?: boolean
 }
 
-export const Card = ({ isColumn, background, children }: CardProps) => {
+export const Card = ({
+  isColumn,
+  background,
+  noPadding,
+  children
+}: CardProps) => {
   return (
-    <S.Container isColumn={isColumn} background={background}>
+    <S.Container
+      noPadding={noPadding}
+      isColumn={isColumn}
+      background={background}
+    >
       {children}
     </S.Container>
   )
