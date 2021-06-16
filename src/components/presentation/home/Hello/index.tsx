@@ -2,7 +2,7 @@ import { SocialButton } from 'components/core/Button'
 
 import * as S from './styles'
 
-export default function Hello() {
+export function Hello() {
   return (
     <S.HelloContainer>
       <S.TitleColorize>Hey, eu sou o Jardel</S.TitleColorize>
