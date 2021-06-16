@@ -1,5 +1,8 @@
 import Image from 'next/image'
+import { nanoid } from 'nanoid'
+
 import { Card } from 'components/core/Card'
+import { Tag } from 'components/core/Tag'
 
 import * as S from './styles'
 import { Article } from 'interfaces/article'
@@ -25,6 +28,16 @@ export const ArticleCard = ({
           />
         </S.ImageCover>
         <S.Details>
+          <S.WrapperTags>
+            {article.tags.map((tag) => (
+              <Tag
+                key={nanoid()}
+                background={tag.background}
+                to={tag.to}
+                label={tag.label}
+              />
+            ))}
+          </S.WrapperTags>
           <S.Title>{article.title}</S.Title>
           <S.Description>{article.description}</S.Description>
           <S.TimeToRead>{article.readToTime}</S.TimeToRead>
