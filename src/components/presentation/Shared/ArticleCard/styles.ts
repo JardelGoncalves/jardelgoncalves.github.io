@@ -137,7 +137,7 @@ export const Description = styled.p.attrs({
   line-height: ${({ theme }) => theme.typography.lineHeight.base};
   color: ${({ theme }) => theme.colors.descriptionColor};
   margin-bottom: ${({ theme }) => theme.spacing.sm};
-  ${limitTextLine(5)};
+  ${limitTextLine(4)};
 `
 
 export const TimeToRead = styled.span.attrs({
@@ -151,4 +151,12 @@ export const TimeToRead = styled.span.attrs({
   ${({ theme }) => theme.breakpoints.lessThan('medium')`
       display: none;
   `}
+`
+
+export const WrapperTags = styled.div`
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
