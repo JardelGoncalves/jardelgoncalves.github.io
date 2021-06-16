@@ -1,3 +1,5 @@
+import { Tag } from './tag'
+
 export interface Article {
   id: string
   textLink: string
@@ -8,4 +10,5 @@ export interface Article {
     url: string
     alt: string
   }
+  tags: Tag[]
 }
