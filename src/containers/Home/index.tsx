@@ -1,4 +1,4 @@
-import Hello from 'components/presentation/home/Hello'
+import { Hello } from 'components/presentation/home/Hello'
 import * as S from './styles'
 
 export default function Index() {
