@@ -23,7 +23,8 @@ export const typography = {
     sm: '1rem',
     base: '1.675rem',
     md: '2rem',
-    lg: '2.5rem'
+    lg: '2.5rem',
+    xl: '3.5rem'
   },
   weight: {
     thin: 100,
