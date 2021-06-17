@@ -2,10 +2,11 @@ import * as S from './styles'
 
 interface LayoutProps {
   children: React.ReactNode
+  full?: boolean
 }
 
-export const Layout = ({ children }: LayoutProps) => (
+export const Layout = ({ children, full }: LayoutProps) => (
   <S.Wrapper>
-    <S.Content>{children}</S.Content>
+    <S.Content full={full}>{children}</S.Content>
   </S.Wrapper>
 )
