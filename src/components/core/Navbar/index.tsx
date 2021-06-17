@@ -36,7 +36,7 @@ export const Navbar = ({ children }: NavbarProps) => {
         transition={{ opacity: { duration: 0.2 } }}
         withBackdrop={lastYPos > 30}
       >
-        <Layout>
+        <Layout full>
           <S.NavWrapper>
             <img src="/images/logo.svg" alt="Logo" />
             <S.NavMenu>
