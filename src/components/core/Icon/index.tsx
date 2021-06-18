@@ -1,10 +1,10 @@
 import * as S from './styles'
 
-import Linkedin from 'static/icons/linkedin.svg'
-import Email from 'static/icons/email.svg'
-import Github from 'static/icons/github.svg'
-import Moon from 'static/icons/moon.svg'
-import Logo from 'static/logo.svg'
+import Linkedin from './Linkedin'
+import Email from './Email'
+import Github from './Github'
+import Moon from './Moon'
+import Logo from './Logo'
 
 export interface IConsElements {
   [key: string]: React.ReactNode
