@@ -1,20 +1,28 @@
 import Image from 'next/image'
 import * as S from './styles'
 
-export const Banner = () => {
+type ImageProps = {
+  url: string
+  alt: string
+}
+
+interface BannerProps {
+  banner: {
+    title: string
+    description: string
+    image: ImageProps
+  }
+}
+
+export const Banner = ({ banner }: BannerProps) => {
   return (
     <S.Container>
-      <S.BannerTitle>Node Clean Architecture Deep Dive</S.BannerTitle>
-      <S.BannerDescription>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-        sollicitudin velit leo, eget efficitur neque fermentum at. Fusce sapien
-        tortor, vestibulum a vehicula at, cursus id ligula. Donec a blandit
-        quam, sed dapibus ex.
-      </S.BannerDescription>
+      <S.BannerTitle>{banner.title}</S.BannerTitle>
+      <S.BannerDescription>{banner.description}</S.BannerDescription>
       <S.BannerImage>
         <Image
-          alt="test"
-          src="https://cdn-images-1.medium.com/max/800/0*4R0hPG95Cv4Rj4S-"
+          alt={banner.image.alt}
+          src={banner.image.url}
           objectFit="cover"
           width={1400}
           height={660}
