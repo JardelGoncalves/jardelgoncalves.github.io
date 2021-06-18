@@ -23,6 +23,8 @@ export const Banner = ({ banner }: BannerProps) => {
         <Image
           alt={banner.image.alt}
           src={banner.image.url}
+          placeholder="blur"
+          blurDataURL={banner.image.url}
           objectFit="cover"
           width={1400}
           height={660}
