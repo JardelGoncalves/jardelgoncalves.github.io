@@ -20,6 +20,7 @@ export const typography = {
     '5xl': '4rem'
   },
   lineHeight: {
+    xs: '0.875rem',
     sm: '1rem',
     base: '1.675rem',
     md: '2rem',
