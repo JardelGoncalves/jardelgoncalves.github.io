@@ -39,6 +39,33 @@ export const Wrapper = styled.div`
   ${flexColumn};
   padding: 0 1rem;
   user-select: none;
+
+  ${({ theme }) => theme.breakpoints.lessThan('huge')`
+    padding: 0 1rem;
+  `}
+  ${({ theme }) => theme.breakpoints.lessThan('large')`
+    padding: 0 0.75rem;
+  `}
+  ${({ theme }) => theme.breakpoints.lessThan('medium')`
+    padding: 0 0.5rem;
+  `}
+  ${({ theme }) => theme.breakpoints.lessThan('small')`
+    bottom: 0;
+    top: unset;
+    right: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transform: none;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: ${theme.colors.bgColor};
+    height: ${theme.sizes.navbar};
+    border-top: 2px solid ${theme.colors.borderColor};
+  `}
 `
 export const Item = styled.button`
   width: 3rem;
@@ -92,4 +119,10 @@ export const Item = styled.button`
       animation: ${addInteractionAnimation} 0.3s linear;
     }
   }
+
+  ${({ theme }) => theme.breakpoints.lessThan('small')`
+    & + & {
+      margin-top: 0;
+    }
+  `}
 `
