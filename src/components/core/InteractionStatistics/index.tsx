@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid'
 import * as S from './styles'
 import React, { useRef, useEffect } from 'react'
+import { PUBLIC_IMAGE } from 'utils/constants/directories'
 
 interface Interaction {
   id: string
@@ -15,8 +16,6 @@ interface InteractionStatisticsProps {
   interactions: Interaction[]
   onInteraction: (interaction: Interaction) => void
 }
-
-const IMAGE_PATH = '/images/'
 
 export const InteractionStatistics = ({
   interactions,
@@ -54,7 +53,7 @@ export const InteractionStatistics = ({
           onClick={() => onInteraction(interaction)}
         >
           <img
-            src={`${IMAGE_PATH}${interaction.image.name}`}
+            src={`${PUBLIC_IMAGE}${interaction.image.name}`}
             alt={interaction.image.alt}
           />
           <span>{interaction.amount}</span>
