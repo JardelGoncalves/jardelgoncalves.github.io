@@ -35,7 +35,7 @@ export const Input = styled.input`
   transition: all 0.2s;
 
   &:focus {
-    border: 2px solid ${({ theme }) => rgba(theme.colors.primary700, 0.6)};
+    border: 2px solid ${({ theme }) => rgba(theme.colors.primary900, 0.6)};
   }
   &::placeholder {
     color: ${({ theme }) => theme.colors.grayscale500};
