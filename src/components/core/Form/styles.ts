@@ -12,6 +12,6 @@ export const WrapperForm = styled.form<WrapperProps>`
     margin-top: 1.5rem;
   }
   .raised-button {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 `
