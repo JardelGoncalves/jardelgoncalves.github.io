@@ -13,9 +13,16 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.textColor};
   font-size: ${({ theme }) => theme.typography.sizes.xl};
   font-weight: ${({ theme }) => theme.typography.weight.bold};
-  margin-bottom: 1rem;
+  margin-bottom: 1.8rem;
 
   ${({ theme }) => theme.breakpoints.lessThan('medium')`
     font-size: ${theme.typography.sizes.lg};
   `}
+`
+
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
