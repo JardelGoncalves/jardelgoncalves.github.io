@@ -1,4 +1,5 @@
 import * as S from './styles'
+import { LoadingEllipsis } from '../../Loading/LoadingEllipsis/index'
 
 interface RaisedButtonProps {
   label: string
@@ -7,6 +8,7 @@ interface RaisedButtonProps {
   bg?: string
   block?: boolean
   disabled?: boolean
+  loading?: boolean
 }
 
 export const RaisedButton = ({
@@ -15,17 +17,19 @@ export const RaisedButton = ({
   width,
   bg,
   block,
-  disabled
+  disabled,
+  loading
 }: RaisedButtonProps) => {
   return (
     <S.Wrapper
       type={type || 'button'}
       bg={bg}
       block={block}
-      disabled={!!disabled}
+      disabled={!!disabled || !!loading}
       width={width}
     >
-      {label}
+      {!loading && label}
+      {loading && <LoadingEllipsis size={6} />}
     </S.Wrapper>
   )
 }
