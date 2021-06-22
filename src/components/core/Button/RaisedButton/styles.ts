@@ -42,6 +42,10 @@ export const Wrapper = styled.button.attrs((props) => ({
     cursor: default;
   }
   &:hover {
-    opacity: 0.8;
+    ${({ disabled }) =>
+      !disabled &&
+      css`
+        opacity: 0.8;
+      `};
   }
 `
