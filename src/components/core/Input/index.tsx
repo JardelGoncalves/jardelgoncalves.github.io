@@ -9,7 +9,7 @@ interface InputProps {
   name?: string
   placeholder?: string
   width?: number
-  onChange?: () => void
+  ChangeHandler?: () => void
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
