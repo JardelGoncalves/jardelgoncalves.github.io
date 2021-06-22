@@ -42,4 +42,13 @@ export const Input = styled.input`
     font-size: ${({ theme }) => theme.typography.sizes.sm};
     font-weight: ${({ theme }) => theme.typography.weight.light};
   }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: ${({ theme }) =>
+      theme.colors.textColor} !important;
+  }
 `
