@@ -1,3 +1,5 @@
+import React from 'react'
+
 function Email() {
   return (
     <svg
@@ -12,4 +14,4 @@ function Email() {
   )
 }
 
-export default Email
+export default React.memo(Email)

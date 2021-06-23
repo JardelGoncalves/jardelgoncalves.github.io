@@ -1,3 +1,5 @@
+import React from 'react'
+
 function Moon() {
   return (
     <svg
@@ -15,4 +17,4 @@ function Moon() {
   )
 }
 
-export default Moon
+export default React.memo(Moon)

@@ -1,3 +1,5 @@
+import React from 'react'
+
 function Linkedin() {
   return (
     <svg
@@ -12,4 +14,4 @@ function Linkedin() {
   )
 }
 
-export default Linkedin
+export default React.memo(Linkedin)

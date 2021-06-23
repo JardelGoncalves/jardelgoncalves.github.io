@@ -1,3 +1,5 @@
+import React from 'react'
+
 function Github() {
   return (
     <svg
@@ -12,4 +14,4 @@ function Github() {
   )
 }
 
-export default Github
+export default React.memo(Github)
