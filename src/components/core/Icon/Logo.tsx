@@ -1,3 +1,5 @@
+import React from 'react'
+
 function Logo() {
   return (
     <svg
@@ -26,9 +28,8 @@ function Logo() {
           y2="55"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#007EFF"></stop>
-          <stop offset="0.599" stopColor="#2AC769"></stop>
-          <stop offset="1" stopColor="#FB4E4E"></stop>
+          <stop stopColor="#FF0A78"></stop>
+          <stop offset="1" stopColor="#007EFF"></stop>
         </linearGradient>
         <linearGradient
           id="paint1_linear"
@@ -38,13 +39,14 @@ function Logo() {
           y2="38.134"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#007EFF"></stop>
-          <stop offset="0.635" stopColor="#2AC769"></stop>
-          <stop offset="1" stopColor="#FB4E4E"></stop>
+          <stop stopColor="#FF0A78"></stop>
+          <stop offset="0.516" stopColor="#B52C9F"></stop>
+          <stop offset="0.661" stopColor="#5657D1"></stop>
+          <stop offset="1" stopColor="#007EFF"></stop>
         </linearGradient>
       </defs>
     </svg>
   )
 }
 
-export default Logo
+export default React.memo(Logo)
