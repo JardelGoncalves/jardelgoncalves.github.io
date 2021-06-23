@@ -1,10 +1,12 @@
 import { Colors, base } from './base'
 export const dark: Colors = base({
-  bgColor: '#25282B',
-  textColor: '#FAFAFA',
-  borderColor: '#e4e4e71a',
-  menuTextColor: '#FAFAFA',
-  switchModeBorder: 'rgba(0, 126, 255, 0.3)',
-  switchModeBg: 'rgba(0, 126, 255, 0.2)',
+  background: '#0E141B',
+  text: '#FAFAFA',
+  border: '#e4e4e71a',
+  textMenu: '#FAFAFA',
+  toggleBorder: 'rgba(0, 126, 255, 0.3)',
+  toggleBackground: 'rgba(0, 126, 255, 0.2)',
   descriptionColor: '#DBDDE0'
 })
+
+// toggleBackgroundContainer: 'transparent',

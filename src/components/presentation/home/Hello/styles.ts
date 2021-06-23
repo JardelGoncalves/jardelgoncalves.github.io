@@ -19,7 +19,18 @@ export const HelloContainer = styled.div`
 export const TitleColorize = styled.h1`
   margin-top: 12rem;
   background: ${({ theme }) =>
-    `repeating-linear-gradient(${theme.colors.gradientFontColorize})`};
+    `repeating-linear-gradient(
+      45deg,
+      ${theme.colors.primary} 0%,
+      ${theme.colors.primary} 7.14%,
+      ${theme.colors.primary} 14.28%,
+      ${theme.colors.tertiary} 21.42%,
+      ${theme.colors.secondary} 28.56%,
+      ${theme.colors.secondary} 35.7%,
+      ${theme.colors.secondary} 42.84%,
+      ${theme.colors.secondary} 46.24%,
+      ${theme.colors.primary} 50%
+    )`};
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -36,7 +47,7 @@ export const Description = styled.p`
   font-weight: ${({ theme }) => theme.typography.weight.light};
   text-align: center;
   line-height: ${({ theme }) => theme.typography.lineHeight.base};
-  color: ${({ theme }) => theme.colors.textColor};
+  color: ${({ theme }) => theme.colors.text};
   max-width: 750px;
   width: 100%;
   padding: 0.75rem 0;
@@ -58,7 +69,7 @@ export const Description = styled.p`
         width: 100%;
         height: 1.625rem;
         background: ${({ theme }) =>
-          `linear-gradient(${theme.colors.gradientEnterprise})`};
+          `linear-gradient(${theme.colors.enterprise})`};
         opacity: 0.6;
         border-radius: 1.25rem;
         z-index: -1;

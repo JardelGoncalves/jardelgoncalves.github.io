@@ -1,11 +1,12 @@
+import { rgba } from 'polished'
 import styled from 'styled-components'
 
 export const Container = styled.div`
   position: relative;
   display: flex;
   width: 2.75rem;
-  border: 2px solid ${({ theme }) => theme.colors.switchModeBorder};
-  background-color: ${({ theme }) => theme.colors.switchModeBg};
+  border: 2px solid ${({ theme }) => rgba(theme.colors.toggleBorder, 0.2)};
+  background-color: ${({ theme }) => theme.colors.toggleBackgroundContainer};
   height: 1.5rem;
   border-radius: ${({ theme }) => theme.shapes.borderRadius.md};
 
@@ -24,7 +25,7 @@ export const Container = styled.div`
     width: 1.75rem;
     left: -0.125rem;
     bottom: -0.25rem;
-    background-color: ${({ theme }) => theme.colors.sliderBgColor};
+    background-color: ${({ theme }) => theme.colors.toggleBackground};
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -34,7 +35,7 @@ export const Container = styled.div`
   }
 
   input:checked + .slider {
-    background: ${({ theme }) => theme.colors.primary900};
+    background: ${({ theme }) => theme.colors.primary};
     left: 1rem;
 
     svg {

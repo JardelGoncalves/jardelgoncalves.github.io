@@ -14,7 +14,7 @@ export const Container = styled(motion.nav)<ContainerProp>`
     css`
       backdrop-filter: blur(15px);
     `};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   transition: border 0.4s;
   transition: padding 0.2s;
   z-index: 9999;
@@ -44,7 +44,7 @@ export const NavMenu = styled.ul`
 `
 
 export const NavMenuItem = styled.li`
-  color: ${({ theme }) => theme.colors.menuTextColor};
+  color: ${({ theme }) => theme.colors.textMenu};
   font-weight: ${({ theme }) => theme.typography.weight.medium};
   padding: 0.5rem 1.5rem;
   position: relative;
@@ -52,7 +52,7 @@ export const NavMenuItem = styled.li`
   a {
     &::after {
       content: '';
-      background-color: ${({ theme }) => theme.colors.primary900};
+      background-color: ${({ theme }) => theme.colors.primary};
       position: absolute;
       bottom: 0;
       left: 0;
@@ -65,7 +65,7 @@ export const NavMenuItem = styled.li`
     }
     &:hover,
     &::after {
-      color: ${({ theme }) => theme.colors.primary900};
+      color: ${({ theme }) => theme.colors.primary};
     }
 
     &:hover::after {

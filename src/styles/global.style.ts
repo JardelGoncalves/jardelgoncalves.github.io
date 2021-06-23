@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   body {
     transition: background 0.4s;
     transition: background-color 0.4s;
-    background-color:${({ theme }) => theme.colors.bgColor};
+    background-color:${({ theme }) => theme.colors.background};
   }
 
   a {
@@ -52,7 +52,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   textarea,
   button {
     font: 500 1rem ${({ theme }) => theme.typography.family.primary};
-    color: ${({ theme }) => theme.colors.textColor};
+    color: ${({ theme }) => theme.colors.text};
   }
 
   h1 {
@@ -71,7 +71,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   h6 {
     font-weight: ${({ theme }) => theme.typography.weight.semiBold};
     font-family: ${({ theme }) => theme.typography.family.primary};
-    color: ${({ theme }) => theme.colors.textColor};
+    color: ${({ theme }) => theme.colors.text};
   }
 
   button {
@@ -79,7 +79,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.primary900};
+    background-color: ${({ theme }) => theme.colors.primary};
   }
   ::-webkit-scrollbar {
     width: 0.25rem;

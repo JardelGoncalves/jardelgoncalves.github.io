@@ -26,7 +26,7 @@ export const Wrapper = styled.button.attrs((props) => ({
         `}
   height: 3rem;
 
-  background-color: ${({ theme, bg }) => theme.colors[bg || 'primary900']};
+  background-color: ${({ theme, bg }) => theme.colors[bg || 'primary']};
   display: flex;
   align-items: center;
   justify-content: center;

@@ -8,8 +8,8 @@ type TagsProps = {
 export const Wrapper = styled.a<TagsProps>`
   padding: ${({ theme }) => `${theme.spacing.xs} ${theme.spacing.sm}`};
   background-color: ${({ theme, background }) =>
-    rgba(background || theme.colors.primary700, 0.15)};
-  color: ${({ theme, background }) => background || theme.colors.primary700};
+    rgba(background || theme.colors.primary, 0.15)};
+  color: ${({ theme, background }) => background || theme.colors.primary};
   font-size: ${({ theme }) => theme.typography.sizes.sm};
   font-weight: ${({ theme }) => theme.typography.weight.semiBold};
   line-height: ${({ theme }) => theme.typography.lineHeight.sm};
@@ -18,8 +18,8 @@ export const Wrapper = styled.a<TagsProps>`
   transition: all 0.2s;
   &:hover {
     background-color: ${({ theme, background }) =>
-      background || theme.colors.primary700};
+      background || theme.colors.primary};
     color: ${({ theme, background }) =>
-      lighten(0.9, background || theme.colors.primary700)};
+      lighten(0.9, background || theme.colors.primary)};
   }
 `

@@ -62,9 +62,9 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-    background-color: ${theme.colors.bgColor};
+    background-color: ${theme.colors.background};
     height: ${theme.sizes.navbar};
-    border-top: 2px solid ${theme.colors.borderColor};
+    border-top: 2px solid ${theme.colors.border};
   `}
 `
 export const Item = styled.button`
@@ -85,7 +85,7 @@ export const Item = styled.button`
     margin-top: 0.25rem;
     font-size: ${({ theme }) => theme.typography.sizes.xs};
     line-height: ${({ theme }) => theme.typography.lineHeight.xs};
-    color: ${({ theme }) => theme.colors.grayscale400};
+    color: ${({ theme }) => theme.colors.textInteraction};
   }
 
   & + & {

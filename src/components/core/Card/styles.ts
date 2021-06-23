@@ -14,6 +14,6 @@ export const Container = styled.div<ContainerProps>`
     background &&
     css`
       background-color: ${theme.colors[background]};
-      border: 1px solid ${theme.colors.borderColor};
+      border: 1px solid ${theme.colors.border};
     `}
 `

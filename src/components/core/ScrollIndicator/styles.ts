@@ -9,7 +9,7 @@ type ProgressContainerProps = {
 export const ProgressContainer = styled.div<ProgressContainerProps>`
   width: 100%;
   height: 0.25rem;
-  background-color: ${({ theme }) => theme.colors.borderColor};
+  background-color: ${({ theme }) => theme.colors.border};
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   position: ${({ position }) => position || 'absolute'};
   left: 0;
@@ -23,5 +23,9 @@ export const Progress = styled.div`
   height: 100%;
   width: 0%;
   background: ${({ theme }) =>
-    `linear-gradient(${theme.colors.gradientPrimary})`};
+    `linear-gradient(
+      90deg,
+      ${theme.colors.secondary} 0%,
+      ${theme.colors.primary} 100%,
+    )`};
 `

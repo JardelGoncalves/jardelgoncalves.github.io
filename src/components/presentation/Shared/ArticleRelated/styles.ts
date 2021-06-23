@@ -17,7 +17,7 @@ export const AnchorLik = styled.a`
   transition: all 0.1s;
   &:hover {
     text-decoration: underline;
-    color: ${({ theme }) => theme.colors.primary700};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `
 
@@ -25,7 +25,7 @@ export const Description = styled.p`
   font-size: ${({ theme }) => theme.typography.sizes.base};
   font-weight: ${({ theme }) => theme.typography.weight.regular};
   line-height: ${({ theme }) => theme.typography.lineHeight.base};
-  color: ${({ theme }) => theme.colors.descriptionColor};
+  color: ${({ theme }) => theme.colors.description};
   margin-top: ${({ theme }) => theme.spacing['2xs']};
   ${limitTextLine(1)};
 `

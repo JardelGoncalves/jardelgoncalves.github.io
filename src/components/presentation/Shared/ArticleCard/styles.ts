@@ -120,7 +120,7 @@ export const Title = styled.a.attrs({
   transition: all 0.1s;
   &:hover {
     text-decoration: underline;
-    color: ${({ theme }) => theme.colors.primary700};
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   ${({ theme }) => theme.breakpoints.lessThan('medium')`
@@ -135,7 +135,7 @@ export const Description = styled.p.attrs({
   font-size: ${({ theme }) => theme.typography.sizes.base};
   font-weight: ${({ theme }) => theme.typography.weight.regular};
   line-height: ${({ theme }) => theme.typography.lineHeight.base};
-  color: ${({ theme }) => theme.colors.descriptionColor};
+  color: ${({ theme }) => theme.colors.description};
   margin-bottom: ${({ theme }) => theme.spacing.sm};
   ${limitTextLine(4)};
 `
