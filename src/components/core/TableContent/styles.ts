@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
-  margin-top: 40px;
+export const Container = styled.nav`
+  margin-top: 2.5rem;
   position: relative;
   max-height: 50vh;
   height: 100%;
@@ -9,10 +9,14 @@ export const Container = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 32px;
+  padding: 0 2rem;
 
   &.sticky {
     position: fixed;
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 `
 
