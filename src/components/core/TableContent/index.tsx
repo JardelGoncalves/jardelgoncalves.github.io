@@ -1,6 +1,8 @@
 import { nanoid } from 'nanoid'
 import { useRef, useEffect } from 'react'
 
+import * as DOMHandler from 'utils/DOM-handler'
+
 import * as S from './styles'
 
 interface Anchor {
@@ -17,20 +19,49 @@ type TableContentProps = {
 
 export const TableContent = ({ contents }: TableContentProps) => {
   const tableContentRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     if (tableContentRef.current) {
       const sticky = tableContentRef.current.offsetTop
-      window.onscroll = function () {
+      window.addEventListener('scroll', () => {
         if (tableContentRef.current) {
-          if (window.pageYOffset + 80 > sticky) {
+          if (window.pageYOffset + 90 > sticky) {
             tableContentRef.current.classList.add('sticky')
           } else {
             tableContentRef.current.classList.remove('sticky')
           }
         }
-      }
+      })
     }
   }, [])
+
+  useEffect(() => {
+    let lastId = ''
+    let contentItems = [] //menuItems
+    let scrollItems = []
+    let topMenuHeight = 0
+
+    window.addEventListener('scroll', () => {
+      if (tableContentRef.current) {
+        topMenuHeight = DOMHandler.outerHeight(tableContentRef.current)
+        contentItems = DOMHandler.findElements(tableContentRef.current, 'a')
+        scrollItems = DOMHandler.proccessAttributes(contentItems, 'href')
+
+        const fromTop = window.scrollY + topMenuHeight - 250
+        const currentSection = scrollItems.filter((id) => {
+          return DOMHandler.offsetTop(id) < fromTop
+        })
+
+        const id = currentSection[currentSection.length - 1]
+        if (lastId !== id) {
+          lastId = id
+          DOMHandler.removeClass(contentItems, '--active')
+          DOMHandler.findAddClass(contentItems, '--active', 'href', `${id}`)
+        }
+      }
+    })
+  }, [])
+
   return (
     <S.Container ref={tableContentRef}>
       <S.Title>Conteudo</S.Title>
