@@ -26,6 +26,6 @@ export const Progress = styled.div`
     `linear-gradient(
       90deg,
       ${theme.colors.secondary} 0%,
-      ${theme.colors.primary} 100%,
+      ${theme.colors.primary} 100%
     )`};
 `
