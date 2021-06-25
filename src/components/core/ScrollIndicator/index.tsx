@@ -15,7 +15,7 @@ export const ScrollIndicator = ({
   const progressRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (progressRef.current) {
-      window.onscroll = function () {
+      window.addEventListener('scroll', () => {
         const winScroll =
           document.body.scrollTop || document.documentElement.scrollTop
         const height =
@@ -25,7 +25,7 @@ export const ScrollIndicator = ({
         if (progressRef.current?.style) {
           progressRef.current.style.width = `${scrolled}%`
         }
-      }
+      })
     }
   }, [])
   return (
