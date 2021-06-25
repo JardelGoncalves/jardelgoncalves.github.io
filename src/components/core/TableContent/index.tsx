@@ -20,6 +20,20 @@ type TableContentProps = {
 export const TableContent = ({ contents }: TableContentProps) => {
   const tableContentRef = useRef<HTMLDivElement>(null)
 
+  function onItemClick(event: React.MouseEvent) {
+    const element = event.target as HTMLAnchorElement
+
+    if (element.getAttribute) {
+      const id = element.getAttribute('href')
+      const section = document.querySelector(id as string)
+      if (section) {
+        const y = section.getBoundingClientRect().top + window.pageYOffset - 70
+        window.scrollTo({ top: y, behavior: 'smooth' })
+      }
+    }
+    event.preventDefault()
+  }
+
   useEffect(() => {
     if (tableContentRef.current) {
       const sticky = tableContentRef.current.offsetTop
@@ -68,12 +82,16 @@ export const TableContent = ({ contents }: TableContentProps) => {
       <S.AnchorGroup level={0}>
         {contents.map((content) => (
           <S.AnchorGroupItem key={nanoid()}>
-            <S.Anchor href={content.anchor}>{content.title}</S.Anchor>
+            <S.Anchor onClick={onItemClick} href={content.anchor}>
+              {content.title}
+            </S.Anchor>
             {content.childs?.length &&
               content.childs.map((child) => (
                 <S.AnchorGroup level={1} key={nanoid()}>
                   <S.AnchorGroupItem>
-                    <S.Anchor href={child.anchor}>{child.title}</S.Anchor>
+                    <S.Anchor onClick={onItemClick} href={child.anchor}>
+                      {child.title}
+                    </S.Anchor>
                   </S.AnchorGroupItem>
                 </S.AnchorGroup>
               ))}
