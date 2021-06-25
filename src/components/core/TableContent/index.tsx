@@ -15,9 +15,17 @@ interface Content extends Anchor {
 }
 type TableContentProps = {
   contents: Content[]
+  customOffset?: number
+  color?: string
+  activeColor?: string
 }
 
-export const TableContent = ({ contents }: TableContentProps) => {
+export const TableContent = ({
+  contents,
+  customOffset,
+  activeColor,
+  color
+}: TableContentProps) => {
   const tableContentRef = useRef<HTMLDivElement>(null)
 
   function onItemClick(event: React.MouseEvent) {
@@ -27,11 +35,36 @@ export const TableContent = ({ contents }: TableContentProps) => {
       const id = element.getAttribute('href')
       const section = document.querySelector(id as string)
       if (section) {
-        const y = section.getBoundingClientRect().top + window.pageYOffset - 70
+        const y = section.getBoundingClientRect().top + window.pageYOffset - 80
         window.scrollTo({ top: y, behavior: 'smooth' })
       }
     }
     event.preventDefault()
+  }
+
+  function onScroll() {
+    let lastId = ''
+    let contentItems = []
+    let scrollItems = []
+    let topMenuHeight = 0
+
+    if (tableContentRef.current) {
+      topMenuHeight = DOMHandler.outerHeight(tableContentRef.current)
+      contentItems = DOMHandler.findElements(tableContentRef.current, 'a')
+      scrollItems = DOMHandler.proccessAttributes(contentItems, 'href')
+
+      const fromTop = window.scrollY + topMenuHeight - (customOffset || 250)
+      const currentSection = scrollItems.filter((id) => {
+        return DOMHandler.offsetTop(id) < fromTop
+      })
+
+      const id = currentSection[currentSection.length - 1]
+      if (lastId !== id) {
+        lastId = id
+        DOMHandler.removeClass(contentItems, '--active')
+        DOMHandler.findAddClass(contentItems, '--active', 'href', `${id}`)
+      }
+    }
   }
 
   useEffect(() => {
@@ -50,46 +83,36 @@ export const TableContent = ({ contents }: TableContentProps) => {
   }, [])
 
   useEffect(() => {
-    let lastId = ''
-    let contentItems = [] //menuItems
-    let scrollItems = []
-    let topMenuHeight = 0
+    onScroll()
+    window.addEventListener('scroll', onScroll)
 
-    window.addEventListener('scroll', () => {
-      if (tableContentRef.current) {
-        topMenuHeight = DOMHandler.outerHeight(tableContentRef.current)
-        contentItems = DOMHandler.findElements(tableContentRef.current, 'a')
-        scrollItems = DOMHandler.proccessAttributes(contentItems, 'href')
-
-        const fromTop = window.scrollY + topMenuHeight - 250
-        const currentSection = scrollItems.filter((id) => {
-          return DOMHandler.offsetTop(id) < fromTop
-        })
-
-        const id = currentSection[currentSection.length - 1]
-        if (lastId !== id) {
-          lastId = id
-          DOMHandler.removeClass(contentItems, '--active')
-          DOMHandler.findAddClass(contentItems, '--active', 'href', `${id}`)
-        }
-      }
-    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <S.Container ref={tableContentRef}>
-      <S.Title>Conteudo</S.Title>
+      <S.Title color={color}>Conteudo</S.Title>
       <S.AnchorGroup level={0}>
         {contents.map((content) => (
           <S.AnchorGroupItem key={nanoid()}>
-            <S.Anchor onClick={onItemClick} href={content.anchor}>
+            <S.Anchor
+              activeColor={activeColor}
+              color={color}
+              onClick={onItemClick}
+              href={content.anchor}
+            >
               {content.title}
             </S.Anchor>
             {content.childs?.length &&
               content.childs.map((child) => (
                 <S.AnchorGroup level={1} key={nanoid()}>
                   <S.AnchorGroupItem>
-                    <S.Anchor onClick={onItemClick} href={child.anchor}>
+                    <S.Anchor
+                      activeColor={activeColor}
+                      color={color}
+                      onClick={onItemClick}
+                      href={child.anchor}
+                    >
                       {child.title}
                     </S.Anchor>
                   </S.AnchorGroupItem>
