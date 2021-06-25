@@ -1,3 +1,4 @@
+import { rgba } from 'polished'
 import styled from 'styled-components'
 
 export const Container = styled.nav`
@@ -20,10 +21,16 @@ export const Container = styled.nav`
   }
 `
 
-export const Title = styled.h4`
+type CustomColorsProps = {
+  color?: string | undefined
+  activeColor?: string | undefined
+}
+
+export const Title = styled.h4<CustomColorsProps>`
   font-size: 1rem;
   font-weight: 900;
-  color: #52575c;
+  color: ${({ theme, color }) =>
+    rgba(theme.colors[color || 'description'], 0.8)};
   margin-bottom: 0.5rem;
 `
 
@@ -35,7 +42,7 @@ export const AnchorGroup = styled.ul<AnchorGroupProps>`
   list-style: none;
   margin: 0;
   padding: 0;
-  .table-content__anchor {
+  a {
     margin-left: ${({ level }) => (level ? level * 12 : 0)}px;
     font-size: ${({ level }) => (level ? 15 - level * 2 : 14)}px;
   }
@@ -46,22 +53,21 @@ export const AnchorGroupItem = styled.li`
   padding: 0;
 `
 
-export const Anchor = styled.a.attrs((props) => ({
-  className: 'table-content__anchor',
-  ...props
-}))`
+export const Anchor = styled.a<CustomColorsProps>`
   display: block;
   font-size: 15px;
   font-weight: 500;
-  color: #52575c;
+  color: ${({ theme, color }) =>
+    rgba(theme.colors[color || 'description'], 0.8)};
   text-decoration: none;
 
   &:hover {
-    color: #fafafa;
+    color: ${({ theme, color }) => theme.colors[color || 'description']};
   }
 
   &.--active {
-    color: ${({ theme }) => theme.colors.tertiary};
+    color: ${({ theme, activeColor }) =>
+      rgba(theme.colors[activeColor || 'tertiary'], 0.8)};
   }
   margin-top: 0.75rem;
 `
