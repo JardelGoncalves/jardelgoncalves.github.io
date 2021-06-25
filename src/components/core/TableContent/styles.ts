@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.nav`
-  margin-top: 2.5rem;
+  margin-top: 4rem;
   position: relative;
   max-height: 50vh;
   height: 100%;
@@ -58,6 +58,10 @@ export const Anchor = styled.a.attrs((props) => ({
 
   &:hover {
     color: #fafafa;
+  }
+
+  &.--active {
+    color: ${({ theme }) => theme.colors.tertiary};
   }
   margin-top: 0.75rem;
 `
