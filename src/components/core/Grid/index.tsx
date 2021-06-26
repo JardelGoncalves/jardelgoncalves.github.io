@@ -6,5 +6,9 @@ interface GridProps {
 }
 
 export const Grid = ({ children, column }: GridProps) => {
-  return <S.GridWrapper column={column}>{children}</S.GridWrapper>
+  return (
+    <S.GridWrapper className="grid-template-columns" column={column}>
+      {children}
+    </S.GridWrapper>
+  )
 }
