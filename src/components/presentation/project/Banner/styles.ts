@@ -4,7 +4,9 @@ export const BannerWrapper = styled.header`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 4rem 0;
+  padding: 5rem 0;
+  border-radius: 1rem;
+  margin-top: 2rem;
 `
 
 export const LogoWrapper = styled.div`
@@ -17,8 +19,8 @@ export const LogoWrapper = styled.div`
 `
 
 export const Title = styled.h1`
-  font-size: 3rem;
-  font-weight: 900;
+  font-size: ${({ theme }) => theme.typography.sizes['2xl']};
+  font-weight: ${({ theme }) => theme.typography.weight.xBold};
   text-align: center;
 `
 
