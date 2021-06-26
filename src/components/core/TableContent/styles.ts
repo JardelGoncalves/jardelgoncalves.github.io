@@ -2,7 +2,6 @@ import { rgba } from 'polished'
 import styled from 'styled-components'
 
 export const Container = styled.nav`
-  margin-top: 4rem;
   position: relative;
   max-height: 50vh;
   height: 100%;
@@ -10,7 +9,6 @@ export const Container = styled.nav`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
 
   &.sticky {
     position: fixed;
@@ -66,8 +64,8 @@ export const Anchor = styled.a<CustomColorsProps>`
   }
 
   &.--active {
-    color: ${({ theme, activeColor }) =>
-      rgba(theme.colors[activeColor || 'tertiary'], 0.8)};
+    color: ${({ theme, activeColor }) => theme.colors[activeColor || 'title']};
+    font-weight: ${({ theme }) => theme.typography.weight.semiBold};
   }
   margin-top: 0.75rem;
 `
