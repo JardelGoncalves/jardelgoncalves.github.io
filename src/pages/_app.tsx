@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }: Props) {
           <Navbar>
             <SwitchDarkMode isDark={isDark} toggle={toggle} />
           </Navbar>
-          <Layout>
+          <Layout full={pageProps.fullLayout}>
             <Component {...pageProps} />
           </Layout>
         </>
