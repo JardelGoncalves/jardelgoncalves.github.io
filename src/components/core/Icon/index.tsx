@@ -5,6 +5,7 @@ import Email from './Email'
 import Github from './Github'
 import Moon from './Moon'
 import Logo from './Logo'
+import Link from './Link'
 
 export interface IConsElements {
   [key: string]: React.ReactNode
@@ -15,7 +16,8 @@ const icons: IConsElements = {
   github: <Github />,
   linkedin: <Linkedin />,
   email: <Email />,
-  moon: <Moon />
+  moon: <Moon />,
+  link: <Link />
 }
 
 export interface IConProps {
