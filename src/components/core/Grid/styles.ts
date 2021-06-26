@@ -9,6 +9,6 @@ export const GridWrapper = styled.section<GridWrapperProps>`
   ${({ column }) =>
     column &&
     css`
-      grid-column: ${column};
+      grid-template-columns: ${column};
     `};
 `
