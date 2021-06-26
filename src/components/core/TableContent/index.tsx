@@ -18,13 +18,15 @@ type TableContentProps = {
   customOffset?: number
   color?: string
   activeColor?: string
+  title: string
 }
 
 export const TableContent = ({
   contents,
   customOffset,
   activeColor,
-  color
+  color,
+  title
 }: TableContentProps) => {
   const tableContentRef = useRef<HTMLDivElement>(null)
 
@@ -91,7 +93,7 @@ export const TableContent = ({
 
   return (
     <S.Container ref={tableContentRef}>
-      <S.Title color={color}>Conteudo</S.Title>
+      <S.Title color={color}>{title}</S.Title>
       <S.AnchorGroup level={0}>
         {contents.map((content) => (
           <S.AnchorGroupItem key={nanoid()}>
