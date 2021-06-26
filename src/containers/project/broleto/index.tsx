@@ -5,11 +5,11 @@ export default function Broleto() {
   return (
     <S.Container>
       <Banner
-        title="Broleto"
-        description="Valide e/ou obtenha dados de boletos bancário ou arrecadação de forma fácil"
+        title="broleto"
+        description="Valide e obtenha dados de boleto bancário/arrecadação de forma fácil"
         image={{
           url: '/images/broleto.png',
-          alt: 'Barras lateral e vertical com imitando a bandeira do Brasil'
+          alt: 'Barras verticais semelhantes ao um codigo de barra nas cores verde, amarelo e azul representando a bandeira do Brasil'
         }}
       />
     </S.Container>
