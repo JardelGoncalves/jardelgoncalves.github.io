@@ -9,6 +9,7 @@ export const WrapperSyntax = styled.section`
     transition: all 0.9s;
     margin-top: 0 !important;
     z-index: 2 !important;
+    border-radius: 0.5rem;
   }
 `
 
