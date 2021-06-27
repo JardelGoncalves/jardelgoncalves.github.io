@@ -1,0 +1,30 @@
+{
+  "banner": {
+    "title": "broleto",
+    "description": "Valide e obtenha dados de boleto bancário/arrecadação de forma fácil",
+    "image": {
+      "url": "/images/broleto.png",
+      "alt": "Barras verticais semelhantes ao um codigo de barra nas cores verde, amarelo e azul representando a bandeira do Brasil"
+    }
+  },
+  "tableContent": {
+    "title": "Conteúdo",
+    "contents": [
+      {
+        "title": "Introdução",
+        "anchor": "#introduction"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introdução",
+      "descriptions": [
+        "No Brasil existe um método muito utilizado chamado Boleto Bancário que consiste em uma série de números onde é possível extrair informações sobre o pagamento como o banco que emitiu tal boleto (se houver), data de vencimento, valor a ser pago e entre outras informações.",
+        "Apesar dessas informações serem facilmente extraida de um papel, porém, quando temos apenas números isso torna uma tarefa chata, pois precisamos estar atento a diversas informações como se o digito verificador está correto, qual o tipo de boleto (Arrecadação ou Banco) ou se os números são de uma linha digitável ou código de barras e etc...",
+        "Pensando nisso, decidi idealizar a criação de uma biblioteca que pudesse ajudar tanto na validação de boletos como na obtenção de informações dos mesmos. Abaixo, apresento as etapas de instalações e funcionalidades da biblioteca."
+      ]
+    }
+  ]
+}
