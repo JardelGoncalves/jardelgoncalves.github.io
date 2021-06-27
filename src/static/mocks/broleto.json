@@ -17,6 +17,10 @@
       {
         "title": "Instalação",
         "anchor": "#installation"
+      },
+      {
+        "title": "Uso",
+        "anchor": "#usage"
       }
     ]
   },
@@ -35,7 +39,42 @@
       "id": "installation",
       "title": "Instalação",
       "descriptions": [
-        "A biblioteca broleto está disponivel para Javascript/Typescript e futuramente Dart"
+        "A biblioteca broleto está disponivel para Javascript/Typescript e futuramente em Dart"
+      ],
+      "codes": [
+        {
+          "label": "JS/TS",
+          "language": "bash",
+          "code": "npm i broleto"
+        }
+      ]
+    },
+    "usage": {
+      "id": "usage",
+      "title": "Uso",
+      "descriptions": [
+        "Para usar todas as funcionalidades, é necessário importar a classe ",
+        "Boleto ",
+        " e criar uma instância como mostrrado abaixo:"
+      ],
+      "codes": [
+        {
+          "label": "CommonJS",
+          "language": "javascript",
+          "code": "const { Boleto } = require('broleto');\n\nconst boleto = new Boleto('34191091070000013555851122200002157810000115300');"
+        },
+        {
+          "label": "ES6/TS",
+          "language": "javascript",
+          "code": "import { Boleto } from 'broleto';\n\nconst boleto = new Boleto('34191091070000013555851122200002157810000115300');"
+        }
+      ]
+    },
+    "functionality": {
+      "id": "functionality",
+      "title": "Funcionalidade",
+      "descriptions": [
+        "A biblioteca possui varias funções que ajuda na validação do boleto e para obter informações como data de validade, valor do boleto, verifica se o boleto está expirado, além de outras funções que auxilia para calcular os juros."
       ]
     }
   }
