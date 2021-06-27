@@ -71,7 +71,9 @@ export const TableContent = ({
 
   useEffect(() => {
     if (tableContentRef.current) {
-      const sticky = tableContentRef.current.offsetTop
+      tableContentRef.current.classList.remove('sticky')
+      const sticky =
+        tableContentRef.current.getBoundingClientRect().top + window.scrollY
       window.addEventListener('scroll', () => {
         if (tableContentRef.current) {
           if (window.pageYOffset + 90 > sticky) {
@@ -85,7 +87,6 @@ export const TableContent = ({
   }, [])
 
   useEffect(() => {
-    onScroll()
     window.addEventListener('scroll', onScroll)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
