@@ -11,7 +11,7 @@ interface NavbarProps {
 }
 
 export const Navbar = ({ children }: NavbarProps) => {
-  const [lastYPos, setLastYPos] = useState(0)
+  const [lastYPos, setLastYPos] = useState(30)
   const [shouldShowNavbar, setShouldShowNavbar] = useState(true)
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export const Navbar = ({ children }: NavbarProps) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: shouldShowNavbar ? 1 : 0 }}
         transition={{ opacity: { duration: 0.2 } }}
-        withBackdrop={lastYPos > 30}
+        withBackdrop={lastYPos >= 30}
       >
         <Layout>
           <S.NavWrapper>
