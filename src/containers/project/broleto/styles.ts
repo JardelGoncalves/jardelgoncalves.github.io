@@ -24,6 +24,9 @@ export const Content = styled.section`
   flex-direction: column;
   padding: 0 0 0 1rem;
   margin-bottom: 2rem;
+  .syntax-component {
+    margin-top: 1rem;
+  }
   & + & {
     margin-top: 5rem;
   }
@@ -45,5 +48,10 @@ export const Description = styled.p`
 
   & + & {
     margin-top: 0;
+  }
+
+  strong {
+    color: ${({ theme }) => theme.colors.secondary};
+    font-weight: ${({ theme }) => theme.typography.lineHeight.black};
   }
 `
