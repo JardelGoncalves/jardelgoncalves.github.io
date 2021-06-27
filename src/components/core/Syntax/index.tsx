@@ -13,7 +13,7 @@ import { nanoid } from 'nanoid'
 type Codes = {
   label: string
   language: string
-  code: string
+  code: string[]
 }
 
 interface SintaxProps {
@@ -47,7 +47,7 @@ export const Sintax = ({ codes }: SintaxProps) => {
         ))}
       </S.LanguageWrapper>
       <SyntaxHighlighter language={codes[index].language} style={style}>
-        {codes[index].code}
+        {codes[index].code.join('\n')}
       </SyntaxHighlighter>
     </S.WrapperSyntax>
   )
