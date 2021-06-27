@@ -22,6 +22,7 @@ export const base = (colors?: Colors): Colors => ({
   toggleBackgroundContainer: 'transparent',
   enterprise: '90deg, #7877d9 0%, #cf4e6f 100%',
   title: '#007EFF',
+  subtitle: '#012245',
   bannerProject: '#f2f2f2',
   ...(colors || {})
 })

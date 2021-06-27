@@ -8,5 +8,6 @@ export const dark: Colors = base({
   toggleBorder: 'rgba(0, 126, 255, 0.3)',
   toggleBackground: 'rgba(0, 126, 255, 0.2)',
   title: '#FFE100',
+  subtitle: '#fff9cc',
   bannerProject: '#141417'
 })
