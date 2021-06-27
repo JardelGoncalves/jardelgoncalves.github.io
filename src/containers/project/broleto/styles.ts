@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.main`
   display: flex;
@@ -19,17 +19,27 @@ export const Container = styled.section`
   padding: 0 3rem;
 `
 
-export const Content = styled.section`
+type ContentProps = {
+  isSubsection?: boolean | undefined
+}
+
+export const Content = styled.section<ContentProps>`
   display: flex;
   flex-direction: column;
   padding: 0 0 0 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   .syntax-component {
     margin-top: 1rem;
   }
   & + & {
     margin-top: 5rem;
   }
+  ${({ isSubsection }) =>
+    isSubsection &&
+    css`
+      padding: 0;
+      margin-top: 2rem;
+    `}
 `
 
 export const Side = styled.section`
@@ -43,7 +53,7 @@ export const Side = styled.section`
 
 export const Description = styled.p`
   line-height: ${({ theme }) => theme.typography.lineHeight.md};
-  margin-top: 2rem;
+  margin-top: 1.25rem;
   margin-bottom: 0.875rem;
 
   & + & {
