@@ -19,18 +19,15 @@ export const Title = ({
   color
 }: TitleProps) => {
   return (
-    <S.TitleWrapper
-      size={size}
-      weight={weight}
-      color={color}
-      as={heading || 'h1'}
-    >
-      {text}
-      {anchorId && (
-        <a href={`#${anchorId}`}>
-          <Icon name="link" />
-        </a>
-      )}
+    <S.TitleWrapper size={size} weight={weight} color={color} heading={heading}>
+      <>
+        {text}
+        {anchorId && (
+          <a href={`#${anchorId}`}>
+            <Icon name="link" />
+          </a>
+        )}
+      </>
     </S.TitleWrapper>
   )
 }

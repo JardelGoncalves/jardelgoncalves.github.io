@@ -4,10 +4,13 @@ interface TitleProps {
   weight?: string | undefined
   size?: string | undefined
   color?: string | undefined
-  as?: string | undefined
+  heading?: string | undefined
 }
 
-export const TitleWrapper = styled.h1<TitleProps>`
+export const TitleWrapper = styled.h1.attrs((props: TitleProps) => ({
+  as: props.heading,
+  ...props
+}))<TitleProps>`
   position: relative;
   font-weight: ${({ theme, weight }) =>
     theme.typography.weight[weight || 'bold']};
