@@ -21,6 +21,16 @@
       {
         "title": "Uso",
         "anchor": "#usage"
+      },
+      {
+        "title": "Funcionalidades",
+        "anchor": "#functionality",
+        "childs": [
+          {
+            "title": "Verificar se boleto é válido",
+            "anchor": "#functionality-valid"
+          }
+        ]
       }
     ]
   },
@@ -45,7 +55,7 @@
         {
           "label": "JS/TS",
           "language": "bash",
-          "code": "npm i broleto"
+          "code": ["npm i broleto"]
         }
       ]
     },
@@ -61,21 +71,65 @@
         {
           "label": "CommonJS",
           "language": "javascript",
-          "code": "const { Boleto } = require('broleto');\n\nconst boleto = new Boleto('34191091070000013555851122200002157810000115300');"
+          "code": [
+            "const { Boleto } = require('broleto');\n",
+            "const boleto = new Boleto('34191091070000013555851122200002157810000115300');"
+          ]
         },
         {
           "label": "ES6/TS",
           "language": "javascript",
-          "code": "import { Boleto } from 'broleto';\n\nconst boleto = new Boleto('34191091070000013555851122200002157810000115300');"
+          "code": [
+            "import { Boleto } from 'broleto';\n",
+            "const boleto = new Boleto('34191091070000013555851122200002157810000115300');"
+          ]
         }
       ]
     },
     "functionality": {
       "id": "functionality",
-      "title": "Funcionalidade",
+      "title": "Funcionalidades",
       "descriptions": [
         "A biblioteca possui varias funções que ajuda na validação do boleto e para obter informações como data de validade, valor do boleto, verifica se o boleto está expirado, além de outras funções que auxilia para calcular os juros."
-      ]
+      ],
+      "sections": {
+        "valid": {
+          "id": "functionality-valid",
+          "title": "Verificar se boleto é válido",
+          "descriptions": [
+            "Para verificar se o boleto é válido você pode utilizar o método ",
+            "valid() ",
+            "caso o valor gerado no calculo do digito verificador é igual ao digito verificador exposto no codigo de barras retorna ",
+            "true ",
+            "ou caso contrário retorna ",
+            "false "
+          ],
+          "codes": [
+            {
+              "label": "CommonJS",
+              "language": "javascript",
+              "code": [
+                "const { Boleto } = require('broleto');\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.valid()\n",
+                "// output",
+                "false"
+              ]
+            },
+            {
+              "label": "ES6/TS",
+              "language": "javascript",
+              "code": [
+                "import { Boleto } from 'broleto';\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.valid()\n",
+                "// output",
+                "false"
+              ]
+            }
+          ]
+        }
+      }
     }
   }
 }
