@@ -9,13 +9,11 @@ export const Container = styled.nav`
   width: 100%;
   display: flex;
   flex-direction: column;
+  transition: all 0.2s;
 
   &.sticky {
     position: fixed;
-  }
-
-  @media screen and (max-width: 900px) {
-    display: none;
+    top: 120px;
   }
 `
 
@@ -24,7 +22,7 @@ type CustomColorsProps = {
   activeColor?: string | undefined
 }
 
-export const Title = styled.h4<CustomColorsProps>`
+export const Title = styled.h1<CustomColorsProps>`
   font-size: 1rem;
   font-weight: 900;
   color: ${({ theme, color }) =>
