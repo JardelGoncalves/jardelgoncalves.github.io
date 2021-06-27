@@ -32,7 +32,10 @@ export const Navbar = ({ children }: NavbarProps) => {
     <>
       <S.Container
         initial={{ opacity: 0 }}
-        animate={{ opacity: shouldShowNavbar ? 1 : 0 }}
+        animate={{
+          opacity: shouldShowNavbar ? 1 : 0,
+          visibility: shouldShowNavbar ? 'visible' : 'hidden'
+        }}
         transition={{ opacity: { duration: 0.2 } }}
         withBackdrop={lastYPos >= 30}
       >
