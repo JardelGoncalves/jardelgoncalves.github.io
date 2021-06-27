@@ -13,18 +13,30 @@
       {
         "title": "Introdução",
         "anchor": "#introduction"
+      },
+      {
+        "title": "Instalação",
+        "anchor": "#installation"
       }
     ]
   },
-  "sections": [
-    {
+  "sections": {
+
+    "introduction": {
       "id": "introduction",
       "title": "Introdução",
       "descriptions": [
-        "No Brasil existe um método muito utilizado chamado Boleto Bancário que consiste em uma série de números onde é possível extrair informações sobre o pagamento como o banco que emitiu tal boleto (se houver), data de vencimento, valor a ser pago e entre outras informações.",
+        "No Brasil existe um método de pagamento muito utilizado chamado Boleto Bancário que consiste em uma série de números onde é possível extrair informações sobre o pagamento como o banco que emitiu tal boleto (se houver), data de vencimento, valor a ser pago e entre outras informações.",
         "Apesar dessas informações serem facilmente extraida de um papel, porém, quando temos apenas números isso torna uma tarefa chata, pois precisamos estar atento a diversas informações como se o digito verificador está correto, qual o tipo de boleto (Arrecadação ou Banco) ou se os números são de uma linha digitável ou código de barras e etc...",
         "Pensando nisso, decidi idealizar a criação de uma biblioteca que pudesse ajudar tanto na validação de boletos como na obtenção de informações dos mesmos. Abaixo, apresento as etapas de instalações e funcionalidades da biblioteca."
       ]
+    },
+    "installation": {
+      "id": "installation",
+      "title": "Instalação",
+      "descriptions": [
+        "A biblioteca broleto está disponivel para Javascript/Typescript e futuramente Dart"
+      ]
     }
-  ]
+  }
 }
