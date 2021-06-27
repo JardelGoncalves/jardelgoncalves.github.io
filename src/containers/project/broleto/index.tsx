@@ -48,27 +48,28 @@ export default function Broleto() {
                     <S.Description key={nanoid()}>{description}</S.Description>
                   )
                 )}
-                <Sintax
-                  codes={[
-                    {
-                      label: 'JS/TS',
-                      language: 'bash',
-                      code: 'npm i broleto'
-                    },
-                    {
-                      label: 'Dart',
-                      language: 'yaml',
-                      code: `dependencies:\n  ...\n  broleto: ^0.0.11`
-                    }
-                  ]}
+                <Sintax codes={broletoMock.sections.installation.codes} />
+              </S.Content>
+              <S.Content id={broletoMock.sections.usage.id}>
+                <Title
+                  size="xl"
+                  text={broletoMock.sections.usage.title}
+                  heading="h2"
+                  anchorId={broletoMock.sections.usage.id}
                 />
+                <S.Description>
+                  {broletoMock.sections.usage.descriptions[0]}
+                  <strong>{broletoMock.sections.usage.descriptions[1]}</strong>
+                  {broletoMock.sections.usage.descriptions[2]}
+                </S.Description>
+                <Sintax codes={broletoMock.sections.usage.codes} />
               </S.Content>
             </S.Container>
             <S.Side className="content-table-section">
               <TableContent
                 title={broletoMock.tableContent.title}
                 contents={broletoMock.tableContent.contents}
-                customOffset={200}
+                customOffset={100}
               />
             </S.Side>
           </Grid>
