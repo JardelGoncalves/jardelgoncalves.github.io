@@ -23,9 +23,14 @@ export const Content = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0 0 0 1rem;
+  margin-bottom: 2rem;
+  & + & {
+    margin-top: 5rem;
+  }
 `
 
 export const Side = styled.section`
+  position: relative;
   width: 100%;
 
   @media screen and (max-width: 900px) {
