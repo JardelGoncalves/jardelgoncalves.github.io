@@ -64,6 +64,72 @@ export default function Broleto() {
                 </S.Description>
                 <Sintax codes={broletoMock.sections.usage.codes} />
               </S.Content>
+              <S.Content id={broletoMock.sections.functionality.id}>
+                <Title
+                  size="xl"
+                  text={broletoMock.sections.functionality.title}
+                  heading="h2"
+                  anchorId={broletoMock.sections.functionality.id}
+                />
+                {broletoMock.sections.functionality.descriptions.map(
+                  (description) => (
+                    <S.Description key={nanoid()}>{description}</S.Description>
+                  )
+                )}
+                <S.Content
+                  isSubsection
+                  id={broletoMock.sections.functionality.sections.valid.id}
+                >
+                  <Title
+                    color="subtitle"
+                    size="lg"
+                    text={
+                      broletoMock.sections.functionality.sections.valid.title
+                    }
+                    heading="h3"
+                    anchorId={
+                      broletoMock.sections.functionality.sections.valid.id
+                    }
+                  />
+                  <S.Description>
+                    {
+                      broletoMock.sections.functionality.sections.valid
+                        .descriptions[0]
+                    }
+                    <strong>
+                      {
+                        broletoMock.sections.functionality.sections.valid
+                          .descriptions[1]
+                      }
+                    </strong>
+                    {
+                      broletoMock.sections.functionality.sections.valid
+                        .descriptions[2]
+                    }
+                    <strong>
+                      {
+                        broletoMock.sections.functionality.sections.valid
+                          .descriptions[3]
+                      }
+                    </strong>
+                    {
+                      broletoMock.sections.functionality.sections.valid
+                        .descriptions[4]
+                    }
+                    <strong>
+                      {
+                        broletoMock.sections.functionality.sections.valid
+                          .descriptions[5]
+                      }
+                    </strong>
+                  </S.Description>
+                  <Sintax
+                    codes={
+                      broletoMock.sections.functionality.sections.valid.codes
+                    }
+                  />
+                </S.Content>
+              </S.Content>
             </S.Container>
             <S.Side className="content-table-section">
               <TableContent
