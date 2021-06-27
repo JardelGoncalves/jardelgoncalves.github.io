@@ -1,5 +1,7 @@
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { dracula as style } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript'
+import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript'
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx'
 import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx'
 import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml'
@@ -21,6 +23,8 @@ interface SintaxProps {
 SyntaxHighlighter.registerLanguage('jsx', jsx)
 SyntaxHighlighter.registerLanguage('tsx', tsx)
 SyntaxHighlighter.registerLanguage('yaml', yaml)
+SyntaxHighlighter.registerLanguage('typescript', typescript)
+SyntaxHighlighter.registerLanguage('javascript', javascript)
 
 export const Sintax = ({ codes }: SintaxProps) => {
   const [index, setIndex] = useState(0)
@@ -29,7 +33,7 @@ export const Sintax = ({ codes }: SintaxProps) => {
   }
 
   return (
-    <S.WrapperSyntax>
+    <S.WrapperSyntax className="syntax-component">
       <S.LanguageWrapper>
         {codes.map((code, i) => (
           <S.Language
@@ -42,7 +46,7 @@ export const Sintax = ({ codes }: SintaxProps) => {
           </S.Language>
         ))}
       </S.LanguageWrapper>
-      <SyntaxHighlighter language={codes[index].language} style={dracula}>
+      <SyntaxHighlighter language={codes[index].language} style={style}>
         {codes[index].code}
       </SyntaxHighlighter>
     </S.WrapperSyntax>
