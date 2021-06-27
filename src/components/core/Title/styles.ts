@@ -13,7 +13,7 @@ export const TitleWrapper = styled.h1.attrs((props: TitleProps) => ({
 }))<TitleProps>`
   position: relative;
   font-weight: ${({ theme, weight }) =>
-    theme.typography.weight[weight || 'bold']};
+    theme.typography.weight[weight || 'xBold']};
   font-size: ${({ theme, size }) => theme.typography.sizes[size || '2xl']};
   color: ${({ theme, color }) => theme.colors[color || 'title']};
 
