@@ -23,7 +23,7 @@ export const Banner = ({ title, description, image }: BannerProps) => {
           <S.Description>{description}</S.Description>
         </S.BannerWrapper>
       </Layout>
-      <ScrollTo anchorId="test" />
+      <ScrollTo anchorId="introduction" />
     </S.Content>
   )
 }
