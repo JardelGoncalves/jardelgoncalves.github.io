@@ -33,6 +33,10 @@
           {
             "title": "Obter tipo de boleto",
             "anchor": "#functionality-type"
+          },
+          {
+            "title": "Obter tipo de código do boleto",
+            "anchor": "#functionality-codeType"
           }
         ]
       }
@@ -171,6 +175,51 @@
                 "boleto.type()\n",
                 "// output",
                 "{\n type: 'BANCO',\n subtype: ''\n}"
+              ]
+            }
+          ]
+        },
+        "codeType": {
+          "id": "functionality-codeType",
+          "title": "Obter tipo de código do boleto",
+          "descriptions": [
+            "Todo boleto possui dois tipos de código, são eles:"
+          ],
+          "list": {
+            "first": [
+              "LINHA DIGITAVEL",
+              ": são os números visivelmente expostos nos boletos"
+            ],
+            "second": [
+              "CODIGO DE BARRAS",
+              ": são as barras na vertical que ficam normalmente no final do boleto e os números só se tornam visiveis com um leitor de código de barras"
+            ],
+            "third": [
+              "INVALIDO",
+              ": esse tipo foi adicionado caso o boleto seja inválido"
+            ]
+          },
+          "codes": [
+            {
+              "label": "CommonJS",
+              "language": "javascript",
+              "code": [
+                "const { Boleto } = require('broleto');\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.codeType()\n",
+                "// output",
+                "'LINHA DIGITAVEL'"
+              ]
+            },
+            {
+              "label": "ES6/TS",
+              "language": "javascript",
+              "code": [
+                "import { Boleto } from 'broleto';\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.codeType()\n",
+                "// output",
+                "'LINHA DIGITAVEL'"
               ]
             }
           ]
