@@ -199,6 +199,74 @@ export default function Broleto() {
                     }
                   />
                 </S.Content>
+
+                <S.Content
+                  isSubsection
+                  id={broletoMock.sections.functionality.sections.codeType.id}
+                >
+                  <Title
+                    color="subtitle"
+                    size="lg"
+                    text={
+                      broletoMock.sections.functionality.sections.codeType.title
+                    }
+                    heading="h3"
+                    anchorId={
+                      broletoMock.sections.functionality.sections.codeType.id
+                    }
+                  />
+                  <S.Description>
+                    {
+                      broletoMock.sections.functionality.sections.codeType
+                        .descriptions[0]
+                    }
+                  </S.Description>
+                  <List
+                    items={[
+                      <>
+                        <strong>
+                          {
+                            broletoMock.sections.functionality.sections.codeType
+                              .list.first[0]
+                          }
+                        </strong>
+                        {
+                          broletoMock.sections.functionality.sections.codeType
+                            .list.first[1]
+                        }
+                      </>,
+                      <>
+                        <strong>
+                          {
+                            broletoMock.sections.functionality.sections.codeType
+                              .list.second[0]
+                          }
+                        </strong>
+                        {
+                          broletoMock.sections.functionality.sections.codeType
+                            .list.second[1]
+                        }
+                      </>,
+                      <>
+                        <strong>
+                          {
+                            broletoMock.sections.functionality.sections.codeType
+                              .list.third[0]
+                          }
+                        </strong>
+                        {
+                          broletoMock.sections.functionality.sections.codeType
+                            .list.third[1]
+                        }
+                      </>
+                    ]}
+                  />
+                  <Sintax
+                    codes={
+                      broletoMock.sections.functionality.sections.codeType.codes
+                    }
+                  />
+                </S.Content>
               </S.Content>
             </S.Container>
             <S.Side className="content-table-section">
