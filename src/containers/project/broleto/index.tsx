@@ -10,6 +10,7 @@ import * as S from './styles'
 
 import broletoMock from 'static/mocks/broleto.json'
 import { Sintax } from 'components/core/Syntax'
+import { List } from 'components/presentation/project/List'
 
 export default function Broleto() {
   return (
@@ -126,6 +127,75 @@ export default function Broleto() {
                   <Sintax
                     codes={
                       broletoMock.sections.functionality.sections.valid.codes
+                    }
+                  />
+                </S.Content>
+                <S.Content
+                  isSubsection
+                  id={broletoMock.sections.functionality.sections.type.id}
+                >
+                  <Title
+                    color="subtitle"
+                    size="lg"
+                    text={
+                      broletoMock.sections.functionality.sections.type.title
+                    }
+                    heading="h3"
+                    anchorId={
+                      broletoMock.sections.functionality.sections.type.id
+                    }
+                  />
+                  <S.Description>
+                    {
+                      broletoMock.sections.functionality.sections.type
+                        .descriptions[0]
+                    }
+                  </S.Description>
+                  <List
+                    items={[
+                      <>
+                        <strong>
+                          {
+                            broletoMock.sections.functionality.sections.type
+                              .list.first[0]
+                          }
+                        </strong>
+                        {
+                          broletoMock.sections.functionality.sections.type.list
+                            .first[1]
+                        }
+                      </>,
+                      <>
+                        <strong>
+                          {
+                            broletoMock.sections.functionality.sections.type
+                              .list.second[0]
+                          }
+                        </strong>
+                        {
+                          broletoMock.sections.functionality.sections.type.list
+                            .second[1]
+                        }
+                        <strong>
+                          {
+                            broletoMock.sections.functionality.sections.type
+                              .list.second[2]
+                          }
+                        </strong>
+                        ou
+                        <strong>
+                          {
+                            broletoMock.sections.functionality.sections.type
+                              .list.second[3]
+                          }
+                        </strong>
+                        (vazio)
+                      </>
+                    ]}
+                  />
+                  <Sintax
+                    codes={
+                      broletoMock.sections.functionality.sections.type.codes
                     }
                   />
                 </S.Content>
