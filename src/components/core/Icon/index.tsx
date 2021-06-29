@@ -6,6 +6,7 @@ import Github from './Github'
 import Moon from './Moon'
 import Logo from './Logo'
 import Link from './Link'
+import ArrowRight from './ArrowRight'
 
 export interface IConsElements {
   [key: string]: React.ReactNode
@@ -17,7 +18,8 @@ const icons: IConsElements = {
   linkedin: <Linkedin />,
   email: <Email />,
   moon: <Moon />,
-  link: <Link />
+  link: <Link />,
+  'arrow-right': <ArrowRight />
 }
 
 export interface IConProps {
