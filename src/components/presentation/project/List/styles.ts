@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 export const ListItem = styled.li`
-  padding: 1rem 1.5rem;
+  padding: 0.875rem 1.5rem;
   position: relative;
+  line-height: ${({ theme }) => theme.typography.lineHeight.md};
   svg {
     position: absolute;
-    top: 12px;
+    top: 16px;
     left: -4px;
     path {
       stroke: ${({ theme }) => theme.colors.title};
@@ -22,7 +23,7 @@ export const List = styled.ul.attrs((props) => ({
   flex-direction: column;
 
   strong {
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.title};
     font-weight: 600;
   }
 `
