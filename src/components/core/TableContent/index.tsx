@@ -18,13 +18,15 @@ type TableContentProps = {
   customOffset?: number
   color?: string
   activeColor?: string
+  title: string
 }
 
 export const TableContent = ({
   contents,
   customOffset,
   activeColor,
-  color
+  color,
+  title
 }: TableContentProps) => {
   const tableContentRef = useRef<HTMLDivElement>(null)
 
@@ -69,7 +71,9 @@ export const TableContent = ({
 
   useEffect(() => {
     if (tableContentRef.current) {
-      const sticky = tableContentRef.current.offsetTop
+      tableContentRef.current.classList.remove('sticky')
+      const sticky =
+        tableContentRef.current.getBoundingClientRect().top + window.scrollY
       window.addEventListener('scroll', () => {
         if (tableContentRef.current) {
           if (window.pageYOffset + 90 > sticky) {
@@ -83,7 +87,6 @@ export const TableContent = ({
   }, [])
 
   useEffect(() => {
-    onScroll()
     window.addEventListener('scroll', onScroll)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -91,7 +94,7 @@ export const TableContent = ({
 
   return (
     <S.Container ref={tableContentRef}>
-      <S.Title color={color}>Conteudo</S.Title>
+      <S.Title color={color}>{title}</S.Title>
       <S.AnchorGroup level={0}>
         {contents.map((content) => (
           <S.AnchorGroupItem key={nanoid()}>

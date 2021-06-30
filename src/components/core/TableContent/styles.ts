@@ -2,7 +2,6 @@ import { rgba } from 'polished'
 import styled from 'styled-components'
 
 export const Container = styled.nav`
-  margin-top: 4rem;
   position: relative;
   max-height: 50vh;
   height: 100%;
@@ -10,14 +9,11 @@ export const Container = styled.nav`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
+  transition: all 0.2s;
 
   &.sticky {
     position: fixed;
-  }
-
-  @media screen and (max-width: 900px) {
-    display: none;
+    top: 120px;
   }
 `
 
@@ -26,7 +22,7 @@ type CustomColorsProps = {
   activeColor?: string | undefined
 }
 
-export const Title = styled.h4<CustomColorsProps>`
+export const Title = styled.h1<CustomColorsProps>`
   font-size: 1rem;
   font-weight: 900;
   color: ${({ theme, color }) =>
@@ -66,8 +62,8 @@ export const Anchor = styled.a<CustomColorsProps>`
   }
 
   &.--active {
-    color: ${({ theme, activeColor }) =>
-      rgba(theme.colors[activeColor || 'tertiary'], 0.8)};
+    color: ${({ theme, activeColor }) => theme.colors[activeColor || 'title']};
+    font-weight: ${({ theme }) => theme.typography.weight.semiBold};
   }
   margin-top: 0.75rem;
 `

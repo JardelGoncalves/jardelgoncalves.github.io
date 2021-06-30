@@ -11,7 +11,7 @@ interface NavbarProps {
 }
 
 export const Navbar = ({ children }: NavbarProps) => {
-  const [lastYPos, setLastYPos] = useState(0)
+  const [lastYPos, setLastYPos] = useState(30)
   const [shouldShowNavbar, setShouldShowNavbar] = useState(true)
 
   useEffect(() => {
@@ -32,11 +32,14 @@ export const Navbar = ({ children }: NavbarProps) => {
     <>
       <S.Container
         initial={{ opacity: 0 }}
-        animate={{ opacity: shouldShowNavbar ? 1 : 0 }}
+        animate={{
+          opacity: shouldShowNavbar ? 1 : 0,
+          visibility: shouldShowNavbar ? 'visible' : 'hidden'
+        }}
         transition={{ opacity: { duration: 0.2 } }}
-        withBackdrop={lastYPos > 30}
+        withBackdrop={lastYPos >= 30}
       >
-        <Layout full>
+        <Layout>
           <S.NavWrapper>
             <img src="/images/logo.svg" alt="Logo" />
             <S.NavMenu>

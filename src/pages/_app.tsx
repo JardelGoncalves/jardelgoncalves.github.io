@@ -15,6 +15,7 @@ import * as S from 'styles/global.style'
 import { LoadingLogo } from 'components/core/Loading'
 
 import 'styles/global.css'
+import { useSmooth } from 'hooks/use-smooth'
 
 type Props = {
   Component: React.FC
@@ -24,6 +25,8 @@ type Props = {
 function MyApp({ Component, pageProps }: Props) {
   const [mounted, setMounted] = useState(false)
   const [isDark, setIsDark] = useState(false)
+
+  useSmooth()
 
   useEffect(() => {
     const theme = Cache.get(THEME_SETTING_KEY)
@@ -61,7 +64,7 @@ function MyApp({ Component, pageProps }: Props) {
           <Navbar>
             <SwitchDarkMode isDark={isDark} toggle={toggle} />
           </Navbar>
-          <Layout>
+          <Layout full={pageProps.fullLayout}>
             <Component {...pageProps} />
           </Layout>
         </>

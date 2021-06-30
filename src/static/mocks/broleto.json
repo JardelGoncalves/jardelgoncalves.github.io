@@ -1,0 +1,230 @@
+{
+  "banner": {
+    "title": "broleto",
+    "description": "Valide e obtenha dados de boleto bancário/arrecadação de forma fácil",
+    "image": {
+      "url": "/images/broleto.png",
+      "alt": "Barras verticais semelhantes ao um codigo de barra nas cores verde, amarelo e azul representando a bandeira do Brasil"
+    }
+  },
+  "tableContent": {
+    "title": "Conteúdo",
+    "contents": [
+      {
+        "title": "Introdução",
+        "anchor": "#introduction"
+      },
+      {
+        "title": "Instalação",
+        "anchor": "#installation"
+      },
+      {
+        "title": "Uso",
+        "anchor": "#usage"
+      },
+      {
+        "title": "Funcionalidades",
+        "anchor": "#functionality",
+        "childs": [
+          {
+            "title": "Verificar se boleto é válido",
+            "anchor": "#functionality-valid"
+          },
+          {
+            "title": "Obter tipo de boleto",
+            "anchor": "#functionality-type"
+          },
+          {
+            "title": "Obter tipo de código do boleto",
+            "anchor": "#functionality-codeType"
+          }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "introduction": {
+      "id": "introduction",
+      "title": "Introdução",
+      "descriptions": [
+        "No Brasil existe um método de pagamento muito utilizado chamado Boleto Bancário que consiste em uma série de números onde é possível extrair informações sobre o pagamento como o banco que emitiu tal boleto (se houver), data de vencimento, valor a ser pago e entre outras informações.",
+        "Apesar dessas informações serem facilmente extraida de um papel, porém, quando temos apenas números isso torna uma tarefa chata, pois precisamos estar atento a diversas informações como se o digito verificador está correto, qual o tipo de boleto (Arrecadação ou Banco) ou se os números são de uma linha digitável ou código de barras e etc...",
+        "Pensando nisso, decidi idealizar a criação de uma biblioteca que pudesse ajudar tanto na validação de boletos como na obtenção de informações dos mesmos. Abaixo, apresento as etapas de instalações e funcionalidades da biblioteca."
+      ]
+    },
+    "installation": {
+      "id": "installation",
+      "title": "Instalação",
+      "descriptions": [
+        "A biblioteca broleto está disponivel para Javascript/Typescript e futuramente em Dart"
+      ],
+      "codes": [
+        {
+          "label": "JS/TS",
+          "language": "bash",
+          "code": ["npm i broleto"]
+        }
+      ]
+    },
+    "usage": {
+      "id": "usage",
+      "title": "Uso",
+      "descriptions": [
+        "Para usar todas as funcionalidades, é necessário importar a classe ",
+        "Boleto ",
+        " e criar uma instância como mostrrado abaixo:"
+      ],
+      "codes": [
+        {
+          "label": "CommonJS",
+          "language": "javascript",
+          "code": [
+            "const { Boleto } = require('broleto');\n",
+            "const boleto = new Boleto('34191091070000013555851122200002157810000115300');"
+          ]
+        },
+        {
+          "label": "ES6/TS",
+          "language": "javascript",
+          "code": [
+            "import { Boleto } from 'broleto';\n",
+            "const boleto = new Boleto('34191091070000013555851122200002157810000115300');"
+          ]
+        }
+      ]
+    },
+    "functionality": {
+      "id": "functionality",
+      "title": "Funcionalidades",
+      "descriptions": [
+        "A biblioteca possui varias funções que ajuda na validação do boleto e para obter informações como data de validade, valor do boleto, verifica se o boleto está expirado, além de outras funções que auxilia para calcular os juros."
+      ],
+      "sections": {
+        "valid": {
+          "id": "functionality-valid",
+          "title": "Verificar se boleto é válido",
+          "descriptions": [
+            "Para verificar se o boleto é válido você pode utilizar o método ",
+            "valid() ",
+            "caso o valor gerado no calculo do digito verificador é igual ao digito verificador exposto no codigo de barras retorna ",
+            "true ",
+            "ou caso contrário retorna ",
+            "false "
+          ],
+          "codes": [
+            {
+              "label": "CommonJS",
+              "language": "javascript",
+              "code": [
+                "const { Boleto } = require('broleto');\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.valid()\n",
+                "// output",
+                "true"
+              ]
+            },
+            {
+              "label": "ES6/TS",
+              "language": "javascript",
+              "code": [
+                "import { Boleto } from 'broleto';\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.valid()\n",
+                "// output",
+                "true"
+              ]
+            }
+          ]
+        },
+        "type": {
+          "id": "functionality-type",
+          "title": "Obter tipo de boleto",
+          "descriptions": [
+            "A biblioteca suporta dois tipos de boletos que são eles:"
+          ],
+          "list": {
+            "first": [
+              "BANCO",
+              ": que também é conhecido como Boleto proposta que para emitir esse tipo de boleto é necessário ter contrato com algum banco."
+            ],
+            "second": [
+              "ARRECADACAO",
+              ": também conhecido como boleto codigo D8, é usado exclusivamente para concessionárias (água, luz, telefone) e tributos municipais, estaduais e federais. Possui os seguintes subtipos: ",
+              "CONVENIO_SANEAMENTO, CONVENIO_ENERGIA_ELETRICA_E_GAS, CONVENIO_TELECOMUNICACOES, ARRECADACAO_ORGAOS_GOVERNAMENTAIS, OUTROS, ARRECADACAO_TAXAS_DE_TRANSITO ",
+              " '' "
+            ]
+          },
+          "codes": [
+            {
+              "label": "CommonJS",
+              "language": "javascript",
+              "code": [
+                "const { Boleto } = require('broleto');\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.type()\n",
+                "// output",
+                "{\n type: 'BANCO',\n subtype: ''\n}"
+              ]
+            },
+            {
+              "label": "ES6/TS",
+              "language": "javascript",
+              "code": [
+                "import { Boleto } from 'broleto';\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.type()\n",
+                "// output",
+                "{\n type: 'BANCO',\n subtype: ''\n}"
+              ]
+            }
+          ]
+        },
+        "codeType": {
+          "id": "functionality-codeType",
+          "title": "Obter tipo de código do boleto",
+          "descriptions": [
+            "Todo boleto possui dois tipos de código, são eles:"
+          ],
+          "list": {
+            "first": [
+              "LINHA DIGITAVEL",
+              ": são os números visivelmente expostos nos boletos"
+            ],
+            "second": [
+              "CODIGO DE BARRAS",
+              ": são as barras na vertical que ficam normalmente no final do boleto e os números só se tornam visiveis com um leitor de código de barras"
+            ],
+            "third": [
+              "INVALIDO",
+              ": esse tipo foi adicionado caso o boleto seja inválido"
+            ]
+          },
+          "codes": [
+            {
+              "label": "CommonJS",
+              "language": "javascript",
+              "code": [
+                "const { Boleto } = require('broleto');\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.codeType()\n",
+                "// output",
+                "'LINHA DIGITAVEL'"
+              ]
+            },
+            {
+              "label": "ES6/TS",
+              "language": "javascript",
+              "code": [
+                "import { Boleto } from 'broleto';\n",
+                "const boleto = new Boleto('34191091070000013555851122200002157810000115300');",
+                "boleto.codeType()\n",
+                "// output",
+                "'LINHA DIGITAVEL'"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
