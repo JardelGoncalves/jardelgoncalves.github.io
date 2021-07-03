@@ -14,7 +14,10 @@ const plugins = [
 ]
 
 const nextConfig = {
-  webpack5: true
+  webpack5: true,
+  eslint: {
+    ignoreDuringBuilds: true
+  }
 }
 
 module.exports = withPlugins([...plugins], nextConfig)
