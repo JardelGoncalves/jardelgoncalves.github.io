@@ -1,17 +1,25 @@
+import { MongoClient } from 'mongodb'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { NextFunction } from 'express'
 
 import * as database from '../database'
-global.mongo = global.mongo || {}
+
+type Conn = {
+  client?: MongoClient
+}
+
+const conn: Conn = {}
 
 export const connection = async (
-  _: NextApiRequest,
+  req: NextApiRequest,
   _res: NextApiResponse,
   next: NextFunction
 ) => {
-  if (!global.mongo.isConnected) {
-    const db = await database.connect()
-    global.mongo.isConnected = db.connections[0].readyState;
+  if (!conn.client) {
+    const client = await database.connect()
+    conn.client = client
   }
+  req.dbClient = conn.client
+  req.db = conn.client.db(process.env.DB_NAME as string)
   return next()
 }
