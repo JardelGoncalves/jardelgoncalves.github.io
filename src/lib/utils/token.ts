@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import JWT from 'jsonwebtoken'
 
 export class Token {
-  static async encode(data: string) {
+  static async encode(data: object) {
     return JWT.sign(data, process.env.SECURITY_KEY as string, {
       expiresIn: process.env.EXPIRES_IN
     })
