@@ -5,6 +5,8 @@ import { all } from 'lib/middlewares'
 import { authValidator } from 'lib/schema/auth.schema'
 import { Token } from 'lib/utils/token'
 import { Hash } from 'lib/utils/hash'
+import { InternalError } from 'lib/utils/error/internal-error'
+import { ApiError } from 'lib/utils/error/api-error'
 
 const handler = nc()
 handler.use(all)
@@ -16,22 +18,11 @@ handler.post<NextApiRequest, NextApiResponse>(async (req, res) => {
 
     const user = await req.db?.collection('users').findOne({ email })
 
-    if (!user) {
-      return res.status(401).json({
-        message: 'Email or password invalid!',
-        code: 401,
-        error: 'UNAUTHORIZED'
-      })
-    }
+    if (!user) throw new InternalError('Email or Password invalid!', 401)
 
     const matchPassowrd = await Hash.compare(password, user.password)
-    if (!matchPassowrd) {
-      return res.status(401).json({
-        message: 'Email or password invalid!',
-        code: 401,
-        error: 'UNAUTHORIZED'
-      })
-    }
+    if (!matchPassowrd)
+      throw new InternalError('Email or Password invalid!', 401)
 
     const token = await Token.encode({ id: user._id })
 
@@ -40,12 +31,7 @@ handler.post<NextApiRequest, NextApiResponse>(async (req, res) => {
       token
     })
   } catch (error) {
-    console.log(error)
-    return res.status(401).json({
-      message: 'Email or password invalid!',
-      code: 401,
-      error: 'UNAUTHORIZED'
-    })
+    return ApiError.handler(res, error as Error)
   }
 })
 
