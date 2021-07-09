@@ -2,11 +2,11 @@ import * as S from './styles'
 
 interface LayoutProps {
   children: React.ReactNode
-  full?: boolean
+  isOnlyHeader?: boolean
 }
 
-export const Layout = ({ children, full }: LayoutProps) => (
-  <S.Wrapper>
-    <S.Content full={full}>{children}</S.Content>
-  </S.Wrapper>
-)
+export const Layout = ({ children, isOnlyHeader }: LayoutProps) => {
+  return (
+    <S.WrapperLayout isOnlyHeader={isOnlyHeader}>{children}</S.WrapperLayout>
+  )
+}
