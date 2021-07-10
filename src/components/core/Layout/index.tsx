@@ -1,12 +1,5 @@
-import * as S from './styles'
+export { default } from './Layout'
 
-interface LayoutProps {
-  children: React.ReactNode
-  full?: boolean
-}
-
-export const Layout = ({ children, full }: LayoutProps) => (
-  <S.Wrapper>
-    <S.Content full={full}>{children}</S.Content>
-  </S.Wrapper>
-)
+export * from './Side'
+export * from './Content'
+export * from './Header'
