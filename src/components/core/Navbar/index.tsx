@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-import { Layout } from 'components/core/Layout'
 import { ScrollIndicator } from 'components/core/ScrollIndicator'
 
 import * as S from './styles'
@@ -39,34 +38,32 @@ export const Navbar = ({ children }: NavbarProps) => {
         transition={{ opacity: { duration: 0.2 } }}
         withBackdrop={lastYPos >= 30}
       >
-        <Layout>
-          <S.NavWrapper>
-            <img src="/images/logo.svg" alt="Logo" />
-            <S.NavMenu>
-              <S.NavMenuItem>
-                <Link href="/">Página Inicial</Link>
-              </S.NavMenuItem>
-              <S.NavMenuItem>
-                <Link href="#">Artigos</Link>
-              </S.NavMenuItem>
-              <S.NavMenuItem>
-                <Link href="/about">Sobre mim</Link>
-              </S.NavMenuItem>
-              <S.NavMenuItem>
-                <Link href="#">RSS Feed</Link>
-              </S.NavMenuItem>
-              {/* <S.NavMenuItem>
+        <S.NavWrapper>
+          <img src="/images/logo.svg" alt="Logo" />
+          <S.NavMenu>
+            <S.NavMenuItem>
+              <Link href="/">Página Inicial</Link>
+            </S.NavMenuItem>
+            <S.NavMenuItem>
+              <Link href="#">Artigos</Link>
+            </S.NavMenuItem>
+            <S.NavMenuItem>
+              <Link href="/about">Sobre mim</Link>
+            </S.NavMenuItem>
+            <S.NavMenuItem>
+              <Link href="#">RSS Feed</Link>
+            </S.NavMenuItem>
+            {/* <S.NavMenuItem>
               <Link href="#">AMA</Link>
             </S.NavMenuItem> */}
-            </S.NavMenu>
-            {children}
-          </S.NavWrapper>
-        </Layout>
+          </S.NavMenu>
+          {children}
+        </S.NavWrapper>
       </S.Container>
       <ScrollIndicator
-        isVisible={lastYPos > 30}
+        distanceToVisible={10}
         position="fixed"
-        topDistance={shouldShowNavbar ? 70 : 0}
+        topDistance={60}
       />
     </>
   )
