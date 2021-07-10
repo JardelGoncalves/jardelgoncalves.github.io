@@ -19,6 +19,6 @@ export const WrapperLayout = styled.main<WrapperLayoutProps>`
           grid-template:
             'side header' 60px
             'side content' 1fr
-            /250px 1fr;
+            / 250px 1fr;
         `}
 `
