@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 type ContainerProp = {
@@ -6,18 +6,7 @@ type ContainerProp = {
 }
 
 export const Container = styled(motion.nav)<ContainerProp>`
-  position: fixed;
-  height: ${({ theme }) => theme.sizes.navbar};
   width: 100%;
-  ${({ withBackdrop }) =>
-    withBackdrop &&
-    css`
-      backdrop-filter: blur(15px);
-    `};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
-  transition: border 0.4s;
-  transition: padding 0.2s;
-  z-index: 9999;
   display: flex;
   align-items: center;
 `
@@ -31,7 +20,7 @@ export const NavWrapper = styled.div`
 
   img {
     width: auto;
-    height: 3.2rem;
+    height: 3rem;
   }
 `
 
@@ -45,11 +34,12 @@ export const NavMenu = styled.ul`
 
 export const NavMenuItem = styled.li`
   color: ${({ theme }) => theme.colors.textMenu};
-  font-weight: ${({ theme }) => theme.typography.weight.medium};
+  font-weight: ${({ theme }) => theme.typography.weight.semiBold};
   padding: 0.5rem 1.5rem;
   position: relative;
 
   a {
+    font-size: ${({ theme }) => theme.typography.sizes.sm};
     &::after {
       content: '';
       background-color: ${({ theme }) => theme.colors.primary};
