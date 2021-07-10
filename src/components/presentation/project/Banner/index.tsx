@@ -1,5 +1,3 @@
-import { Layout } from 'components/core/Layout/index'
-
 import { Image } from 'interfaces/image'
 
 import * as S from './styles'
@@ -14,15 +12,13 @@ interface BannerProps {
 export const Banner = ({ title, description, image }: BannerProps) => {
   return (
     <S.Content>
-      <Layout>
-        <S.BannerWrapper>
-          <S.LogoWrapper>
-            <img src={image.url} alt={image.alt} />
-          </S.LogoWrapper>
-          <S.Title>{title}</S.Title>
-          <S.Description>{description}</S.Description>
-        </S.BannerWrapper>
-      </Layout>
+      <S.BannerWrapper>
+        <S.LogoWrapper>
+          <img src={image.url} alt={image.alt} />
+        </S.LogoWrapper>
+        <S.Title>{title}</S.Title>
+        <S.Description>{description}</S.Description>
+      </S.BannerWrapper>
       <ScrollTo anchorId="introduction" />
     </S.Content>
   )
