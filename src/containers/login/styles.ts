@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  margin-top: 1.25rem;
   width: 100%;
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
-  padding: 6rem 0;
   align-items: center;
+  justify-content: center;
 `
 
 export const Title = styled.h1`
