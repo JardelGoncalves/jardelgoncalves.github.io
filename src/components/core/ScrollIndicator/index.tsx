@@ -1,36 +1,39 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import * as S from './styles'
 
 interface ScrollIndicatorProps {
   position?: 'absolute' | 'fixed' | 'relative'
   topDistance?: number
-  isVisible?: boolean
+  distanceToVisible?: number
 }
 
 export const ScrollIndicator = ({
   position,
   topDistance,
-  isVisible
+  distanceToVisible
 }: ScrollIndicatorProps) => {
   const progressRef = useRef<HTMLDivElement>(null)
+  const [distance, setDistance] = useState(0)
   useEffect(() => {
     if (progressRef.current) {
-      window.addEventListener('scroll', () => {
-        const winScroll =
-          document.body.scrollTop || document.documentElement.scrollTop
-        const height =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight
-        const scrolled = (winScroll / height) * 100
-        if (progressRef.current?.style) {
-          progressRef.current.style.width = `${scrolled}%`
-        }
-      })
+      const content = document.querySelector('#content-page')
+      if (content) {
+        content.addEventListener('scroll', () => {
+          const winScroll = content.scrollTop
+          const height = content.scrollHeight - content.clientHeight
+
+          const scrolled = (winScroll / height) * 100
+          setDistance(scrolled)
+          if (progressRef.current?.style) {
+            progressRef.current.style.width = `${scrolled}%`
+          }
+        })
+      }
     }
   }, [])
   return (
     <S.ProgressContainer
-      isVisible={isVisible}
+      isVisible={distanceToVisible ? distance >= distanceToVisible : true}
       position={position}
       topDistance={topDistance}
     >
