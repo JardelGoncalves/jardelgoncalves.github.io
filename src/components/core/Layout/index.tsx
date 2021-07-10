@@ -1,12 +1,5 @@
-import * as S from './styles'
+export { default } from './Layout'
 
-interface LayoutProps {
-  children: React.ReactNode
-  isOnlyHeader?: boolean
-}
-
-export const Layout = ({ children, isOnlyHeader }: LayoutProps) => {
-  return (
-    <S.WrapperLayout isOnlyHeader={isOnlyHeader}>{children}</S.WrapperLayout>
-  )
-}
+export * from './Side'
+export * from './Content'
+export * from './Header'
