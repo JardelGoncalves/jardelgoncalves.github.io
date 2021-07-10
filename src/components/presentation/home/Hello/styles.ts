@@ -17,7 +17,7 @@ export const HelloContainer = styled.div`
   align-items: center;
 `
 export const TitleColorize = styled.h1`
-  margin-top: 12rem;
+  margin-top: 10rem;
   background: ${({ theme }) =>
     `repeating-linear-gradient(
       45deg,

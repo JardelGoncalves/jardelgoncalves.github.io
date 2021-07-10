@@ -14,6 +14,7 @@ export const typography = {
     md: '1.125rem',
     lg: '1.5rem',
     xl: '2rem',
+    '1xl': '2.25rem',
     '2xl': '2.5rem',
     '3xl': '3rem',
     '4xl': '3.5rem',

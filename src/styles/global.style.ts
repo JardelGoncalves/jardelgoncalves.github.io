@@ -22,6 +22,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
 
   html {
     font-size: 16px;
+    scroll-behavior: smooth;
   }
 
   @media (max-width: 1080px) {
