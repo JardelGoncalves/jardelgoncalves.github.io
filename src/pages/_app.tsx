@@ -6,6 +6,7 @@ import { Navbar } from 'components/core/Navbar'
 import { SwitchDarkMode } from 'components/core/SwitchDarkMode'
 import { HeadSEO } from 'components/core/HeadSEO'
 import Layout, { Content, Header, Side } from 'components/core/Layout'
+import { LoadingLogo } from 'components/core/Loading'
 
 import { Cache } from 'utils/cache'
 import { THEMES } from 'utils/constants/enums'
@@ -23,12 +24,14 @@ type Props = {
 
 function MyApp({ Component, pageProps }: Props) {
   const [isDark, setIsDark] = useState(false)
+  const [mountedPage, setMountedPage] = useState(false)
 
   useSmooth()
 
   useEffect(() => {
     const theme = Cache.get(THEME_SETTING_KEY)
     setIsDark(theme === THEMES.DARK)
+    setMountedPage(true)
   }, [])
 
   const toggle = () => {
@@ -56,17 +59,21 @@ function MyApp({ Component, pageProps }: Props) {
         url={pageProps.url}
       />
       <S.GlobalStyle />
-      <Layout isOnlyHeader>
-        <Header>
-          <Navbar>
-            <SwitchDarkMode isDark={isDark} toggle={toggle} />
-          </Navbar>
-        </Header>
-        <Side></Side>
-        <Content>
-          <Component {...pageProps} />
-        </Content>
-      </Layout>
+      {mountedPage ? (
+        <Layout isOnlyHeader>
+          <Header>
+            <Navbar>
+              <SwitchDarkMode isDark={isDark} toggle={toggle} />
+            </Navbar>
+          </Header>
+          <Side></Side>
+          <Content>
+            <Component {...pageProps} />
+          </Content>
+        </Layout>
+      ) : (
+        <LoadingLogo />
+      )}
     </ThemeProvider>
   )
 }
