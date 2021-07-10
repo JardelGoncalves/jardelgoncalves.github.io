@@ -5,20 +5,9 @@ type ContentProps = {
   hasSide?: boolean | undefined
 }
 
-export const Wrapper = styled.main.attrs((props) => ({
-  id: 'content-page',
-  ...props
-}))`
-  grid-area: content;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  overflow-y: auto;
-  padding-bottom: 40px;
-`
-
 export const Content = styled.section<ContentProps>`
   display: flex;
+  flex-direction: column;
   max-width: ${({ theme, full, hasSide }) =>
     full || hasSide ? '100%' : theme.sizes.portView};
   width: 100%;
@@ -37,4 +26,21 @@ export const Content = styled.section<ContentProps>`
   ${({ theme, full, hasSide }) => theme.breakpoints.lessThan('small')`
     padding: ${full ? '0' : hasSide ? '0 1.15rem' : '0 1.2rem'};
   `}
+`
+
+export const Footer = styled.footer`
+  height: 40px;
+  width: 100%;
+`
+
+export const Wrapper = styled.main.attrs((props) => ({
+  id: 'content-page',
+  ...props
+}))`
+  grid-area: content;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-y: auto;
+  padding-bottom: 40px;
 `
