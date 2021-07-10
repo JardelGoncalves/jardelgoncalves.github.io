@@ -1,11 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-type ContainerProp = {
-  withBackdrop: boolean
-}
-
-export const Container = styled(motion.nav)<ContainerProp>`
+export const Container = styled(motion.nav)`
   width: 100%;
   display: flex;
   align-items: center;
