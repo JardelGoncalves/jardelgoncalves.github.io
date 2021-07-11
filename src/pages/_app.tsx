@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { ToastContainer } from 'react-toastify'
 import { setLocale } from 'yup'
 import { pt } from 'yup-locale-pt'
 
@@ -13,11 +14,12 @@ import { LoadingLogo } from 'components/core/Loading'
 import { Cache } from 'utils/cache'
 import { THEMES } from 'utils/constants/enums'
 import { THEME_SETTING_KEY } from 'utils/constants/local-storage'
+import { useSmooth } from 'hooks/use-smooth'
 import theme from 'styles/theme'
-import * as S from 'styles/global.style'
 
 import 'styles/global.css'
-import { useSmooth } from 'hooks/use-smooth'
+import 'react-toastify/dist/ReactToastify.css'
+import * as S from 'styles/global.style'
 
 type Props = {
   Component: React.FC
@@ -62,6 +64,17 @@ function MyApp({ Component, pageProps }: Props) {
         url={pageProps.url}
       />
       <S.GlobalStyle />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       {mountedPage ? (
         <Layout isOnlyHeader>
           <Header>
