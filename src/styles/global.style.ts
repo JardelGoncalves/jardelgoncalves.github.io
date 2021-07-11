@@ -79,6 +79,22 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     cursor: pointer;
   }
 
+  .Toastify__toast {
+    font-family: ${({ theme }) => theme.typography.family.primary};
+    font-size: ${({ theme }) => theme.typography.sizes.sm};
+    font-weight: ${({ theme }) => theme.typography.weight.semiBold};
+  }
+
+  .Toastify__toast--success {
+    background: ${({ theme }) => theme.colors.positive};
+  }
+  .Toastify__toast--warning {
+    background: ${({ theme }) => theme.colors.warning};
+  }
+  .Toastify__toast--error {
+    background: ${({ theme }) => theme.colors.negative};
+  }
+
   ::-webkit-scrollbar-thumb {
     background-color: ${({ theme }) => theme.colors.primary};
   }
