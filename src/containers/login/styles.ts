@@ -10,9 +10,10 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h1`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.description};
   font-size: ${({ theme }) => theme.typography.sizes.xl};
-  font-weight: ${({ theme }) => theme.typography.weight.bold};
+  font-weight: ${({ theme }) => theme.typography.weight.black};
+  text-align: center;
   margin-bottom: 1.8rem;
 
   ${({ theme }) => theme.breakpoints.lessThan('medium')`
