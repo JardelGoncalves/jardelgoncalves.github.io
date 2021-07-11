@@ -12,6 +12,7 @@
     "@hookform/resolvers": "^2.6.0",
     "@types/mongodb": "^3.6.19",
     "@types/react-syntax-highlighter": "^13.5.1",
+    "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
     "framer-motion": "^3.10.0",
     "http-status-codes": "^2.1.4",
@@ -28,6 +29,7 @@
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.9.0",
     "react-syntax-highlighter": "^15.4.3",
+    "react-toastify": "^7.0.4",
     "styled-components": "^5.2.1",
     "styled-media-query": "^2.1.2",
     "swiper": "^6.7.5",
@@ -35,6 +37,7 @@
     "yup-locale-pt": "^0.0.8"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/bcrypt": "^5.0.0",
     "@types/cookie": "^0.4.1",
     "@types/express": "^4.17.12",
