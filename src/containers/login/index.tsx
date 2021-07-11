@@ -1,4 +1,6 @@
-import { useForm, useWatch } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
 import { Input } from 'components/core/Input'
 import { Form } from 'components/core/Form'
@@ -6,11 +8,23 @@ import { RaisedButton } from 'components/core/Button'
 
 import * as S from './styles'
 
-export default function Login() {
-  const { register, handleSubmit, control } = useForm()
+const schema = yup.object().shape({
+  email: yup.string().required().email(),
+  password: yup.string().required()
+})
 
-  const email = useWatch({ control, name: 'email', defaultValue: '' })
-  const password = useWatch({ control, name: 'password', defaultValue: '' })
+export default function Login() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm<{
+    email: string
+    password: string
+  }>({
+    resolver: yupResolver(schema),
+    defaultValues: { email: '', password: '' }
+  })
 
   const onSubmit = handleSubmit((data) => console.log(data))
 
@@ -19,22 +33,19 @@ export default function Login() {
       <Form width={600} onSubmit={onSubmit}>
         <S.Title>Faça login para continuar</S.Title>
         <Input
-          {...register('email', { required: true })}
+          {...register('email')}
           placeholder="Email"
           type="email"
+          error={errors?.email?.message}
         />
         <Input
-          {...register('password', { required: true })}
+          {...register('password')}
           placeholder="Senha"
           type="password"
+          error={errors?.password?.message}
         />
         <S.ButtonWrapper>
-          <RaisedButton
-            disabled={!(email && password)}
-            type="submit"
-            label="Entrar"
-            width={200}
-          />
+          <RaisedButton type="submit" label="Entrar" width={200} />
         </S.ButtonWrapper>
       </Form>
     </S.Container>
