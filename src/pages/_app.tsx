@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { setLocale } from 'yup'
+import { pt } from 'yup-locale-pt'
 
 import { Navbar } from 'components/core/Navbar'
 import { SwitchDarkMode } from 'components/core/SwitchDarkMode'
@@ -22,6 +24,7 @@ type Props = {
   pageProps: any
 }
 
+setLocale(pt)
 function MyApp({ Component, pageProps }: Props) {
   const [isDark, setIsDark] = useState(false)
   const [mountedPage, setMountedPage] = useState(false)
