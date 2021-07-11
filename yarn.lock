@@ -208,6 +208,11 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.2.0.tgz#f3933a44e365864f4dad5db94158106d511e8131"
   integrity sha512-sqKVVVOe5ivCaXDWivIJYVSaEgdQK9ul7a4Kity5Iw7u9+wBAPbX1RMSnLLmp7O4Vzj0WOWwMAJsTL00xwaNug==
 
+"@hookform/resolvers@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-2.6.0.tgz#a4497fe33807d4ba09c34f41549f87a642550886"
+  integrity sha512-1Pbxjc4HEzATEcRsyDfkEQR/3OWaQwbemW9HTTYH+ZiLF2mzafl5Pn++65gwNnJSGzXUp5LIq3Nz2+Cz4m2U8A==
+
 "@mapbox/node-pre-gyp@^1.0.0":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.5.tgz#2a0b32fcb416fb3f2250fd24cb2a81421a4f5950"
@@ -4279,6 +4284,11 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+yup-locale-pt@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/yup-locale-pt/-/yup-locale-pt-0.0.8.tgz#2fc1dfed5884193dedc2a708160678c4cd31c0a3"
+  integrity sha512-8Y/sDpvgApcOtg61UE/01yz+MiSgxoUcs7Njv7CWh5Sw3ez+8avu+GJzotTd5atWJ5f9pcVMkVE4BUJYi8c+3Q==
 
 yup@^0.32.9:
   version "0.32.9"
