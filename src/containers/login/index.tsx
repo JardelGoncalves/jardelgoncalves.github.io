@@ -7,26 +7,29 @@ import { Form } from 'components/core/Form'
 import { RaisedButton } from 'components/core/Button'
 
 import * as S from './styles'
+import { AuthService } from '../../services/auth'
 
 const schema = yup.object().shape({
   email: yup.string().required().email(),
   password: yup.string().required()
 })
 
+type UseForm = {
+  email: string
+  password: string
+}
+
 export default function Login() {
   const {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<{
-    email: string
-    password: string
-  }>({
+  } = useForm<UseForm>({
     resolver: yupResolver(schema),
     defaultValues: { email: '', password: '' }
   })
 
-  const onSubmit = handleSubmit((data) => console.log(data))
+  const onSubmit = handleSubmit(async (data) => AuthService.signIn(data))
 
   return (
     <S.Container>
