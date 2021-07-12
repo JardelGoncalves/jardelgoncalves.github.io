@@ -51,3 +51,8 @@ export const Input = styled.input`
     -webkit-text-fill-color: ${({ theme }) => theme.colors.text} !important;
   }
 `
+export const MessageError = styled.p`
+  color: ${({ theme }) => theme.colors.negative};
+  font-size: ${({ theme }) => theme.typography.sizes.sm};
+  padding-top: ${({ theme }) => theme.spacing['2xs']};
+`
