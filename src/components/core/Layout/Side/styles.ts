@@ -4,5 +4,5 @@ export const Wrapper = styled.nav`
   grid-area: side;
   height: 100%;
   width: 100%;
-  background-color: yellow;
+  transition: border 0.3s;
 `
