@@ -42,5 +42,4 @@ export const Wrapper = styled.main.attrs((props) => ({
   justify-content: center;
   width: 100%;
   overflow-y: auto;
-  padding-bottom: 40px;
 `

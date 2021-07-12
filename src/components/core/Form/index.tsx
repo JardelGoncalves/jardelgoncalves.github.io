@@ -8,7 +8,7 @@ interface FormProps {
 
 export const Form = ({ children, width, onSubmit }: FormProps) => {
   return (
-    <S.WrapperForm onSubmit={onSubmit} width={width}>
+    <S.WrapperForm onSubmit={onSubmit} width={width} role="alert">
       {children}
     </S.WrapperForm>
   )
