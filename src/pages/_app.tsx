@@ -76,14 +76,14 @@ function MyApp({ Component, pageProps }: Props) {
         pauseOnHover
       />
       {mountedPage ? (
-        <Layout isOnlyHeader>
-          <Header>
+        <Layout isOnlyHeader={!pageProps.isLayoutAuth}>
+          <Header hasSide={pageProps.isLayoutAuth} full={pageProps.isFullPage}>
             <Navbar>
               <SwitchDarkMode isDark={isDark} toggle={toggle} />
             </Navbar>
           </Header>
           <Side></Side>
-          <Content>
+          <Content hasSide={pageProps.isLayoutAuth} full={pageProps.isFullPage}>
             <Component {...pageProps} />
           </Content>
         </Layout>
