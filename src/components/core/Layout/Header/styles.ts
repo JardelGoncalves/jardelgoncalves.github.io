@@ -12,10 +12,10 @@ export const Wrapper = styled.header<HeaderProps>`
     !hasSide &&
     css`
       justify-content: center;
+      border-bottom: 1px solid ${({ theme }) => theme.colors.border};
     `}
 
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   transition: border 0.4s;
 `
 
