@@ -1,3 +1,4 @@
+import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
@@ -7,7 +8,7 @@ import { Form } from 'components/core/Form'
 import { RaisedButton } from 'components/core/Button'
 
 import * as S from './styles'
-import { AuthService } from '../../services/auth'
+import { SignInContext } from '../../contexts/sign-in'
 
 const schema = yup.object().shape({
   email: yup.string().required().email(),
@@ -20,6 +21,7 @@ type UseForm = {
 }
 
 export default function Login() {
+  const { signIn, loading } = useContext(SignInContext)
   const {
     register,
     handleSubmit,
@@ -29,7 +31,7 @@ export default function Login() {
     defaultValues: { email: '', password: '' }
   })
 
-  const onSubmit = handleSubmit(async (data) => AuthService.signIn(data))
+  const onSubmit = handleSubmit(async (data) => await signIn(data))
 
   return (
     <S.Container>
@@ -48,7 +50,12 @@ export default function Login() {
           error={errors?.password?.message}
         />
         <S.ButtonWrapper>
-          <RaisedButton type="submit" label="Entrar" width={200} />
+          <RaisedButton
+            loading={loading}
+            type="submit"
+            label="Entrar"
+            width={200}
+          />
         </S.ButtonWrapper>
       </Form>
     </S.Container>
