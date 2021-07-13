@@ -29,6 +29,7 @@ type Props = {
 setLocale(pt)
 function MyApp({ Component, pageProps }: Props) {
   const [isDark, setIsDark] = useState(false)
+  const [minus, setMinus] = useState(false)
   const [mountedPage, setMountedPage] = useState(false)
 
   useSmooth()
@@ -76,9 +77,13 @@ function MyApp({ Component, pageProps }: Props) {
         pauseOnHover
       />
       {mountedPage ? (
-        <Layout isOnlyHeader={!pageProps.isLayoutAuth}>
+        <Layout isOnlyHeader={!pageProps.isLayoutAuth} minus={minus}>
           <Header hasSide={pageProps.isLayoutAuth} full={pageProps.isFullPage}>
-            <Navbar>
+            <Navbar
+              isLayoutAuth={pageProps.isLayoutAuth}
+              minus={minus}
+              onMinusChange={() => setMinus(!minus)}
+            >
               <SwitchDarkMode isDark={isDark} toggle={toggle} />
             </Navbar>
           </Header>
