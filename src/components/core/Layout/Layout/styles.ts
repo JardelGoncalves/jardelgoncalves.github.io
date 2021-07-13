@@ -2,12 +2,13 @@ import styled, { css } from 'styled-components'
 
 type WrapperLayoutProps = {
   isOnlyHeader?: boolean | undefined
+  minus?: boolean | undefined
 }
 
 export const WrapperLayout = styled.main<WrapperLayoutProps>`
   height: 100vh;
   display: grid;
-  ${({ isOnlyHeader }) =>
+  ${({ isOnlyHeader, minus }) =>
     isOnlyHeader
       ? css`
           grid-template:
@@ -17,8 +18,9 @@ export const WrapperLayout = styled.main<WrapperLayoutProps>`
         `
       : css`
           grid-template:
-            'side header' 60px
-            'side content' 1fr
-            / 220px 1fr;
+            'side header'
+            'side content';
+          grid-template-rows: 60px 1fr;
+          grid-template-columns: ${minus ? '100px' : '220px'} 1fr;
         `}
 `
