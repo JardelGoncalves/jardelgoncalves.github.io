@@ -26,6 +26,24 @@ type Props = {
   pageProps: any
 }
 
+const sideItems = [
+  {
+    text: 'Dashboard',
+    icon: 'dashboard',
+    to: '/dashboard'
+  },
+  {
+    text: 'Artigos',
+    icon: 'paper',
+    to: '/dashboard/articles'
+  },
+  {
+    text: 'Mensagens',
+    icon: 'chat',
+    to: '/dashboard/messages'
+  }
+]
+
 setLocale(pt)
 function MyApp({ Component, pageProps }: Props) {
   const [isDark, setIsDark] = useState(false)
@@ -87,7 +105,7 @@ function MyApp({ Component, pageProps }: Props) {
               <SwitchDarkMode isDark={isDark} toggle={toggle} />
             </Navbar>
           </Header>
-          <Side minus={minus}></Side>
+          {pageProps.isLayoutAuth && <Side minus={minus} items={sideItems} />}
           <Content hasSide={pageProps.isLayoutAuth} full={pageProps.isFullPage}>
             <Component {...pageProps} />
           </Content>
