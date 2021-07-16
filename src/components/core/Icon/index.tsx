@@ -7,6 +7,10 @@ import Moon from './Moon'
 import Logo from './Logo'
 import Link from './Link'
 import ArrowRight from './ArrowRight'
+import Dashboard from './Dashboard'
+import Chat from './Chat'
+import Paper from './Paper'
+import Logout from './Logout'
 
 export interface IConsElements {
   [key: string]: React.ReactNode
@@ -19,7 +23,11 @@ const icons: IConsElements = {
   email: <Email />,
   moon: <Moon />,
   link: <Link />,
-  'arrow-right': <ArrowRight />
+  'arrow-right': <ArrowRight />,
+  dashboard: <Dashboard />,
+  chat: <Chat />,
+  paper: <Paper />,
+  logout: <Logout />
 }
 
 export interface IConProps {
