@@ -6,7 +6,7 @@ type WrapperProps = {
   noHover?: boolean
 }
 
-export const Wrapper = styled.div<WrapperProps>`
+export const Wrapper = styled.a<WrapperProps>`
   display: flex;
   align-items: center;
   width: 100%;
@@ -35,6 +35,7 @@ export const Wrapper = styled.div<WrapperProps>`
 
   .--minus {
     width: ${({ minus }) => (minus ? '100%' : 'auto')};
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: ${({ minus }) => (minus ? 'center' : 'flex-start')};
@@ -42,7 +43,9 @@ export const Wrapper = styled.div<WrapperProps>`
 
   .--text {
     width: 100%;
+    height: 100%;
     display: ${({ minus }) => (minus ? 'none' : 'flex')};
     align-items: center;
+    padding-left: 1rem;
   }
 `
