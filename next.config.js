@@ -15,6 +15,9 @@ const plugins = [
 
 const nextConfig = {
   webpack5: true,
+  images: {
+    domains: ['avatars.githubusercontent.com']
+  },
   eslint: {
     ignoreDuringBuilds: true
   }
