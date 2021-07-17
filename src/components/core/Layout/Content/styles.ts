@@ -12,19 +12,19 @@ export const Content = styled.section<ContentProps>`
     full || hasSide ? '100%' : theme.sizes.portView};
   width: 100%;
   padding: ${({ full, hasSide }) =>
-    full ? 0 : hasSide ? '0 2rem' : '0 10rem'};
+    full ? 0 : hasSide ? '0 4rem' : '0 10rem'};
 
   ${({ theme, full, hasSide }) => theme.breakpoints.lessThan('huge')`
-    padding: ${full ? '0' : hasSide ? '0 1.675rem' : '0 10rem'};
+    padding: ${full ? '0' : hasSide ? '0 3.675rem' : '0 10rem'};
   `}
   ${({ theme, full, hasSide }) => theme.breakpoints.lessThan('large')`
-    padding: ${full ? '0' : hasSide ? '0 1.45rem' : '0 7.5rem'};
+    padding: ${full ? '0' : hasSide ? '0 3.145rem' : '0 7.5rem'};
   `}
   ${({ theme, full, hasSide }) => theme.breakpoints.lessThan('medium')`
-    padding:${full ? '0' : hasSide ? '0 1.25rem' : '0 3rem'};
+    padding:${full ? '0' : hasSide ? '0 2.5rem' : '0 3rem'};
   `}
-  ${({ theme, full, hasSide }) => theme.breakpoints.lessThan('small')`
-    padding: ${full ? '0' : hasSide ? '0 1.15rem' : '0 1.2rem'};
+  ${({ theme, full }) => theme.breakpoints.lessThan('small')`
+    padding: ${full ? '0' : '0 1.2rem'};
   `}
 `
 
